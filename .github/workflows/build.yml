@@ -1,0 +1,35 @@
+name: Build Kernel
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Instalar dependências
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y git bc bison build-essential libssl-dev libncurses-dev flex python3
+
+      - name: Setup Toolchain
+        run: |
+          # Baixando Clang/GCC necessário (ajuste conforme o esperado pelo seu source)
+          git clone https://github.com/kdrag0n/proton-clang --depth=1 clang
+
+      - name: Compilar Kernel
+        run: |
+          export ARCH=arm64
+          export SUBARCH=arm64
+          export CROSS_COMPILE=aarch64-linux-gnu-
+          export CC=clang
+          export PATH=$GITHUB_WORKSPACE/clang/bin:$PATH
+          
+          # Limpeza e configuração
+          make O=out ARCH=arm64 frost_defconfig
+          
+          # Build com flags de ignorar erros de warning
+          make O=out ARCH=arm64 KBUILD_WERROR=0 -j$(nproc) CC=clang
+
