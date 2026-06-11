@@ -15,19 +15,31 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y git bc bison build-essential libssl-dev libncurses-dev flex python3 gcc-aarch64-linux-gnu
 
-      - name: Limpeza Profunda e Compilação
+      - name: Compilar Kernel
         run: |
           export ARCH=arm64
           export SUBARCH=arm64
           export CROSS_COMPILE=aarch64-linux-gnu-
           
-          # 1. Limpeza obrigatória para evitar "source tree is not clean"
+          # Limpeza total na raiz
           make mrproper
           rm -rf out/
           mkdir -p out/
           
-          # 2. Busca automática da configuração correta
-          # Prioriza arquivos com 'frost' ou 'jlq', caso contrário usa o primeiro defconfig encontrado
-          DEFCONFIG=$(find arch/arm64/configs/ -name "*frost*defconfig" -o -name "*jlq*defconfig" | head -n 1)
-          if [ -z "$DEFCONFIG" ]; then
-            DEFCONFIG=$(find arch/arm64/configs/ -name "*defconfig*"
+          # Configuração manual forçada para evitar o erro de 'Target not found'
+          # Tente usar o frost_defconfig, se não existir, tente o gki_defconfig
+          if [ -f arch/arm64/configs/frost_defconfig ]; then
+            make O=out ARCH=arm64 frost_defconfig
+          else
+            make O=out ARCH=arm64 gki_defconfig
+          fi
+          
+          # Compilação
+          make O=out ARCH=arm64 V=1 KBUILD_WERROR=0 -j2
+
+      - name: Upload Kernel Artifact
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Kernel-Poco-C40
+          path: out/arch/arm64/boot/Image.gz-dtb
