@@ -1,35 +1,42 @@
-name: Build Kernel
+name: Build Kernel C40
 
 on:
   workflow_dispatch:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout source
+        uses: actions/checkout@v3
 
       - name: Instalar dependências
         run: |
           sudo apt-get update
-          sudo apt-get install -y git bc bison build-essential libssl-dev libncurses-dev flex python3
-
-      - name: Setup Toolchain
-        run: |
-          # Baixando Clang/GCC necessário (ajuste conforme o esperado pelo seu source)
-          git clone https://github.com/kdrag0n/proton-clang --depth=1 clang
+          sudo apt-get install -y git bc bison build-essential libssl-dev libncurses-dev flex python3 gcc-aarch64-linux-gnu
 
       - name: Compilar Kernel
         run: |
+          # Definindo variáveis de ambiente essenciais
           export ARCH=arm64
           export SUBARCH=arm64
           export CROSS_COMPILE=aarch64-linux-gnu-
-          export CC=clang
-          export PATH=$GITHUB_WORKSPACE/clang/bin:$PATH
           
-          # Limpeza e configuração
+          # Limpeza do ambiente
+          make O=out ARCH=arm64 mrproper
+          
+          # Configuração base (ajuste 'frost_defconfig' se o seu for outro nome)
           make O=out ARCH=arm64 frost_defconfig
           
-          # Build com flags de ignorar erros de warning
-          make O=out ARCH=arm64 KBUILD_WERROR=0 -j$(nproc) CC=clang
+          # Build otimizado:
+          # V=1 para mostrar erros reais caso trave
+          # KBUILD_WERROR=0 para ignorar avisos de sintaxe do GCC
+          # -j2 para não estourar a memória RAM do GitHub Actions
+          make O=out ARCH=arm64 V=1 KBUILD_WERROR=0 -j2
 
+      - name: Upload Kernel Artifact
+        if: success()
+        uses: actions/upload-artifact@v3
+        with:
+          name: Kernel-Poco-C40
+          path: out/arch/arm64/boot/Image.gz-dtb
