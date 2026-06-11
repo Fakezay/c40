@@ -77,9 +77,17 @@ jobs:
             make O=out ARCH=arm64 V=1 KBUILD_WERROR=0 -j2
           "
 
+      - name: Listar arquivos gerados
+        if: success()
+        run: |
+          echo "=== Verificando o que foi gerado na pasta boot ==="
+          ls -la out/arch/arm64/boot/ || echo "Pasta boot não existe. Verificando raiz do out..."
+          ls -la out/ | grep -i image || true
+
       - name: Upload Kernel Artifact
         if: success()
         uses: actions/upload-artifact@v4
         with:
           name: Kernel-Poco-C40-Docker
-          path: out/arch/arm64/boot/Image.gz-dtb
+          # Usamos Image* para pegar Image, Image.gz, Image.gz-dtb, etc.
+          path: out/arch/arm64/boot/Image*
