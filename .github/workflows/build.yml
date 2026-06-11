@@ -13,6 +13,8 @@ jobs:
       - name: Construção no Ambiente Isolado (Docker Ubuntu 18.04)
         run: |
           docker run --rm -v ${{ github.workspace }}:/workspace -w /workspace ubuntu:18.04 /bin/bash -c "
+            set -e  # ATENÇÃO: Força a parada imediata se houver erro real no compilador
+            
             echo '=== Iniciando ambiente limpo no Ubuntu 18.04 ==='
             apt-get update
             DEBIAN_FRONTEND=noninteractive apt-get install -y git bc bison flex libssl-dev make libc6-dev libncurses5-dev gcc-aarch64-linux-gnu build-essential python3
@@ -28,7 +30,6 @@ jobs:
             mkdir -p out/
             
             echo '=== Injetando Configurações para Docker no defconfig ==='
-            # Identificamos qual defconfig o seu sistema usa e injetamos as flags obrigatórias para o Docker
             DEFCONFIG_FILE=arch/arm64/configs/frost_defconfig
             if [ ! -f \$DEFCONFIG_FILE ]; then
                DEFCONFIG_FILE=arch/arm64/configs/gki_defconfig
@@ -63,7 +64,7 @@ jobs:
             CONFIG_NETFILTER_XT_MATCH_ADDRTYPE=y
             CONFIG_NETFILTER_XT_MATCH_CONNTRACK=y
             
-            # Sistema de Arquivos em Camadas (Fundamental)
+            # Sistema de Arquivos em Camadas
             CONFIG_OVERLAY_FS=y
             EOF
             
@@ -78,10 +79,10 @@ jobs:
           "
 
       - name: Listar arquivos gerados
-        if: success()
+        if: always()
         run: |
           echo "=== Verificando o que foi gerado na pasta boot ==="
-          ls -la out/arch/arm64/boot/ || echo "Pasta boot não existe. Verificando raiz do out..."
+          ls -la out/arch/arm64/boot/ || echo "A pasta boot não foi gerada."
           ls -la out/ | grep -i image || true
 
       - name: Upload Kernel Artifact
@@ -89,5 +90,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Kernel-Poco-C40-Docker
-          # Usamos Image* para pegar Image, Image.gz, Image.gz-dtb, etc.
           path: out/arch/arm64/boot/Image*
