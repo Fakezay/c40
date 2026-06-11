@@ -1,41 +1,52 @@
-name: Build Kernel C40
+name: Build Kernel C40 (Ubuntu 18.04 Isolado)
 
 on:
   workflow_dispatch:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout source
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Instalar dependências
+      - name: Construção no Ambiente Isolado (Docker Ubuntu 18.04)
         run: |
-          sudo apt-get update
-          sudo apt-get install -y git bc bison build-essential libssl-dev libncurses-dev flex python3 gcc-aarch64-linux-gnu
-
-      - name: Compilar Kernel
-        run: |
-          export ARCH=arm64
-          export SUBARCH=arm64
-          export CROSS_COMPILE=aarch64-linux-gnu-
-          
-          # Limpeza total na raiz
-          make mrproper
-          rm -rf out/
-          mkdir -p out/
-          
-          # Configuração manual forçada para evitar o erro de 'Target not found'
-          # Tente usar o frost_defconfig, se não existir, tente o gki_defconfig
-          if [ -f arch/arm64/configs/frost_defconfig ]; then
-            make O=out ARCH=arm64 frost_defconfig
-          else
-            make O=out ARCH=arm64 gki_defconfig
-          fi
-          
-          # Compilação
-          make O=out ARCH=arm64 V=1 KBUILD_WERROR=0 -j2
+          # Criamos um container Ubuntu 18.04, montamos o diretório do código dentro dele e executamos tudo lá.
+          docker run --rm -v ${{ github.workspace }}:/workspace -w /workspace ubuntu:18.04 /bin/bash -c "
+            echo '=== Iniciando ambiente limpo no Ubuntu 18.04 ==='
+            
+            # 1. Instalação das dependências legadas
+            apt-get update
+            DEBIAN_FRONTEND=noninteractive apt-get install -y git bc bison flex libssl-dev make libc6-dev libncurses5-dev gcc-aarch64-linux-gnu build-essential python3
+            
+            export ARCH=arm64
+            export SUBARCH=arm64
+            export CROSS_COMPILE=aarch64-linux-gnu-
+            
+            echo '=== Executando limpeza profunda ==='
+            # 2. Limpeza absoluta do sistema para deixá-lo livre
+            make mrproper
+            make clean
+            rm -rf out/
+            mkdir -p out/
+            
+            echo '=== Configurando o Kernel ==='
+            # 3. Configuração
+            if [ -f arch/arm64/configs/frost_defconfig ]; then
+              make O=out ARCH=arm64 frost_defconfig
+            else
+              make O=out ARCH=arm64 gki_defconfig
+            fi
+            
+            echo '=== Neutralizando módulos proprietários problemáticos ==='
+            # 4. Isso remove a exigência do TEE que causou o erro 'Target not found'
+            sed -i 's/CONFIG_MICROTRUST_TEE_VERSION=.*/CONFIG_MICROTRUST_TEE_VERSION=\"\"/g' out/.config || true
+            
+            echo '=== Iniciando Compilação ==='
+            # 5. Compilação final
+            make O=out ARCH=arm64 V=1 KBUILD_WERROR=0 -j2
+          "
 
       - name: Upload Kernel Artifact
         if: success()
