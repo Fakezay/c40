@@ -12,14 +12,15 @@ jobs:
 
       - name: Criar Script de Compilação
         run: |
-          # Criamos o script do lado de fora do Docker para evitar erros de sintaxe do YAML
+          # Criamos o script do lado de fora do Docker para evitar erros de sintaxe
           cat << 'SCRIPT' > build_kernel.sh
           #!/bin/bash
           set -e # Aborta no primeiro erro real
           
           echo '=== Iniciando ambiente limpo no Ubuntu 18.04 ==='
           apt-get update
-          DEBIAN_FRONTEND=noninteractive apt-get install -y git bc bison flex libssl-dev make libc6-dev libncurses5-dev gcc-aarch64-linux-gnu build-essential python3
+          # AQUI FOI ADICIONADO O PACOTE 'cpio' NO FINAL DA LISTA
+          DEBIAN_FRONTEND=noninteractive apt-get install -y git bc bison flex libssl-dev make libc6-dev libncurses5-dev gcc-aarch64-linux-gnu build-essential python3 cpio
           
           export ARCH=arm64
           export SUBARCH=arm64
@@ -39,7 +40,7 @@ jobs:
           
           echo "Adicionando suporte a containers em: $DEFCONFIG_FILE"
           
-          # Injeção linha por linha para garantir compatibilidade máxima
+          # Injeção linha por linha
           echo "CONFIG_NAMESPACES=y" >> $DEFCONFIG_FILE
           echo "CONFIG_NET_NS=y" >> $DEFCONFIG_FILE
           echo "CONFIG_PID_NS=y" >> $DEFCONFIG_FILE
@@ -79,7 +80,7 @@ jobs:
 
       - name: Executar no Ubuntu 18.04 Isolado
         run: |
-          # Monta a pasta atual e manda o Docker rodar o arquivo .sh que acabamos de criar
+          # Monta a pasta atual e manda o Docker rodar o arquivo .sh
           docker run --rm -v ${{ github.workspace }}:/workspace -w /workspace ubuntu:18.04 ./build_kernel.sh
 
       - name: Listar arquivos gerados
