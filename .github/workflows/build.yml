@@ -1,4 +1,4 @@
-name: Build Kernel C40
+name: Build Kernel Poco C40
 
 on:
   workflow_dispatch:
@@ -15,19 +15,25 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y git bc bison build-essential libssl-dev libncurses-dev flex python3 gcc-aarch64-linux-gnu
 
+      - name: Encontrar arquivo de configuração
+        run: |
+          echo "Buscando arquivos de configuração..."
+          find arch/arm64/configs/ -name "*defconfig*"
+        
       - name: Compilar Kernel
         run: |
           export ARCH=arm64
           export SUBARCH=arm64
           export CROSS_COMPILE=aarch64-linux-gnu-
           
-          # Limpeza do ambiente
+          # Aqui ele vai usar o primeiro arquivo defconfig que encontrar na pasta
+          DEFCONFIG=$(find arch/arm64/configs/ -name "*defconfig*" | head -n 1)
+          echo "Usando configuração: $DEFCONFIG"
+          
           make O=out ARCH=arm64 mrproper
+          make O=out ARCH=arm64 $(basename $DEFCONFIG)
           
-          # Configuração (ajuste o nome se necessário)
-          make O=out ARCH=arm64 frost_defconfig
-          
-          # Build otimizado
+          # Build
           make O=out ARCH=arm64 V=1 KBUILD_WERROR=0 -j2
 
       - name: Upload Kernel Artifact
