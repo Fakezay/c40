@@ -72,7 +72,7 @@ jobs:
           sed -i 's/CONFIG_MICROTRUST_TEE_VERSION=.*/CONFIG_MICROTRUST_TEE_VERSION=\"\"/g' out/.config || true
           
           echo '=== Iniciando Compilação ==='
-          make O=out ARCH=arm64 V=1 KBUILD_WERROR=0 -j2
+          make O=out ARCH=arm64 V=1 KBUILD_WERROR=0 -j1
           SCRIPT
           
           # Dá permissão de execução ao script
