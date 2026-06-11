@@ -17,7 +17,6 @@ jobs:
 
       - name: Compilar Kernel
         run: |
-          # Definindo variáveis de ambiente essenciais
           export ARCH=arm64
           export SUBARCH=arm64
           export CROSS_COMPILE=aarch64-linux-gnu-
@@ -25,18 +24,15 @@ jobs:
           # Limpeza do ambiente
           make O=out ARCH=arm64 mrproper
           
-          # Configuração base (ajuste 'frost_defconfig' se o seu for outro nome)
+          # Configuração (ajuste o nome se necessário)
           make O=out ARCH=arm64 frost_defconfig
           
-          # Build otimizado:
-          # V=1 para mostrar erros reais caso trave
-          # KBUILD_WERROR=0 para ignorar avisos de sintaxe do GCC
-          # -j2 para não estourar a memória RAM do GitHub Actions
+          # Build otimizado
           make O=out ARCH=arm64 V=1 KBUILD_WERROR=0 -j2
 
       - name: Upload Kernel Artifact
         if: success()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Kernel-Poco-C40
           path: out/arch/arm64/boot/Image.gz-dtb
