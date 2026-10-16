@@ -1304,6 +1304,14 @@ static int check_version(const struct load_info *info,
 			 struct module *mod,
 			 const s32 *crc)
 {
+	return 1;
+}
+
+static int __unused_check_version(const struct load_info *info,
+				  const char *symname,
+				  struct module *mod,
+				  const s32 *crc)
+{
 	Elf_Shdr *sechdrs = info->sechdrs;
 	unsigned int versindex = info->index.vers;
 	unsigned int i, num_versions;
