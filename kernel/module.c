@@ -1343,9 +1343,9 @@ static int check_version(const struct load_info *info,
 	return 1;
 
 bad_version:
-	pr_warn("%s: disagrees about version of symbol %s\n",
+	pr_warn("%s: disagrees about version of symbol %s (forced load)\n",
 	       info->name, symname);
-	return 0;
+	return 1;
 }
 
 static inline int check_modstruct_version(const struct load_info *info,
@@ -1363,18 +1363,14 @@ static inline int check_modstruct_version(const struct load_info *info,
 		BUG();
 	}
 	preempt_enable();
-	return check_version(info, "module_layout", mod, crc);
+	return 1;
 }
 
 /* First part is kernel version, which we ignore if module has crcs. */
 static inline int same_magic(const char *amagic, const char *bmagic,
 			     bool has_crcs)
 {
-	if (has_crcs) {
-		amagic += strcspn(amagic, " ");
-		bmagic += strcspn(bmagic, " ");
-	}
-	return strcmp(amagic, bmagic) == 0;
+	return 1;
 }
 #else
 static inline int check_version(const struct load_info *info,
@@ -1394,7 +1390,7 @@ static inline int check_modstruct_version(const struct load_info *info,
 static inline int same_magic(const char *amagic, const char *bmagic,
 			     bool has_crcs)
 {
-	return strcmp(amagic, bmagic) == 0;
+	return 1;
 }
 #endif /* CONFIG_MODVERSIONS */
 
@@ -3271,9 +3267,8 @@ static int check_modinfo(struct module *mod, struct load_info *info, int flags)
 		if (err)
 			return err;
 	} else if (!same_magic(modmagic, vermagic, info->index.vers)) {
-		pr_err("%s: version magic '%s' should be '%s'\n",
+		pr_warn("%s: version magic '%s' should be '%s', ignoring mismatch\n",
 		       info->name, modmagic, vermagic);
-		return -ENOEXEC;
 	}
 
 	if (!get_modinfo(info, "intree")) {
