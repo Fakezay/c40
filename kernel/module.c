@@ -1359,18 +1359,6 @@ bad_version:
 static inline int check_modstruct_version(const struct load_info *info,
 					  struct module *mod)
 {
-	const s32 *crc;
-
-	/*
-	 * Since this should be found in kernel (which can't be removed), no
-	 * locking is necessary -- use preempt_disable() to placate lockdep.
-	 */
-	preempt_disable();
-	if (!find_symbol("module_layout", NULL, &crc, NULL, true, false)) {
-		preempt_enable();
-		BUG();
-	}
-	preempt_enable();
 	return 1;
 }
 
@@ -2920,7 +2908,11 @@ static inline void kmemleak_load_module(const struct module *mod,
 #ifdef CONFIG_MODULE_SIG
 static int module_sig_check(struct load_info *info, int flags)
 {
-	int err = -ENODATA;
+	return 0;
+}
+
+static int __unused_module_sig_check(struct load_info *info, int flags)
+{
 	const unsigned long markerlen = sizeof(MODULE_SIG_STRING) - 1;
 	const char *reason;
 	const void *mod = info->hdr;
