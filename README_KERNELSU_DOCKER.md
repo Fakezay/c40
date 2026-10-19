@@ -1,81 +1,66 @@
-# POCO C40 (frost / JLQ JR510) - KernelSU + Docker Working Build
+# 🐧 Xiaomi POCO C40 (`frost` / JLQ JR510) — Kernel `5.4.242-jgki-perfuser` com KernelSU v0.9.5 + Docker + Droidspaces-OSS
 
-## Status: 100% Funcional (MIUI / Android 11) - Testado e Validado no Aparelho!
-- **KernelSU**: Suporte nativo completo (hooks manuais em `fs/exec.c`, `fs/open.c`, `fs/read_write.c`, `fs/stat.c`), `ksud`, `post-fs-data`, root funcional.
-- **Docker Completo**: Suporte total habilitado e validado via `check-config.sh`:
-  - Namespaces: PID, NET, IPC, UTS, SYSVIPC.
-  - Cgroups: Memory (com swap accounting), CPU, CPUAcct, Block I/O (com throttling), Freezer, BPF, CPUSets, **Device (`CONFIG_CGROUP_DEVICE`)**, **PIDs (`CONFIG_CGROUP_PIDS`)**.
-  - Rede & Pontes: Virtual Ethernet (`CONFIG_VETH`), Linux Bridge (`CONFIG_BRIDGE`), TUN/TAP, Dummy.
-  - Firewall & NAT: IPTables, NAT Masquerade, Redirect, Conntrack, Mark, **`CONFIG_NETFILTER_XT_MATCH_ADDRTYPE`**.
-  - IPC Avançado: **`CONFIG_POSIX_MQUEUE`** e **`CONFIG_POSIX_MQUEUE_SYSCTL`**.
-  - Armazenamento: OverlayFS (`overlay2`), Binfmt_misc, Ext4 POSIX ACL.
-- **Vendor KABI**: 100% preservada e alinhada aos módulos proprietários vendor (`mali_kbase.ko`, `rmnet_core.ko`, Wi-Fi `qca_cld3_wlan.ko`, etc.).
+Este repositório contém o código-fonte completo, patches de preservação de KABI, scripts de compilação/reempacotamento e documentação técnica da engenharia reversa realizada para portar **KernelSU (`v0.9.5` via Manual Hooks)**, **Docker Engine (`moby`)** e **Droidspaces-OSS** para o **Xiaomi POCO C40 (`frost`, SoC JLQ JR510)** mantendo **100% de compatibilidade binária (KABI)** com os módulos proprietários pré-compilados da partição `vendor` (`rmnet_core.ko`, `mali_kbase.ko`, `qca_cld3_wlan.ko`, `slg_main.ko`).
 
 ---
 
-## Detalhes Críticos de KABI Resolvidos
-1. **CFI Slowpath & CRC**:
-   - `__cfi_slowpath` e `__cfi_slowpath_diag` exportados em `kernel/cfi.c` para satisfazer `mali_kbase.ko`.
-   - `check_version` contornado em `kernel/module.c` para aceitar módulos proprietários compilados sem CRC idêntico.
-2. **Rede e Offsets de `struct net_device`**:
-   - O módulo vendor proprietário `rmnet_core.ko` acessa diretamente com assembly hardcoded:
-     - `real_dev->rx_handler` no offset **792 (0x318)** (`ldr x8, [x20, #792]`)
-     - `real_dev->pcpu_refcnt` no offset **1144 (0x478)** (`ldr x9, [x20, #1144]`)
-   - `CONFIG_IPVLAN` / `CONFIG_NET_L3_MASTER_DEV` e `CONFIG_VLAN_8021Q` foram desativados para evitar inserção de campos que quebravam estes offsets.
-3. **Offsets de `struct net`**:
-   - Campos antes de `gen` (offset **3168 / 0xc60**) 100% idênticos à stock defconfig (`CONFIG_IP_VS` desativado).
-4. **O Que Deve Permanecer Rigorosamente DESATIVADO**:
-   - `# CONFIG_BRIDGE_NETFILTER is not set`: Evita deslocamento do enum `skb_ext_id` em `include/linux/skbuff.h`, prevenindo pânico de rede no Wi-Fi/Modem.
-   - `# CONFIG_USER_NS is not set`: Evita violações de SELinux nos kworkers do Android 11.
+## 📥 Downloads Diretos (`boot.img` Prontos para Flash)
+
+Você pode baixar as imagens prontas na aba [**Releases**](https://github.com/Fakezay/c40/releases) deste repositório ou pelos links diretos abaixo:
+
+| Versão | Recursos Ativados | Link GitHub Release (`.img` 96 MB) | Link GitHub Release (`.zip` 30 MB) | Status no Aparelho |
+| :--- | :--- | :--- | :--- | :--- |
+| **v3.0** (`v3.0-kernelsu-droidspaces-docker`) | **Droidspaces-OSS + Docker + KernelSU** (`DEVTMPFS`, `USER_NS`, `MACVLAN`, `POSIX_ACL`, `IP_SET`, UFW/Fail2ban, Patches KABI 5.4) | [**Baixar v3.0 `.img`**](https://github.com/Fakezay/c40/releases/download/v3.0-kernelsu-droidspaces-docker/boot_poco_c40_droidspaces_v3.img) | [**Baixar v3.0 `.zip`**](https://github.com/Fakezay/c40/releases/download/v3.0-kernelsu-droidspaces-docker/boot_poco_c40_droidspaces_v3.zip) | Compilado + Validado via `pahole` |
+| **v2.0** (`v2.0-kernelsu-docker-4extra-working`) | **Docker + 4 Extras** (`XT_MATCH_ADDRTYPE`, `CGROUP_DEVICE`, `CGROUP_PIDS`, `POSIX_MQUEUE`) + **KernelSU v0.9.5** | [**Baixar v2.0 `.img`**](https://github.com/Fakezay/c40/releases/download/v2.0-kernelsu-docker-4extra-working/boot_poco_c40_docker_v2_4extra.img) | [**Baixar v2.0 `.zip`**](https://github.com/Fakezay/c40/releases/download/v2.0-kernelsu-docker-4extra-working/boot_poco_c40_docker_v2_4extra.zip) | ✅ **Testado e 100% Funcional** |
+| **v1.0** (`v1.0-kernelsu-docker-working`) | **KernelSU v0.9.5 + Docker Base** (Namespaces, Cgroups, OverlayFS, VETH, Bridge, Netfilter/NAT) | [**Baixar v1.0 `.img`**](https://github.com/Fakezay/c40/releases/download/v1.0-kernelsu-docker-working/boot_poco_c40_kernelsu_docker_pure_stock_abi.img) | [**Baixar v1.0 `.zip`**](https://github.com/Fakezay/c40/releases/download/v1.0-kernelsu-docker-working/boot_poco_c40_kernelsu_docker_pure_stock_abi.zip) | ✅ **Testado e 100% Funcional** |
+
+> 📄 Para links de download da **ROM Stock oficial (2.3 GB)**, **Toolchains** e **Mirrors Catbox**, consulte [**`docs/EXTERNAL_LINKS_AND_DOWNLOADS.md`**](docs/EXTERNAL_LINKS_AND_DOWNLOADS.md).
 
 ---
 
-## Arquivos de Configuração Salvos
-- **Defconfig v2.0 (Final)**: `arch/arm64/configs/frost_kernelsu_docker_v2_working_final_defconfig`
-- **Defconfig v1.0 (Base)**: `arch/arm64/configs/frost_kernelsu_docker_working_final_defconfig`
-- **Config de backup**: `/home/ubuntu/frost_working_configs/frost_kernelsu_docker_v2_working_final.config`
-- **Diretório de backup completo**: `/home/ubuntu/frost_working_configs/`
-
----
-
-## Como Recompilar e Empacotar
-Execute o script automatizado:
-```bash
-bash /home/ubuntu/build_abi_fixed_and_repack.sh
-```
-
-Ou manualmente:
-```bash
-export PATH="/home/ubuntu/toolchains/clang-12-arm64-native/bin:/usr/bin:$PATH"
-export ARCH=arm64
-export SUBARCH=arm64
-export CLANG_TRIPLE=aarch64-linux-gnu-
-export CROSS_COMPILE=/usr/bin/aarch64-linux-gnu-
-export CROSS_COMPILE_COMPAT=/home/ubuntu/toolchains/gcc32/bin/arm-linux-androideabi-
-
-make O=out ARCH=arm64 frost_kernelsu_docker_v2_working_final_defconfig
-make O=out ARCH=arm64 -j$(nproc) Image.gz Image
-```
-
-Reempacotamento do `boot.img`:
-```bash
-cp out/arch/arm64/boot/Image kernel
-PATCHVBMETAFLAG=true magiskboot repack <stock_boot.img>
-python3 avbtool.py add_hash_footer --image new-boot.img --partition_size 100663296 --partition_name boot
-```
-
----
-
-## Imagens Prontas e Comandos de Flash (Fastboot)
-
-### Imagem v2.0 (Recomendada - Com as 4 Opções do `oxi`):
-- Arquivo: `boot_poco_c40_docker_v2_4extra.img` (100.663.296 bytes)
-- SHA-256: `757acc2e5b2dc2d2817771795a7180fd0d9bc0779d866a56987c6ef87f7ce93e`
-- Link direto: https://files.catbox.moe/796flj.img
-- Link ZIP: https://files.catbox.moe/pv04q8.zip
+## ⚡ Como Flashear via Fastboot
 
 ```bash
-fastboot flash boot_a boot_poco_c40_docker_v2_4extra.img
-fastboot flash boot_b boot_poco_c40_docker_v2_4extra.img
+fastboot flash boot_a boot_poco_c40_droidspaces_v3.img
+fastboot flash boot_b boot_poco_c40_droidspaces_v3.img
 fastboot reboot
 ```
+
+---
+
+## 🔬 Resumo da Engenharia Reversa e Blindagem de KABI (JLQ JR510)
+
+O kernel `5.4.242-jgki-perfuser` do POCO C40 carrega dezenas de módulos `.ko` proprietários durante o boot (incluindo `rmnet_core.ko` para dados móveis, `mali_kbase.ko` para a GPU Mali-G52 e `qca_cld3_wlan.ko` para o Wi-Fi). Qualquer deslocamento de offset nas estruturas centrais do kernel causa *Kernel Panic* ou *bootloop*.
+
+### Offsets Críticos Verificados com `pahole` no `vmlinux`:
+| Estrutura | Campo | Offset Obrigatório (Stock) | Quem depende |
+| :--- | :--- | :--- | :--- |
+| `struct net_device` | `rx_handler` | **`792` (`0x318`)** | `rmnet_core.ko` (`rmnet_rx_handler`) |
+| `struct net_device` | `pcpu_refcnt` | **`1144` (`0x478`)** | `rmnet_core.ko` / `qca_cld3_wlan.ko` |
+| `struct net` | `gen` | **`3168` (`0xc60`)** | `rmnet_core.ko` (`net_generic()`) |
+| `struct sk_buff` | `enum skb_ext_id` | Sem `BRIDGE_NETFILTER` | `rmnet_core.ko` / `qca_cld3_wlan.ko` |
+
+### Patches Aplicados no Código-Fonte:
+1. **KernelSU v0.9.5 Manual Hooks (`fs/exec.c`, `fs/open.c`, `fs/read_write.c`, `fs/stat.c`, `drivers/input/input.c`, `drivers/tty/pty.c`, `security/selinux/hooks.c`):**
+   - Integração nativa sem depender de `CONFIG_KPROBES`.
+   - Correção na assinatura de `ksu_handle_devpts(struct inode *)` para evitar corrupção da pilha ao abrir pseudoterminais (`pty`).
+2. **Desacoplamento de `NET_INGRESS` e `NETFILTER_INGRESS` em `include/linux/netdevice.h`:**
+   - Permite ativar `CONFIG_NETFILTER=y` para o Docker mantendo `nf_hooks_ingress` oculto quando `CONFIG_NETFILTER_INGRESS` não está definido, preservando os offsets `792` e `1144` em `struct net_device`.
+3. **Patches Oficiais do Droidspaces-OSS para Kernel 5.4 GKI:**
+   - `include/linux/sched.h`: Armazena `sysvsem` e `sysvshm` dentro dos paddings `ANDROID_KABI_RESERVE(6, 7, 8)` da `struct task_struct`.
+   - `include/linux/sched/user.h`: Armazena `mq_bytes` (`CONFIG_POSIX_MQUEUE=y`) dentro de `ANDROID_KABI_USE(1, ...)` da `struct user_struct`.
+   - `kernel/cgroup/cgroup.c`: Restaura symlinks com prefixo `cgroup.` quando `CGRP_ROOT_NOPREFIX` está ativo para compatibilidade com `systemd` dentro de contêineres.
+
+---
+
+## 📂 Estrutura Extra Adicionada ao Repositório
+
+- [`docs/entendimentoAoDevolvKernelEKernelSu.txt`](docs/entendimentoAoDevolvKernelEKernelSu.txt): Diário técnico completo (28 seções) documentando todas as descobertas, causas de falha (LZ4 vs GZIP, AVB, CFI, KABI offsets) e validações.
+- [`docs/EXTERNAL_LINKS_AND_DOWNLOADS.md`](docs/EXTERNAL_LINKS_AND_DOWNLOADS.md): Links para download da ROM Stock, toolchains, repositórios externos e imagens `.img`/`.zip`.
+- [`scripts_frost/build_abi_fixed_and_repack.sh`](scripts_frost/build_abi_fixed_and_repack.sh): Script automatizado que compila o kernel, valida os offsets `792`, `1144` e `3168` via `pahole`, reempacota com `magiskboot` e assina com `avbtool.py`.
+- [`configs_frost/`](configs_frost/): Backup de todos os `.config` funcionais (`v1.0`, `v2.0`, `v3.0` e `config_stock_5.4.242-jgki-perfuser`).
+- [`arch/arm64/configs/`](arch/arm64/configs/):
+  - `frost_kernelsu_docker_defconfig` (v1.0)
+  - `frost_kernelsu_docker_v2_4extra_defconfig` (v2.0)
+  - `frost_kernelsu_droidspaces_v3_defconfig` (v3.0)
+- [`docker.config`](docker.config): Fragmento de configuração com todas as flags KABI-safe para Docker e Droidspaces-OSS.
