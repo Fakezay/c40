@@ -1876,7 +1876,7 @@ struct net_device {
 	const struct net_device_ops *netdev_ops;
 	const struct ethtool_ops *ethtool_ops;
 #ifdef CONFIG_NET_L3_MASTER_DEV
-	const struct l3mdev_ops	*l3mdev_ops;
+	/* l3mdev_ops moved to ANDROID_KABI_USE(1) at end of struct net_device */
 #endif
 #if IS_ENABLED(CONFIG_IPV6)
 	const struct ndisc_ops *ndisc_ops;
@@ -1945,7 +1945,7 @@ struct net_device {
 	/* Protocol-specific pointers */
 
 #if IS_ENABLED(CONFIG_VLAN_8021Q)
-	struct vlan_info __rcu	*vlan_info;
+	/* vlan_info moved to ANDROID_KABI_USE(2) at end of struct net_device */
 #endif
 #if IS_ENABLED(CONFIG_NET_DSA)
 	struct dsa_port		*dsa_ptr;
@@ -2091,7 +2091,7 @@ struct net_device {
 	unsigned int		fcoe_ddp_xid;
 #endif
 #if IS_ENABLED(CONFIG_CGROUP_NET_PRIO)
-	struct netprio_map __rcu *priomap;
+	/* priomap moved to ANDROID_KABI_USE(3) at end of struct net_device */
 #endif
 	struct phy_device	*phydev;
 	struct sfp_bus		*sfp_bus;
@@ -2102,9 +2102,21 @@ struct net_device {
 	bool			proto_down;
 	unsigned		wol_enabled:1;
 
+#ifdef CONFIG_NET_L3_MASTER_DEV
+	ANDROID_KABI_USE(1, const struct l3mdev_ops *l3mdev_ops);
+#else
 	ANDROID_KABI_RESERVE(1);
+#endif
+#if IS_ENABLED(CONFIG_VLAN_8021Q)
+	ANDROID_KABI_USE(2, struct vlan_info __rcu *vlan_info);
+#else
 	ANDROID_KABI_RESERVE(2);
+#endif
+#if IS_ENABLED(CONFIG_CGROUP_NET_PRIO)
+	ANDROID_KABI_USE(3, struct netprio_map __rcu *priomap);
+#else
 	ANDROID_KABI_RESERVE(3);
+#endif
 	ANDROID_KABI_RESERVE(4);
 	ANDROID_KABI_RESERVE(5);
 	ANDROID_KABI_RESERVE(6);

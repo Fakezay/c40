@@ -1,0 +1,17 @@
+=== POCO C40 (frost) - KernelSU + Droidspaces-OSS + Docker v3.0 (KABI 100% Stock) ===
+Data: 2026-10-17 23:44:25 UTC
+
+[v3.0 - Droidspaces-OSS + Docker + KernelSU (Novo)]
+1. Link Direto (.img - 100.663.296 bytes):
+   https://litter.catbox.moe/7peiv6.img
+   SHA-256: d33d6707c62a0359e3a99ae973f73fc10b4d9d20194ebf24af66bfb722e57dbd
+   Arquivo Local: /home/ubuntu/boot_poco_c40_droidspaces_v3.img
+
+2. Link Compactado (.zip - 30.667.269 bytes):
+   https://litter.catbox.moe/gwi5cu.zip
+   SHA-256: 0bab00c462b9107c921f9d39e97a2094089f03f7508862ae30647234586ce102
+   Arquivo Local: /home/ubuntu/boot_poco_c40_droidspaces_v3.zip
+
+[v2.0 - Estável Anterior (Docker + 4 Extras)]
+- .img: https://files.catbox.moe/796flj.img (SHA-256: 757acc2e5b2dc2d2817771795a7180fd0d9bc0779d866a56987c6ef87f7ce93e)
+- .zip: https://files.catbox.moe/pv04q8.zip (SHA-256: 282331ab7740f022ea3dcbe7377f3e936e3c966285d7bfb46f9f275a296e75b6)

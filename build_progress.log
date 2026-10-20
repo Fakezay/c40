@@ -1,0 +1,46 @@
+==========================================================
+Compilando POCO C40 (frost) Kernel com KernelSU (8 cores)...
+==========================================================
+  GEN     Makefile
+  CALL    ../scripts/atomic/check-atomics.sh
+  CALL    ../scripts/checksyscalls.sh
+  LDS     arch/arm64/kernel/vdso/vdso.lds
+  CC      arch/arm64/kernel/vdso/vgettimeofday.o
+  AS      arch/arm64/kernel/vdso/note.o
+  AS      arch/arm64/kernel/vdso/sigreturn.o
+  LD      arch/arm64/kernel/vdso/vdso.so.dbg
+  VDSOSYM include/generated/vdso-offsets.h
+  CHK     include/generated/compile.h
+  CC      arch/arm64/kernel/signal.o
+  CC      security/keys/compat.o
+  CC      security/selinux/avc.o
+  CC      fs/char_dev.o
+  CC      mm/page-writeback.o
+  CC      kernel/sysctl.o
+  CC      block/elevator.o
+  CC      crypto/api.o
+  CC      security/keys/process_keys.o
+  CC      fs/stat.o
+  CC      crypto/cipher.o
+  CC      arch/arm64/kernel/stacktrace.o
+  CC      block/blk-core.o
+  CC      security/selinux/hooks.o
+  AR      security/keys/built-in.a
+  CC      kernel/sysctl_binary.o
+  CC      crypto/compress.o
+  CC      mm/readahead.o
+  CC      fs/exec.o
+  CC      arch/arm64/kernel/traps.o
+  CC      security/selinux/selinuxfs.o
+  CC      crypto/crypto_engine.o
+  CC      kernel/capability.o
+  CC      arch/arm64/kernel/vdso.o
+  CC      mm/swap.o
+  CC      crypto/algapi.o
+  CC      kernel/ptrace.o
+  CC      block/blk-sysfs.o
+  CC      arch/arm64/kernel/return_address.o
+  CC      drivers/amba/bus.o
+  CC      fs/pipe.o
+  CC      security/selinux/nlmsgtab.o
+  CC      arch/arm64/kernel/cpuinfo.o

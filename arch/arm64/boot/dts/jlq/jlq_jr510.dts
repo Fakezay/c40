@@ -491,6 +491,18 @@
 				opp-microamp = <76000>;
 				clock-latency-ns = <29000>;
 			};
+			opp-2100000000 {
+				opp-hz = /bits/ 64 <2100000000>;
+				opp-microvolt = <1050000 400000 1140000>;
+				opp-microamp = <80000>;
+				clock-latency-ns = <29000>;
+			};
+			opp-2200000000 {
+				opp-hz = /bits/ 64 <2200000000>;
+				opp-microvolt = <1100000 400000 1140000>;
+				opp-microamp = <85000>;
+				clock-latency-ns = <29000>;
+			};
 		};
 
 		little_core_opp_table: cpu_opp_table1 {
@@ -543,6 +555,12 @@
 				opp-hz = /bits/ 64 <1500000000>;
 				opp-microvolt = <900000 400000 1140000>;
 				opp-microamp = <66000>;
+				clock-latency-ns = <29000>;
+			};
+			opp-1600000000 {
+				opp-hz = /bits/ 64 <1600000000>;
+				opp-microvolt = <950000 400000 1140000>;
+				opp-microamp = <70000>;
 				clock-latency-ns = <29000>;
 			};
 		};
@@ -1042,28 +1060,31 @@
 	};
 	gpu_opp_table: gpu_opp_table0 {
 		compatible = "operating-points-v2", "operating-points-v2-mali";
+		opp-900000000 {
+			opp-hz = /bits/ 64 <900000000>;
+			opp-hz-real = /bits/ 64 <900000000>;
+			opp-microvolt = <850000 850000 850000>;
+		};
 		opp-800000000 {
 			opp-hz = /bits/ 64 <800000000>;
 			opp-hz-real = /bits/ 64 <800000000>;
 			opp-microvolt = <800000 800000 800000>;
 		};
-		/* opp-692428711 {
+		opp-692428711 {
 			opp-hz = /bits/ 64 <692428711>;
 			opp-hz-real = /bits/ 64 <692428711>;
 			opp-microvolt = <800000 800000 800000>;
 		};
-		*/
 		opp-519321533 {
 			opp-hz = /bits/ 64 <519321533>;
 			opp-hz-real = /bits/ 64 <519321533>;
 			opp-microvolt = <700000 700000 800000>;
 		};
-		/* opp-400000000 {
+		opp-400000000 {
 			opp-hz = /bits/ 64 <400000000>;
 			opp-hz-real = /bits/ 64 <400000000>;
 			opp-microvolt = <700000 700000 800000>;
 		};
-		*/
 		opp-346214355 {
 			opp-hz = /bits/ 64 <346214355>;
 			opp-hz-real = /bits/ 64 <346214355>;

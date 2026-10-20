@@ -278,9 +278,9 @@ nf_hook_entry_head(struct net *net, int pf, unsigned int hooknum,
 #endif
 #ifdef CONFIG_NETFILTER_FAMILY_BRIDGE
 	case NFPROTO_BRIDGE:
-		if (WARN_ON_ONCE(ARRAY_SIZE(net->nf.hooks_bridge) <= hooknum))
+		if (WARN_ON_ONCE(ARRAY_SIZE(net->hooks_bridge) <= hooknum))
 			return NULL;
-		return net->nf.hooks_bridge + hooknum;
+		return net->hooks_bridge + hooknum;
 #endif
 	case NFPROTO_IPV4:
 		if (WARN_ON_ONCE(ARRAY_SIZE(net->nf.hooks_ipv4) <= hooknum))
@@ -623,7 +623,7 @@ static int __net_init netfilter_net_init(struct net *net)
 	__netfilter_net_init(net->nf.hooks_arp, ARRAY_SIZE(net->nf.hooks_arp));
 #endif
 #ifdef CONFIG_NETFILTER_FAMILY_BRIDGE
-	__netfilter_net_init(net->nf.hooks_bridge, ARRAY_SIZE(net->nf.hooks_bridge));
+	__netfilter_net_init(net->hooks_bridge, ARRAY_SIZE(net->hooks_bridge));
 #endif
 #if IS_ENABLED(CONFIG_DECNET)
 	__netfilter_net_init(net->nf.hooks_decnet, ARRAY_SIZE(net->nf.hooks_decnet));
