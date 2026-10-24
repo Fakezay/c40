@@ -1243,6 +1243,25 @@ out:
 	return 0;
 }
 
+static void jlq_pll_add_freq_entry(struct jlq_pllx_table *table, int max_entries,
+				   unsigned long rate, unsigned int p,
+				   unsigned int m, unsigned short k, unsigned int s)
+{
+	int i;
+	for (i = 0; i < max_entries && table[i].rate; i++) {
+		if (table[i].rate == rate)
+			return; /* already present */
+	}
+	if (i < max_entries - 1) {
+		table[i].rate = rate;
+		table[i].p = p;
+		table[i].m = m;
+		table[i].k = k;
+		table[i].s = s;
+		table[i+1].rate = 0;
+	}
+}
+
 static int jlq_clkpll43x_table_init(struct device_node *np,
 					struct jlq_pllxclk *pllclk)
 {
@@ -1263,7 +1282,7 @@ static int jlq_clkpll43x_table_init(struct device_node *np,
 
 	prop_len /= 5;
 
-	pllclk->table = kzalloc((prop_len+1) * sizeof(struct jlq_pllx_table),
+	pllclk->table = kzalloc((prop_len + 5) * sizeof(struct jlq_pllx_table),
 						GFP_KERNEL);
 
 	if (!pllclk->table)
@@ -1293,6 +1312,14 @@ static int jlq_clkpll43x_table_init(struct device_node *np,
 	table[i].m = 0;
 	table[i].k = 0;
 	table[i].s = 0;
+
+	/* Add overclock frequencies dynamically for app control */
+	if (np->name && (!strcmp(np->name, "pll_cpu_big_out") || strstr(np->name, "cpu_big"))) {
+		jlq_pll_add_freq_entry(table, prop_len + 5, 2100000000UL, 1, 109, 24576, 0);
+		jlq_pll_add_freq_entry(table, prop_len + 5, 2200000000UL, 1, 114, 38229, 0);
+	} else if (np->name && (!strcmp(np->name, "pll_cpu_little_out") || strstr(np->name, "cpu_little"))) {
+		jlq_pll_add_freq_entry(table, prop_len + 5, 1600000000UL, 1, 166, 43690, 1);
+	}
 
 	kfree(array);
 

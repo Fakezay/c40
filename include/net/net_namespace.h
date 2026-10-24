@@ -127,7 +127,7 @@ struct net {
 	struct netns_ieee802154_lowpan	ieee802154_lowpan;
 #endif
 #if defined(CONFIG_IP_SCTP) || defined(CONFIG_IP_SCTP_MODULE)
-	struct netns_sctp	sctp;
+	/* sctp moved to end of struct net (after diag_nlsk/nft) to prevent shifting gen */
 #endif
 #if defined(CONFIG_IP_DCCP) || defined(CONFIG_IP_DCCP_MODULE)
 	struct netns_dccp	dccp;
@@ -139,7 +139,7 @@ struct net {
 	struct netns_ct		ct;
 #endif
 #if defined(CONFIG_NF_TABLES) || defined(CONFIG_NF_TABLES_MODULE)
-	struct netns_nftables	nft;
+	/* nft moved to end of struct net (after diag_nlsk) to prevent shifting gen */
 #endif
 #if IS_ENABLED(CONFIG_NF_DEFRAG_IPV6)
 	struct netns_nf_frag	nf_frag;
@@ -181,6 +181,15 @@ struct net {
 	struct sock		*crypto_nlsk;
 #endif
 	struct sock		*diag_nlsk;
+#if defined(CONFIG_NF_TABLES) || defined(CONFIG_NF_TABLES_MODULE)
+	struct netns_nftables	nft;
+#endif
+#if defined(CONFIG_IP_SCTP) || defined(CONFIG_IP_SCTP_MODULE)
+	struct netns_sctp	sctp;
+#endif
+#ifdef CONFIG_NETFILTER_FAMILY_BRIDGE
+	struct nf_hook_entries __rcu *hooks_bridge[NF_INET_NUMHOOKS];
+#endif
 } __randomize_layout;
 
 #include <linux/seq_file_net.h>

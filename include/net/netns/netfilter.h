@@ -23,7 +23,7 @@ struct netns_nf {
 	struct nf_hook_entries __rcu *hooks_arp[NF_ARP_NUMHOOKS];
 #endif
 #ifdef CONFIG_NETFILTER_FAMILY_BRIDGE
-	struct nf_hook_entries __rcu *hooks_bridge[NF_INET_NUMHOOKS];
+	/* hooks_bridge moved to end of struct net to preserve struct netns_nf size for KABI */
 #endif
 #if IS_ENABLED(CONFIG_DECNET)
 	struct nf_hook_entries __rcu *hooks_decnet[NF_DN_NUMHOOKS];

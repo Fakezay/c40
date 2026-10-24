@@ -15,21 +15,9 @@
 #include <asm/cacheflush.h>
 #include <asm/set_memory.h>
 
-/* Compiler-defined handler names */
-#ifdef CONFIG_CFI_PERMISSIVE
-#define cfi_failure_handler	__ubsan_handle_cfi_check_fail
-#define cfi_slowpath_handler	__cfi_slowpath_diag
-#else /* enforcing */
-#define cfi_failure_handler	__ubsan_handle_cfi_check_fail_abort
-#define cfi_slowpath_handler	__cfi_slowpath
-#endif /* CONFIG_CFI_PERMISSIVE */
-
 static inline void handle_cfi_failure(void *ptr)
 {
-	if (IS_ENABLED(CONFIG_CFI_PERMISSIVE))
-		WARN_RATELIMIT(1, "CFI failure (target: %pS):\n", ptr);
-	else
-		panic("CFI failure (target: %pS)\n", ptr);
+	WARN_RATELIMIT(1, "CFI failure (target: %pS):\n", ptr);
 }
 
 #ifdef CONFIG_MODULES
@@ -293,25 +281,43 @@ out:
 	return f;
 }
 
-void cfi_slowpath_handler(uint64_t id, void *ptr, void *diag)
+void __cfi_slowpath(uint64_t id, void *ptr)
+{
+	cfi_check_fn check = find_cfi_check(ptr);
+
+	if (likely(check))
+		check(id, ptr, NULL);
+	else
+		handle_cfi_failure(ptr);
+}
+EXPORT_SYMBOL_GPL(__cfi_slowpath);
+
+void __cfi_slowpath_diag(uint64_t id, void *ptr, void *diag)
 {
 	cfi_check_fn check = find_cfi_check(ptr);
 
 	if (likely(check))
 		check(id, ptr, diag);
-	else /* Don't allow unchecked modules */
+	else
 		handle_cfi_failure(ptr);
 }
-EXPORT_SYMBOL_GPL(cfi_slowpath_handler);
+EXPORT_SYMBOL_GPL(__cfi_slowpath_diag);
 #endif /* CONFIG_MODULES */
 
-void cfi_failure_handler(void *data, void *ptr, void *vtable)
+void __ubsan_handle_cfi_check_fail_abort(void *data, void *ptr, void *vtable)
 {
 	handle_cfi_failure(ptr);
 }
-EXPORT_SYMBOL_GPL(cfi_failure_handler);
+EXPORT_SYMBOL_GPL(__ubsan_handle_cfi_check_fail_abort);
+
+void __ubsan_handle_cfi_check_fail(void *data, void *ptr, void *vtable)
+{
+	handle_cfi_failure(ptr);
+}
+EXPORT_SYMBOL_GPL(__ubsan_handle_cfi_check_fail);
 
 void __cfi_check_fail(void *data, void *ptr)
 {
 	handle_cfi_failure(ptr);
 }
+EXPORT_SYMBOL_GPL(__cfi_check_fail);

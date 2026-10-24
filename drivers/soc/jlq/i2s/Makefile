@@ -6,4 +6,4 @@ EXTRA_CFLAGS := -I$(src)/ -I$(srctree)/drivers/soc/jlq/audio-kernel/adspload
 
 #EXTRA_CFLAGS += -DI2S_CLK_DISABLE
 
-obj-m	+= jlq-i2s.o
+obj-$(CONFIG_JlQ_I2S)	+= jlq-i2s.o

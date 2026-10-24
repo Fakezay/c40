@@ -1423,9 +1423,17 @@ static int cpufreq_online(unsigned int cpu)
 		 */
 		policy->max_freq_req = policy->min_freq_req + 1;
 
-		ret = freq_qos_add_request(&policy->constraints,
-					   policy->max_freq_req, FREQ_QOS_MAX,
-					   FREQ_QOS_MAX_DEFAULT_VALUE);
+		{
+			unsigned int default_max_freq = FREQ_QOS_MAX_DEFAULT_VALUE;
+			if (policy->cpu >= 4 && policy->cpuinfo.max_freq > 2000000)
+				default_max_freq = 2000000;
+			else if (policy->cpu < 4 && policy->cpuinfo.max_freq > 1500000)
+				default_max_freq = 1500000;
+
+			ret = freq_qos_add_request(&policy->constraints,
+						   policy->max_freq_req, FREQ_QOS_MAX,
+						   default_max_freq);
+		}
 		if (ret < 0) {
 			policy->max_freq_req = NULL;
 			goto out_destroy_policy;

@@ -246,6 +246,14 @@ static int cpufreq_init(struct cpufreq_policy *policy)
 				__func__, ret);
 	}
 
+	/* Expose safe overclock frequencies for kernel manager apps */
+	if (policy->cpu >= 4) {
+		dev_pm_opp_add(cpu_dev, 2100000000UL, 1050000);
+		dev_pm_opp_add(cpu_dev, 2200000000UL, 1100000);
+	} else {
+		dev_pm_opp_add(cpu_dev, 1600000000UL, 950000);
+	}
+
 	ret = dev_pm_opp_init_cpufreq_table(cpu_dev, &freq_table);
 	if (ret) {
 		dev_err(cpu_dev, "failed to init cpufreq table: %d\n", ret);

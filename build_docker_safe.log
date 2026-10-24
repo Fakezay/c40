@@ -1,0 +1,3543 @@
+==========================================================
+Compilando POCO C40 (frost) Kernel com KernelSU (8 cores)...
+==========================================================
+  GEN     Makefile
+scripts/kconfig/conf  --syncconfig Kconfig
+  GEN     Makefile
+  HOSTCC  scripts/selinux/mdp/mdp
+  DTC     arch/arm64/boot/dts/jlq/dsi_panel_boe_nt36525b.dtbo
+  DTC     arch/arm64/boot/dts/jlq/dsi_panel_boe_nt36525b_lv.dtbo
+  DTC     arch/arm64/boot/dts/jlq/dsi_panel_truly_ft8006saa.dtbo
+  DTC     arch/arm64/boot/dts/jlq/dsi_panel_truly_ft8006saa_lv.dtbo
+  DTC     arch/arm64/boot/dts/jlq/jr510_c3mn.dtbo
+../arch/arm64/boot/dts/jlq/dsi_panel_boe_nt36525b.dts:12.3-13: Warning (reg_format): /fragment@0/__overlay__/nt36525b:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/dsi_panel_boe_nt36525b.dts:121.3-13: Warning (reg_format): /fragment@1/__overlay__/nvt36525b@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+arch/arm64/boot/dts/jlq/dsi_panel_boe_nt36525b.dtbo: Warning (pci_device_bus_num): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/dsi_panel_boe_nt36525b.dtbo: Warning (i2c_bus_reg): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/dsi_panel_boe_nt36525b.dtbo: Warning (spi_bus_reg): Failed prerequisite 'reg_format'
+../arch/arm64/boot/dts/jlq/dsi_panel_boe_nt36525b.dts:10.27-116.4: Warning (avoid_default_addr_size): /fragment@0/__overlay__/nt36525b: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_boe_nt36525b.dts:10.27-116.4: Warning (avoid_default_addr_size): /fragment@0/__overlay__/nt36525b: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_boe_nt36525b.dts:120.14-976.4: Warning (avoid_default_addr_size): /fragment@1/__overlay__/nvt36525b@0: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_boe_nt36525b.dts:120.14-976.4: Warning (avoid_default_addr_size): /fragment@1/__overlay__/nvt36525b@0: Relying on default #size-cells value
+  DTC     arch/arm64/boot/dts/jlq/jr510_c3mnp0.dtbo
+../arch/arm64/boot/dts/jlq/dsi_panel_boe_nt36525b_lv.dts:12.3-13: Warning (reg_format): /fragment@0/__overlay__/nt36525b_lv:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/dsi_panel_boe_nt36525b_lv.dts:375.3-13: Warning (reg_format): /fragment@1/__overlay__/nvt36525b@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+arch/arm64/boot/dts/jlq/dsi_panel_boe_nt36525b_lv.dtbo: Warning (pci_device_bus_num): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/dsi_panel_boe_nt36525b_lv.dtbo: Warning (i2c_bus_reg): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/dsi_panel_boe_nt36525b_lv.dtbo: Warning (spi_bus_reg): Failed prerequisite 'reg_format'
+../arch/arm64/boot/dts/jlq/dsi_panel_boe_nt36525b_lv.dts:10.33-370.4: Warning (avoid_default_addr_size): /fragment@0/__overlay__/nt36525b_lv: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_boe_nt36525b_lv.dts:10.33-370.4: Warning (avoid_default_addr_size): /fragment@0/__overlay__/nt36525b_lv: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_boe_nt36525b_lv.dts:374.14-1231.4: Warning (avoid_default_addr_size): /fragment@1/__overlay__/nvt36525b@0: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_boe_nt36525b_lv.dts:374.14-1231.4: Warning (avoid_default_addr_size): /fragment@1/__overlay__/nvt36525b@0: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_truly_ft8006saa.dts:12.3-13: Warning (reg_format): /fragment@0/__overlay__/ft8006saa:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/dsi_panel_truly_ft8006saa.dts:109.3-15: Warning (reg_format): /fragment@1/__overlay__/focaltech@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+arch/arm64/boot/dts/jlq/dsi_panel_truly_ft8006saa.dtbo: Warning (pci_device_bus_num): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/dsi_panel_truly_ft8006saa.dtbo: Warning (i2c_bus_reg): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/dsi_panel_truly_ft8006saa.dtbo: Warning (spi_bus_reg): Failed prerequisite 'reg_format'
+../arch/arm64/boot/dts/jlq/dsi_panel_truly_ft8006saa.dts:10.29-102.4: Warning (avoid_default_addr_size): /fragment@0/__overlay__/ft8006saa: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_truly_ft8006saa.dts:10.29-102.4: Warning (avoid_default_addr_size): /fragment@0/__overlay__/ft8006saa: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_truly_ft8006saa.dts:107.14-120.4: Warning (avoid_default_addr_size): /fragment@1/__overlay__/focaltech@0: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_truly_ft8006saa.dts:107.14-120.4: Warning (avoid_default_addr_size): /fragment@1/__overlay__/focaltech@0: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_truly_ft8006saa_lv.dts:12.3-13: Warning (reg_format): /fragment@0/__overlay__/ft8006saa_lv:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/dsi_panel_truly_ft8006saa_lv.dts:147.3-15: Warning (reg_format): /fragment@1/__overlay__/focaltech@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+arch/arm64/boot/dts/jlq/dsi_panel_truly_ft8006saa_lv.dtbo: Warning (pci_device_bus_num): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/dsi_panel_truly_ft8006saa_lv.dtbo: Warning (i2c_bus_reg): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/dsi_panel_truly_ft8006saa_lv.dtbo: Warning (spi_bus_reg): Failed prerequisite 'reg_format'
+../arch/arm64/boot/dts/jlq/dsi_panel_truly_ft8006saa_lv.dts:10.35-140.4: Warning (avoid_default_addr_size): /fragment@0/__overlay__/ft8006saa_lv: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_truly_ft8006saa_lv.dts:10.35-140.4: Warning (avoid_default_addr_size): /fragment@0/__overlay__/ft8006saa_lv: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_truly_ft8006saa_lv.dts:145.14-159.4: Warning (avoid_default_addr_size): /fragment@1/__overlay__/focaltech@0: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_truly_ft8006saa_lv.dts:145.14-159.4: Warning (avoid_default_addr_size): /fragment@1/__overlay__/focaltech@0: Relying on default #size-cells value
+  DTC     arch/arm64/boot/dts/jlq/jr510_c3qp_india.dtbo
+  DTC     arch/arm64/boot/dts/jlq/jr510_c3qp_international.dtbo
+  DTC     arch/arm64/boot/dts/jlq/jr510_c3qp_redmi.dtbo
+  DTC     arch/arm64/boot/dts/jlq/jr510_c3qr.dtbo
+../arch/arm64/boot/dts/jlq/aw87xxx.dtsi:6.3-16: Warning (reg_format): /fragment@3/__overlay__/aw87xxx_pa@58:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/pm6125_adc_tz_c3mn.dtsi:27.3-16: Warning (reg_format): /fragment@5/__overlay__/gpio4_therm:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3mn.dts:22.2-74: Warning (reg_format): /fragment@12/__overlay__:reg: property has invalid length (32 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/dsi_panel_ft8006saa.dtsi:12.3-13: Warning (reg_format): /fragment@16/__overlay__/ft8006saa:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:7.3-16: Warning (reg_format): /fragment@21/__overlay__/wl2866d@28:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3mn.dts:80.3-13: Warning (reg_format): /fragment@22/__overlay__/nvt36525b@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3mn.dts:94.3-15: Warning (reg_format): /fragment@22/__overlay__/focaltech@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3mn.dts:113.3-13: Warning (reg_format): /fragment@23/__overlay__/fpc1020@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3mn.dts:161.3-16: Warning (reg_format): /fragment@25/__overlay__/sd7601ad@6b:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3mn.dts:187.3-16: Warning (reg_format): /fragment@26/__overlay__/SH366101@55:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3mn.dts:207.3-16: Warning (reg_format): /fragment@28/__overlay__/gpio3_400k:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+arch/arm64/boot/dts/jlq/jr510_c3mn.dtbo: Warning (pci_device_bus_num): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/jr510_c3mn.dtbo: Warning (i2c_bus_reg): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/jr510_c3mn.dtbo: Warning (spi_bus_reg): Failed prerequisite 'reg_format'
+../arch/arm64/boot/dts/jlq/aw87xxx.dtsi:4.16-10.4: Warning (avoid_default_addr_size): /fragment@3/__overlay__/aw87xxx_pa@58: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/aw87xxx.dtsi:4.16-10.4: Warning (avoid_default_addr_size): /fragment@3/__overlay__/aw87xxx_pa@58: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/pm6125_adc_tz_c3mn.dtsi:26.14-32.4: Warning (avoid_default_addr_size): /fragment@5/__overlay__/gpio4_therm: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/pm6125_adc_tz_c3mn.dtsi:26.14-32.4: Warning (avoid_default_addr_size): /fragment@5/__overlay__/gpio4_therm: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mn.dts:21.19-24.3: Warning (avoid_default_addr_size): /fragment@12/__overlay__: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mn.dts:21.19-24.3: Warning (avoid_default_addr_size): /fragment@12/__overlay__: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_ft8006saa.dtsi:10.29-79.4: Warning (avoid_default_addr_size): /fragment@16/__overlay__/ft8006saa: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_ft8006saa.dtsi:10.29-79.4: Warning (avoid_default_addr_size): /fragment@16/__overlay__/ft8006saa: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:3.13-52.4: Warning (avoid_default_addr_size): /fragment@21/__overlay__/wl2866d@28: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:3.13-52.4: Warning (avoid_default_addr_size): /fragment@21/__overlay__/wl2866d@28: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mn.dts:79.14-90.4: Warning (avoid_default_addr_size): /fragment@22/__overlay__/nvt36525b@0: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mn.dts:79.14-90.4: Warning (avoid_default_addr_size): /fragment@22/__overlay__/nvt36525b@0: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mn.dts:92.14-103.4: Warning (avoid_default_addr_size): /fragment@22/__overlay__/focaltech@0: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mn.dts:92.14-103.4: Warning (avoid_default_addr_size): /fragment@22/__overlay__/focaltech@0: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mn.dts:112.12-119.4: Warning (avoid_default_addr_size): /fragment@23/__overlay__/fpc1020@0: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mn.dts:112.12-119.4: Warning (avoid_default_addr_size): /fragment@23/__overlay__/fpc1020@0: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mn.dts:160.23-179.4: Warning (avoid_default_addr_size): /fragment@25/__overlay__/sd7601ad@6b: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mn.dts:160.23-179.4: Warning (avoid_default_addr_size): /fragment@25/__overlay__/sd7601ad@6b: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mn.dts:186.14-197.4: Warning (avoid_default_addr_size): /fragment@26/__overlay__/SH366101@55: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mn.dts:186.14-197.4: Warning (avoid_default_addr_size): /fragment@26/__overlay__/SH366101@55: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mn.dts:206.13-212.4: Warning (avoid_default_addr_size): /fragment@28/__overlay__/gpio3_400k: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mn.dts:206.13-212.4: Warning (avoid_default_addr_size): /fragment@28/__overlay__/gpio3_400k: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/sia8152.dtsi:96.3-16: Warning (reg_format): /fragment@5/__overlay__/sia81xx_i2c@58:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/pm6125_adc_tz_c3mn.dtsi:27.3-16: Warning (reg_format): /fragment@7/__overlay__/gpio4_therm:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3mnp0.dts:22.2-74: Warning (reg_format): /fragment@14/__overlay__:reg: property has invalid length (32 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/dsi_panel_nt36525b_p0.dtsi:4.3-13: Warning (reg_format): /fragment@16/__overlay__/nt36525b:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:7.3-16: Warning (reg_format): /fragment@21/__overlay__/wl2866d@28:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3mnp0.dts:80.3-13: Warning (reg_format): /fragment@22/__overlay__/nvt36525b@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3mnp0.dts:95.3-15: Warning (reg_format): /fragment@22/__overlay__/focaltech@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3mnp0.dts:115.3-13: Warning (reg_format): /fragment@23/__overlay__/fpc1020@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3mnp0.dts:163.3-16: Warning (reg_format): /fragment@25/__overlay__/sd7601ad@6b:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3mnp0.dts:189.3-16: Warning (reg_format): /fragment@26/__overlay__/SH366101@55:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3mnp0.dts:209.3-16: Warning (reg_format): /fragment@28/__overlay__/gpio3_400k:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+arch/arm64/boot/dts/jlq/jr510_c3mnp0.dtbo: Warning (pci_device_bus_num): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/jr510_c3mnp0.dtbo: Warning (i2c_bus_reg): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/jr510_c3mnp0.dtbo: Warning (spi_bus_reg): Failed prerequisite 'reg_format'
+../arch/arm64/boot/dts/jlq/sia8152.dtsi:94.32-98.4: Warning (avoid_default_addr_size): /fragment@5/__overlay__/sia81xx_i2c@58: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/sia8152.dtsi:94.32-98.4: Warning (avoid_default_addr_size): /fragment@5/__overlay__/sia81xx_i2c@58: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/pm6125_adc_tz_c3mn.dtsi:26.14-32.4: Warning (avoid_default_addr_size): /fragment@7/__overlay__/gpio4_therm: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/pm6125_adc_tz_c3mn.dtsi:26.14-32.4: Warning (avoid_default_addr_size): /fragment@7/__overlay__/gpio4_therm: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mnp0.dts:21.19-24.3: Warning (avoid_default_addr_size): /fragment@14/__overlay__: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mnp0.dts:21.19-24.3: Warning (avoid_default_addr_size): /fragment@14/__overlay__: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_nt36525b_p0.dtsi:2.27-81.4: Warning (avoid_default_addr_size): /fragment@16/__overlay__/nt36525b: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_nt36525b_p0.dtsi:2.27-81.4: Warning (avoid_default_addr_size): /fragment@16/__overlay__/nt36525b: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:3.13-52.4: Warning (avoid_default_addr_size): /fragment@21/__overlay__/wl2866d@28: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:3.13-52.4: Warning (avoid_default_addr_size): /fragment@21/__overlay__/wl2866d@28: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mnp0.dts:79.14-91.4: Warning (avoid_default_addr_size): /fragment@22/__overlay__/nvt36525b@0: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mnp0.dts:79.14-91.4: Warning (avoid_default_addr_size): /fragment@22/__overlay__/nvt36525b@0: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mnp0.dts:93.14-105.4: Warning (avoid_default_addr_size): /fragment@22/__overlay__/focaltech@0: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mnp0.dts:93.14-105.4: Warning (avoid_default_addr_size): /fragment@22/__overlay__/focaltech@0: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mnp0.dts:114.12-121.4: Warning (avoid_default_addr_size): /fragment@23/__overlay__/fpc1020@0: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mnp0.dts:114.12-121.4: Warning (avoid_default_addr_size): /fragment@23/__overlay__/fpc1020@0: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mnp0.dts:162.23-181.4: Warning (avoid_default_addr_size): /fragment@25/__overlay__/sd7601ad@6b: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mnp0.dts:162.23-181.4: Warning (avoid_default_addr_size): /fragment@25/__overlay__/sd7601ad@6b: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mnp0.dts:188.14-199.4: Warning (avoid_default_addr_size): /fragment@26/__overlay__/SH366101@55: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mnp0.dts:188.14-199.4: Warning (avoid_default_addr_size): /fragment@26/__overlay__/SH366101@55: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mnp0.dts:208.13-214.4: Warning (avoid_default_addr_size): /fragment@28/__overlay__/gpio3_400k: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3mnp0.dts:208.13-214.4: Warning (avoid_default_addr_size): /fragment@28/__overlay__/gpio3_400k: Relying on default #size-cells value
+  DTC     arch/arm64/boot/dts/jlq/jr510_evb01.dtbo
+../arch/arm64/boot/dts/jlq/sia8152.dtsi:96.3-16: Warning (reg_format): /fragment@3/__overlay__/sia81xx_i2c@58:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/pm6125_adc_tz_c3mn.dtsi:27.3-16: Warning (reg_format): /fragment@5/__overlay__/gpio4_therm:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:11.2-74: Warning (reg_format): /fragment@12/__overlay__:reg: property has invalid length (32 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:7.3-16: Warning (reg_format): /fragment@18/__overlay__/wl2866d@28:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:72.3-13: Warning (reg_format): /fragment@20/__overlay__/fpc1020@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:120.3-16: Warning (reg_format): /fragment@22/__overlay__/sd7601ad@6b:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:140.17-30: Warning (reg_format): /fragment@22/__overlay__/sgm4154xad@3b:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:166.3-16: Warning (reg_format): /fragment@23/__overlay__/SH366101@55:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:187.3-16: Warning (reg_format): /fragment@25/__overlay__/gpio3_400k:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+arch/arm64/boot/dts/jlq/jr510_c3qp_india.dtbo: Warning (pci_device_bus_num): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/jr510_c3qp_india.dtbo: Warning (i2c_bus_reg): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/jr510_c3qp_india.dtbo: Warning (spi_bus_reg): Failed prerequisite 'reg_format'
+../arch/arm64/boot/dts/jlq/sia8152.dtsi:94.32-98.4: Warning (avoid_default_addr_size): /fragment@3/__overlay__/sia81xx_i2c@58: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/sia8152.dtsi:94.32-98.4: Warning (avoid_default_addr_size): /fragment@3/__overlay__/sia81xx_i2c@58: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/pm6125_adc_tz_c3mn.dtsi:26.14-32.4: Warning (avoid_default_addr_size): /fragment@5/__overlay__/gpio4_therm: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/pm6125_adc_tz_c3mn.dtsi:26.14-32.4: Warning (avoid_default_addr_size): /fragment@5/__overlay__/gpio4_therm: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:10.19-13.3: Warning (avoid_default_addr_size): /fragment@12/__overlay__: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:10.19-13.3: Warning (avoid_default_addr_size): /fragment@12/__overlay__: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:3.13-52.4: Warning (avoid_default_addr_size): /fragment@18/__overlay__/wl2866d@28: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:3.13-52.4: Warning (avoid_default_addr_size): /fragment@18/__overlay__/wl2866d@28: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:71.12-78.4: Warning (avoid_default_addr_size): /fragment@20/__overlay__/fpc1020@0: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:71.12-78.4: Warning (avoid_default_addr_size): /fragment@20/__overlay__/fpc1020@0: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:119.23-138.4: Warning (avoid_default_addr_size): /fragment@22/__overlay__/sd7601ad@6b: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:119.23-138.4: Warning (avoid_default_addr_size): /fragment@22/__overlay__/sd7601ad@6b: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:139.34-158.11: Warning (avoid_default_addr_size): /fragment@22/__overlay__/sgm4154xad@3b: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:139.34-158.11: Warning (avoid_default_addr_size): /fragment@22/__overlay__/sgm4154xad@3b: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:165.14-176.4: Warning (avoid_default_addr_size): /fragment@23/__overlay__/SH366101@55: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:165.14-176.4: Warning (avoid_default_addr_size): /fragment@23/__overlay__/SH366101@55: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:186.13-192.4: Warning (avoid_default_addr_size): /fragment@25/__overlay__/gpio3_400k: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:186.13-192.4: Warning (avoid_default_addr_size): /fragment@25/__overlay__/gpio3_400k: Relying on default #size-cells value
+  DTC     arch/arm64/boot/dts/jlq/jr510_evb04.dtbo
+../arch/arm64/boot/dts/jlq/sia8152.dtsi:96.3-16: Warning (reg_format): /fragment@3/__overlay__/sia81xx_i2c@58:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/pm6125_adc_tz_c3mn.dtsi:27.3-16: Warning (reg_format): /fragment@5/__overlay__/gpio4_therm:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:11.2-74: Warning (reg_format): /fragment@12/__overlay__:reg: property has invalid length (32 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:7.3-16: Warning (reg_format): /fragment@18/__overlay__/wl2866d@28:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:72.3-13: Warning (reg_format): /fragment@20/__overlay__/fpc1020@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:120.3-16: Warning (reg_format): /fragment@22/__overlay__/sd7601ad@6b:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:140.17-30: Warning (reg_format): /fragment@22/__overlay__/sgm4154xad@3b:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:166.3-16: Warning (reg_format): /fragment@23/__overlay__/SH366101@55:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:187.3-16: Warning (reg_format): /fragment@25/__overlay__/gpio3_400k:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+arch/arm64/boot/dts/jlq/jr510_c3qp_redmi.dtbo: Warning (pci_device_bus_num): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/jr510_c3qp_redmi.dtbo: Warning (i2c_bus_reg): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/jr510_c3qp_redmi.dtbo: Warning (spi_bus_reg): Failed prerequisite 'reg_format'
+../arch/arm64/boot/dts/jlq/sia8152.dtsi:94.32-98.4: Warning (avoid_default_addr_size): /fragment@3/__overlay__/sia81xx_i2c@58: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/sia8152.dtsi:94.32-98.4: Warning (avoid_default_addr_size): /fragment@3/__overlay__/sia81xx_i2c@58: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/pm6125_adc_tz_c3mn.dtsi:26.14-32.4: Warning (avoid_default_addr_size): /fragment@5/__overlay__/gpio4_therm: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/pm6125_adc_tz_c3mn.dtsi:26.14-32.4: Warning (avoid_default_addr_size): /fragment@5/__overlay__/gpio4_therm: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:10.19-13.3: Warning (avoid_default_addr_size): /fragment@12/__overlay__: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:10.19-13.3: Warning (avoid_default_addr_size): /fragment@12/__overlay__: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:3.13-52.4: Warning (avoid_default_addr_size): /fragment@18/__overlay__/wl2866d@28: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:3.13-52.4: Warning (avoid_default_addr_size): /fragment@18/__overlay__/wl2866d@28: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:71.12-78.4: Warning (avoid_default_addr_size): /fragment@20/__overlay__/fpc1020@0: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:71.12-78.4: Warning (avoid_default_addr_size): /fragment@20/__overlay__/fpc1020@0: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:119.23-138.4: Warning (avoid_default_addr_size): /fragment@22/__overlay__/sd7601ad@6b: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:119.23-138.4: Warning (avoid_default_addr_size): /fragment@22/__overlay__/sd7601ad@6b: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:139.34-158.11: Warning (avoid_default_addr_size): /fragment@22/__overlay__/sgm4154xad@3b: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:139.34-158.11: Warning (avoid_default_addr_size): /fragment@22/__overlay__/sgm4154xad@3b: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:165.14-176.4: Warning (avoid_default_addr_size): /fragment@23/__overlay__/SH366101@55: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:165.14-176.4: Warning (avoid_default_addr_size): /fragment@23/__overlay__/SH366101@55: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:186.13-192.4: Warning (avoid_default_addr_size): /fragment@25/__overlay__/gpio3_400k: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:186.13-192.4: Warning (avoid_default_addr_size): /fragment@25/__overlay__/gpio3_400k: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/sia8152.dtsi:96.3-16: Warning (reg_format): /fragment@3/__overlay__/sia81xx_i2c@58:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/pm6125_adc_tz_c3mn.dtsi:27.3-16: Warning (reg_format): /fragment@5/__overlay__/gpio4_therm:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:11.2-74: Warning (reg_format): /fragment@12/__overlay__:reg: property has invalid length (32 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:7.3-16: Warning (reg_format): /fragment@18/__overlay__/wl2866d@28:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:72.3-13: Warning (reg_format): /fragment@20/__overlay__/fpc1020@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:120.3-16: Warning (reg_format): /fragment@22/__overlay__/sd7601ad@6b:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:140.17-30: Warning (reg_format): /fragment@22/__overlay__/sgm4154xad@3b:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:166.3-16: Warning (reg_format): /fragment@23/__overlay__/SH366101@55:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:187.3-16: Warning (reg_format): /fragment@25/__overlay__/gpio3_400k:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3qp_international.dts:23.3-13: Warning (reg_format): /fragment@34/__overlay__/goodix_fp@0x00:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+arch/arm64/boot/dts/jlq/jr510_c3qp_international.dtbo: Warning (pci_device_bus_num): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/jr510_c3qp_international.dtbo: Warning (i2c_bus_reg): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/jr510_c3qp_international.dtbo: Warning (spi_bus_reg): Failed prerequisite 'reg_format'
+../arch/arm64/boot/dts/jlq/sia8152.dtsi:94.32-98.4: Warning (avoid_default_addr_size): /fragment@3/__overlay__/sia81xx_i2c@58: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/sia8152.dtsi:94.32-98.4: Warning (avoid_default_addr_size): /fragment@3/__overlay__/sia81xx_i2c@58: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/pm6125_adc_tz_c3mn.dtsi:26.14-32.4: Warning (avoid_default_addr_size): /fragment@5/__overlay__/gpio4_therm: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/pm6125_adc_tz_c3mn.dtsi:26.14-32.4: Warning (avoid_default_addr_size): /fragment@5/__overlay__/gpio4_therm: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:10.19-13.3: Warning (avoid_default_addr_size): /fragment@12/__overlay__: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:10.19-13.3: Warning (avoid_default_addr_size): /fragment@12/__overlay__: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:3.13-52.4: Warning (avoid_default_addr_size): /fragment@18/__overlay__/wl2866d@28: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:3.13-52.4: Warning (avoid_default_addr_size): /fragment@18/__overlay__/wl2866d@28: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:71.12-78.4: Warning (avoid_default_addr_size): /fragment@20/__overlay__/fpc1020@0: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:71.12-78.4: Warning (avoid_default_addr_size): /fragment@20/__overlay__/fpc1020@0: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:119.23-138.4: Warning (avoid_default_addr_size): /fragment@22/__overlay__/sd7601ad@6b: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:119.23-138.4: Warning (avoid_default_addr_size): /fragment@22/__overlay__/sd7601ad@6b: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:139.34-158.11: Warning (avoid_default_addr_size): /fragment@22/__overlay__/sgm4154xad@3b: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:139.34-158.11: Warning (avoid_default_addr_size): /fragment@22/__overlay__/sgm4154xad@3b: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:165.14-176.4: Warning (avoid_default_addr_size): /fragment@23/__overlay__/SH366101@55: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:165.14-176.4: Warning (avoid_default_addr_size): /fragment@23/__overlay__/SH366101@55: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:186.13-192.4: Warning (avoid_default_addr_size): /fragment@25/__overlay__/gpio3_400k: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:186.13-192.4: Warning (avoid_default_addr_size): /fragment@25/__overlay__/gpio3_400k: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_international.dts:20.28-33.4: Warning (avoid_default_addr_size): /fragment@34/__overlay__/goodix_fp@0x00: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_international.dts:20.28-33.4: Warning (avoid_default_addr_size): /fragment@34/__overlay__/goodix_fp@0x00: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/sia8152.dtsi:96.3-16: Warning (reg_format): /fragment@3/__overlay__/sia81xx_i2c@58:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/pm6125_adc_tz_c3mn.dtsi:27.3-16: Warning (reg_format): /fragment@5/__overlay__/gpio4_therm:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:11.2-74: Warning (reg_format): /fragment@12/__overlay__:reg: property has invalid length (32 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:7.3-16: Warning (reg_format): /fragment@18/__overlay__/wl2866d@28:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:72.3-13: Warning (reg_format): /fragment@20/__overlay__/fpc1020@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:120.3-16: Warning (reg_format): /fragment@22/__overlay__/sd7601ad@6b:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:140.17-30: Warning (reg_format): /fragment@22/__overlay__/sgm4154xad@3b:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:166.3-16: Warning (reg_format): /fragment@23/__overlay__/SH366101@55:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:187.3-16: Warning (reg_format): /fragment@25/__overlay__/gpio3_400k:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+arch/arm64/boot/dts/jlq/jr510_c3qr.dtbo: Warning (pci_device_bus_num): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/jr510_c3qr.dtbo: Warning (i2c_bus_reg): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/jr510_c3qr.dtbo: Warning (spi_bus_reg): Failed prerequisite 'reg_format'
+../arch/arm64/boot/dts/jlq/sia8152.dtsi:94.32-98.4: Warning (avoid_default_addr_size): /fragment@3/__overlay__/sia81xx_i2c@58: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/sia8152.dtsi:94.32-98.4: Warning (avoid_default_addr_size): /fragment@3/__overlay__/sia81xx_i2c@58: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/pm6125_adc_tz_c3mn.dtsi:26.14-32.4: Warning (avoid_default_addr_size): /fragment@5/__overlay__/gpio4_therm: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/pm6125_adc_tz_c3mn.dtsi:26.14-32.4: Warning (avoid_default_addr_size): /fragment@5/__overlay__/gpio4_therm: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:10.19-13.3: Warning (avoid_default_addr_size): /fragment@12/__overlay__: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:10.19-13.3: Warning (avoid_default_addr_size): /fragment@12/__overlay__: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:3.13-52.4: Warning (avoid_default_addr_size): /fragment@18/__overlay__/wl2866d@28: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:3.13-52.4: Warning (avoid_default_addr_size): /fragment@18/__overlay__/wl2866d@28: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:71.12-78.4: Warning (avoid_default_addr_size): /fragment@20/__overlay__/fpc1020@0: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:71.12-78.4: Warning (avoid_default_addr_size): /fragment@20/__overlay__/fpc1020@0: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:119.23-138.4: Warning (avoid_default_addr_size): /fragment@22/__overlay__/sd7601ad@6b: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:119.23-138.4: Warning (avoid_default_addr_size): /fragment@22/__overlay__/sd7601ad@6b: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:139.34-158.11: Warning (avoid_default_addr_size): /fragment@22/__overlay__/sgm4154xad@3b: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:139.34-158.11: Warning (avoid_default_addr_size): /fragment@22/__overlay__/sgm4154xad@3b: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:165.14-176.4: Warning (avoid_default_addr_size): /fragment@23/__overlay__/SH366101@55: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:165.14-176.4: Warning (avoid_default_addr_size): /fragment@23/__overlay__/SH366101@55: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:186.13-192.4: Warning (avoid_default_addr_size): /fragment@25/__overlay__/gpio3_400k: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_c3qp_common.dtsi:186.13-192.4: Warning (avoid_default_addr_size): /fragment@25/__overlay__/gpio3_400k: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:8.3-19: Warning (reg_format): /fragment@0/__overlay__/qcom,pmi632@2:reg: property has invalid length (8 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:404.3-19: Warning (reg_format): /fragment@0/__overlay__/qcom,pmi632@3:reg: property has invalid length (8 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/aw87xxx.dtsi:6.3-16: Warning (reg_format): /fragment@5/__overlay__/aw87xxx_pa@58:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/pm8008.dtsi:6.3-15: Warning (reg_format): /fragment@6/__overlay__/qcom,pm8008@8:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/pm8008.dtsi:57.3-15: Warning (reg_format): /fragment@6/__overlay__/qcom,pm8008@9:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_evb01.dts:22.2-74: Warning (reg_format): /fragment@12/__overlay__:reg: property has invalid length (32 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/dsi_panel_rm67200.dtsi:4.3-13: Warning (reg_format): /fragment@16/__overlay__/rm67200:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_evb01.dts:58.3-16: Warning (reg_format): /fragment@17/__overlay__/gsl1691@40:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+arch/arm64/boot/dts/jlq/jr510_evb01.dtbo: Warning (pci_device_bus_num): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/jr510_evb01.dtbo: Warning (i2c_bus_reg): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/jr510_evb01.dtbo: Warning (spi_bus_reg): Failed prerequisite 'reg_format'
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:6.16-400.4: Warning (avoid_default_addr_size): /fragment@0/__overlay__/qcom,pmi632@2: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:6.16-400.4: Warning (avoid_default_addr_size): /fragment@0/__overlay__/qcom,pmi632@2: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:402.26-602.4: Warning (avoid_default_addr_size): /fragment@0/__overlay__/qcom,pmi632@3: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:402.26-602.4: Warning (avoid_default_addr_size): /fragment@0/__overlay__/qcom,pmi632@3: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/aw87xxx.dtsi:4.16-10.4: Warning (avoid_default_addr_size): /fragment@5/__overlay__/aw87xxx_pa@58: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/aw87xxx.dtsi:4.16-10.4: Warning (avoid_default_addr_size): /fragment@5/__overlay__/aw87xxx_pa@58: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/pm8008.dtsi:4.26-53.4: Warning (avoid_default_addr_size): /fragment@6/__overlay__/qcom,pm8008@8: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/pm8008.dtsi:4.26-53.4: Warning (avoid_default_addr_size): /fragment@6/__overlay__/qcom,pm8008@8: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/pm8008.dtsi:55.26-134.4: Warning (avoid_default_addr_size): /fragment@6/__overlay__/qcom,pm8008@9: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/pm8008.dtsi:55.26-134.4: Warning (avoid_default_addr_size): /fragment@6/__overlay__/qcom,pm8008@9: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb01.dts:21.19-24.3: Warning (avoid_default_addr_size): /fragment@12/__overlay__: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb01.dts:21.19-24.3: Warning (avoid_default_addr_size): /fragment@12/__overlay__: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_rm67200.dtsi:2.25-368.4: Warning (avoid_default_addr_size): /fragment@16/__overlay__/rm67200: Relying on default #address-cells value
+  also defined at ../arch/arm64/boot/dts/jlq/jr510_evb01.dts:48.16-53.3
+../arch/arm64/boot/dts/jlq/dsi_panel_rm67200.dtsi:2.25-368.4: Warning (avoid_default_addr_size): /fragment@16/__overlay__/rm67200: Relying on default #size-cells value
+  also defined at ../arch/arm64/boot/dts/jlq/jr510_evb01.dts:48.16-53.3
+../arch/arm64/boot/dts/jlq/jr510_evb01.dts:56.13-66.4: Warning (avoid_default_addr_size): /fragment@17/__overlay__/gsl1691@40: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb01.dts:56.13-66.4: Warning (avoid_default_addr_size): /fragment@17/__overlay__/gsl1691@40: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:27.26-139.5: Warning (interrupts_property): /fragment@0/__overlay__/qcom,pmi632@2/vadc@3100: Missing interrupt-parent
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:141.30-149.5: Warning (interrupts_property): /fragment@0/__overlay__/qcom,pmi632@2/adc_tm@3500: Missing interrupt-parent
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:151.35-157.5: Warning (interrupts_property): /fragment@0/__overlay__/qcom,pmi632@2/qcom,temp-alarm@2400: Missing interrupt-parent
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:159.30-176.5: Warning (interrupts_property): /fragment@0/__overlay__/qcom,pmi632@2/pinctrl@c000: Missing interrupt-parent
+  also defined at ../arch/arm64/boot/dts/jlq/jr510_evb01.dts:34.15-40.3
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:194.19-214.6: Warning (interrupts_property): /fragment@0/__overlay__/qcom,pmi632@2/qcom,qpnp-smb5/qcom,chgr@1000: Missing interrupt-parent
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:216.19-236.6: Warning (interrupts_property): /fragment@0/__overlay__/qcom,pmi632@2/qcom,qpnp-smb5/qcom,dcdc@1100: Missing interrupt-parent
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:238.20-258.6: Warning (interrupts_property): /fragment@0/__overlay__/qcom,pmi632@2/qcom,qpnp-smb5/qcom,batif@1200: Missing interrupt-parent
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:260.18-280.6: Warning (interrupts_property): /fragment@0/__overlay__/qcom,pmi632@2/qcom,qpnp-smb5/qcom,usb@1300: Missing interrupt-parent
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:282.20-302.6: Warning (interrupts_property): /fragment@0/__overlay__/qcom,pmi632@2/qcom,qpnp-smb5/qcom,typec@1500: Missing interrupt-parent
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:304.19-324.6: Warning (interrupts_property): /fragment@0/__overlay__/qcom,pmi632@2/qcom,qpnp-smb5/qcom,misc@1600: Missing interrupt-parent
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:326.26-338.6: Warning (interrupts_property): /fragment@0/__overlay__/qcom,pmi632@2/qcom,qpnp-smb5/qcom,schgm-flash@a600: Missing interrupt-parent
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:351.21-365.6: Warning (interrupts_property): /fragment@0/__overlay__/qcom,pmi632@2/qpnp,qg/qcom,qgauge@4800: Missing interrupt-parent
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:383.24-394.5: Warning (interrupts_property): /fragment@0/__overlay__/qcom,pmi632@2/bcl@3d00: Missing interrupt-parent
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:484.31-515.5: Warning (interrupts_property): /fragment@0/__overlay__/qcom,pmi632@3/qpnp-lcdb@ec00: Missing interrupt-parent
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:517.29-600.5: Warning (interrupts_property): /fragment@0/__overlay__/qcom,pmi632@3/qcom,leds@d300: Missing interrupt-parent
+  DTC     arch/arm64/boot/dts/jlq/jr510_evb05.dtbo
+  DTC     arch/arm64/boot/dts/jlq/jr510_evb05_power.dtbo
+../arch/arm64/boot/dts/jlq/aw87xxx.dtsi:6.3-16: Warning (reg_format): /fragment@3/__overlay__/aw87xxx_pa@58:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:8.3-19: Warning (reg_format): /fragment@4/__overlay__/qcom,pmi632@2:reg: property has invalid length (8 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:404.3-19: Warning (reg_format): /fragment@4/__overlay__/qcom,pmi632@3:reg: property has invalid length (8 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/pm8008.dtsi:6.3-15: Warning (reg_format): /fragment@8/__overlay__/qcom,pm8008@8:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/pm8008.dtsi:57.3-15: Warning (reg_format): /fragment@8/__overlay__/qcom,pm8008@9:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_evb04.dts:23.2-74: Warning (reg_format): /fragment@14/__overlay__:reg: property has invalid length (32 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/dsi_panel_nt36525b.dtsi:4.3-13: Warning (reg_format): /fragment@18/__overlay__/nt36525b:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_evb04.dts:45.3-16: Warning (reg_format): /fragment@19/__overlay__/gsl1691@40:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_evb04.dts:120.3-13: Warning (reg_format): /fragment@27/__overlay__/nvt36525b@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+arch/arm64/boot/dts/jlq/jr510_evb04.dtbo: Warning (pci_device_bus_num): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/jr510_evb04.dtbo: Warning (i2c_bus_reg): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/jr510_evb04.dtbo: Warning (spi_bus_reg): Failed prerequisite 'reg_format'
+../arch/arm64/boot/dts/jlq/aw87xxx.dtsi:4.16-10.4: Warning (avoid_default_addr_size): /fragment@3/__overlay__/aw87xxx_pa@58: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/aw87xxx.dtsi:4.16-10.4: Warning (avoid_default_addr_size): /fragment@3/__overlay__/aw87xxx_pa@58: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:6.16-400.4: Warning (avoid_default_addr_size): /fragment@4/__overlay__/qcom,pmi632@2: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:6.16-400.4: Warning (avoid_default_addr_size): /fragment@4/__overlay__/qcom,pmi632@2: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:402.26-602.4: Warning (avoid_default_addr_size): /fragment@4/__overlay__/qcom,pmi632@3: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:402.26-602.4: Warning (avoid_default_addr_size): /fragment@4/__overlay__/qcom,pmi632@3: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/pm8008.dtsi:4.26-53.4: Warning (avoid_default_addr_size): /fragment@8/__overlay__/qcom,pm8008@8: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/pm8008.dtsi:4.26-53.4: Warning (avoid_default_addr_size): /fragment@8/__overlay__/qcom,pm8008@8: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/pm8008.dtsi:55.26-134.4: Warning (avoid_default_addr_size): /fragment@8/__overlay__/qcom,pm8008@9: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/pm8008.dtsi:55.26-134.4: Warning (avoid_default_addr_size): /fragment@8/__overlay__/qcom,pm8008@9: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb04.dts:22.19-25.3: Warning (avoid_default_addr_size): /fragment@14/__overlay__: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb04.dts:22.19-25.3: Warning (avoid_default_addr_size): /fragment@14/__overlay__: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_nt36525b.dtsi:2.27-86.4: Warning (avoid_default_addr_size): /fragment@18/__overlay__/nt36525b: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_nt36525b.dtsi:2.27-86.4: Warning (avoid_default_addr_size): /fragment@18/__overlay__/nt36525b: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb04.dts:42.13-53.4: Warning (avoid_default_addr_size): /fragment@19/__overlay__/gsl1691@40: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb04.dts:42.13-53.4: Warning (avoid_default_addr_size): /fragment@19/__overlay__/gsl1691@40: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb04.dts:119.14-131.4: Warning (avoid_default_addr_size): /fragment@27/__overlay__/nvt36525b@0: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb04.dts:119.14-131.4: Warning (avoid_default_addr_size): /fragment@27/__overlay__/nvt36525b@0: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:27.26-139.5: Warning (interrupts_property): /fragment@4/__overlay__/qcom,pmi632@2/vadc@3100: Missing interrupt-parent
+  also defined at ../arch/arm64/boot/dts/jlq/jr510_evb_pmi632_cfg.dtsi:144.14-196.3
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:141.30-149.5: Warning (interrupts_property): /fragment@4/__overlay__/qcom,pmi632@2/adc_tm@3500: Missing interrupt-parent
+  also defined at ../arch/arm64/boot/dts/jlq/jr510_evb_pmi632_cfg.dtsi:198.16-209.3
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:151.35-157.5: Warning (interrupts_property): /fragment@4/__overlay__/qcom,pmi632@2/qcom,temp-alarm@2400: Missing interrupt-parent
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:159.30-176.5: Warning (interrupts_property): /fragment@4/__overlay__/qcom,pmi632@2/pinctrl@c000: Missing interrupt-parent
+  also defined at ../arch/arm64/boot/dts/jlq/jr510_evb_pmi632_cfg.dtsi:111.15-142.3
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:194.19-214.6: Warning (interrupts_property): /fragment@4/__overlay__/qcom,pmi632@2/qcom,qpnp-smb5/qcom,chgr@1000: Missing interrupt-parent
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:216.19-236.6: Warning (interrupts_property): /fragment@4/__overlay__/qcom,pmi632@2/qcom,qpnp-smb5/qcom,dcdc@1100: Missing interrupt-parent
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:238.20-258.6: Warning (interrupts_property): /fragment@4/__overlay__/qcom,pmi632@2/qcom,qpnp-smb5/qcom,batif@1200: Missing interrupt-parent
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:260.18-280.6: Warning (interrupts_property): /fragment@4/__overlay__/qcom,pmi632@2/qcom,qpnp-smb5/qcom,usb@1300: Missing interrupt-parent
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:282.20-302.6: Warning (interrupts_property): /fragment@4/__overlay__/qcom,pmi632@2/qcom,qpnp-smb5/qcom,typec@1500: Missing interrupt-parent
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:304.19-324.6: Warning (interrupts_property): /fragment@4/__overlay__/qcom,pmi632@2/qcom,qpnp-smb5/qcom,misc@1600: Missing interrupt-parent
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:326.26-338.6: Warning (interrupts_property): /fragment@4/__overlay__/qcom,pmi632@2/qcom,qpnp-smb5/qcom,schgm-flash@a600: Missing interrupt-parent
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:351.21-365.6: Warning (interrupts_property): /fragment@4/__overlay__/qcom,pmi632@2/qpnp,qg/qcom,qgauge@4800: Missing interrupt-parent
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:383.24-394.5: Warning (interrupts_property): /fragment@4/__overlay__/qcom,pmi632@2/bcl@3d00: Missing interrupt-parent
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:484.31-515.5: Warning (interrupts_property): /fragment@4/__overlay__/qcom,pmi632@3/qpnp-lcdb@ec00: Missing interrupt-parent
+../arch/arm64/boot/dts/jlq/pmi632.dtsi:517.29-600.5: Warning (interrupts_property): /fragment@4/__overlay__/qcom,pmi632@3/qcom,leds@d300: Missing interrupt-parent
+  DTC     arch/arm64/boot/dts/jlq/jr510_evb06.dtbo
+  DTC     arch/arm64/boot/dts/jlq/jr510_svc01.dtbo
+  DTC     arch/arm64/boot/dts/jlq/jr510_svc02.dtbo
+../arch/arm64/boot/dts/jlq/jr510_evb05_power.dts:17.2-74: Warning (reg_format): /fragment@3/__overlay__:reg: property has invalid length (32 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/dsi_panel_nt36525b_evb05.dtsi:4.3-13: Warning (reg_format): /fragment@6/__overlay__/nt36525b:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:7.3-16: Warning (reg_format): /fragment@11/__overlay__/wl2866d@28:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_evb05_power.dts:164.3-16: Warning (reg_format): /fragment@15/__overlay__/sd7601ad@6b:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_evb05_power.dts:186.3-16: Warning (reg_format): /fragment@15/__overlay__/pericom_type_c@1d:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_evb05_power.dts:195.3-16: Warning (reg_format): /fragment@15/__overlay__/aw87xxx_pa@58:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_evb05_power.dts:209.3-16: Warning (reg_format): /fragment@16/__overlay__/SH366101@55:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_evb05_power.dts:232.3-13: Warning (reg_format): /fragment@18/__overlay__/nvt36525b@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+arch/arm64/boot/dts/jlq/jr510_evb05_power.dtbo: Warning (pci_device_bus_num): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/jr510_evb05_power.dtbo: Warning (i2c_bus_reg): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/jr510_evb05_power.dtbo: Warning (spi_bus_reg): Failed prerequisite 'reg_format'
+../arch/arm64/boot/dts/jlq/jr510_evb05_power.dts:16.19-19.3: Warning (avoid_default_addr_size): /fragment@3/__overlay__: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb05_power.dts:16.19-19.3: Warning (avoid_default_addr_size): /fragment@3/__overlay__: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_nt36525b_evb05.dtsi:2.27-80.4: Warning (avoid_default_addr_size): /fragment@6/__overlay__/nt36525b: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_nt36525b_evb05.dtsi:2.27-80.4: Warning (avoid_default_addr_size): /fragment@6/__overlay__/nt36525b: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:3.13-52.4: Warning (avoid_default_addr_size): /fragment@11/__overlay__/wl2866d@28: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:3.13-52.4: Warning (avoid_default_addr_size): /fragment@11/__overlay__/wl2866d@28: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb05_power.dts:163.23-182.4: Warning (avoid_default_addr_size): /fragment@15/__overlay__/sd7601ad@6b: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb05_power.dts:163.23-182.4: Warning (avoid_default_addr_size): /fragment@15/__overlay__/sd7601ad@6b: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb05_power.dts:184.36-190.4: Warning (avoid_default_addr_size): /fragment@15/__overlay__/pericom_type_c@1d: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb05_power.dts:184.36-190.4: Warning (avoid_default_addr_size): /fragment@15/__overlay__/pericom_type_c@1d: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb05_power.dts:193.16-200.4: Warning (avoid_default_addr_size): /fragment@15/__overlay__/aw87xxx_pa@58: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb05_power.dts:193.16-200.4: Warning (avoid_default_addr_size): /fragment@15/__overlay__/aw87xxx_pa@58: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb05_power.dts:208.14-217.4: Warning (avoid_default_addr_size): /fragment@16/__overlay__/SH366101@55: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb05_power.dts:208.14-217.4: Warning (avoid_default_addr_size): /fragment@16/__overlay__/SH366101@55: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb05_power.dts:231.14-243.4: Warning (avoid_default_addr_size): /fragment@18/__overlay__/nvt36525b@0: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb05_power.dts:231.14-243.4: Warning (avoid_default_addr_size): /fragment@18/__overlay__/nvt36525b@0: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb06.dts:219:49: warning: extra tokens at end of ‘#include’ directive
+  219 |                 #include "sh366101_fg_data.dtsi";
+      |                                                 ^
+  DTC     arch/arm64/boot/dts/jlq/jr510_svc03.dtbo
+  DTC     arch/arm64/boot/dts/jlq/jr510_svc04.dtbo
+  CC      kernel/bounds.s
+../arch/arm64/boot/dts/jlq/aw87xxx.dtsi:6.3-16: Warning (reg_format): /fragment@3/__overlay__/aw87xxx_pa@58:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_evb05.dts:21.2-74: Warning (reg_format): /fragment@9/__overlay__:reg: property has invalid length (32 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/dsi_panel_nt36525b_evb05.dtsi:4.3-13: Warning (reg_format): /fragment@12/__overlay__/nt36525b:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:7.3-16: Warning (reg_format): /fragment@17/__overlay__/wl2866d@28:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_evb05.dts:171.3-16: Warning (reg_format): /fragment@21/__overlay__/sd7601ad@6b:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_evb05.dts:193.3-16: Warning (reg_format): /fragment@21/__overlay__/pericom_type_c@1d:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_evb05.dts:205.3-16: Warning (reg_format): /fragment@22/__overlay__/SH366101@55:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_evb05.dts:231.3-13: Warning (reg_format): /fragment@24/__overlay__/nvt36525b@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+arch/arm64/boot/dts/jlq/jr510_evb05.dtbo: Warning (pci_device_bus_num): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/jr510_evb05.dtbo: Warning (i2c_bus_reg): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/jr510_evb05.dtbo: Warning (spi_bus_reg): Failed prerequisite 'reg_format'
+../arch/arm64/boot/dts/jlq/aw87xxx.dtsi:4.16-10.4: Warning (avoid_default_addr_size): /fragment@3/__overlay__/aw87xxx_pa@58: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/aw87xxx.dtsi:4.16-10.4: Warning (avoid_default_addr_size): /fragment@3/__overlay__/aw87xxx_pa@58: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb05.dts:20.19-23.3: Warning (avoid_default_addr_size): /fragment@9/__overlay__: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb05.dts:20.19-23.3: Warning (avoid_default_addr_size): /fragment@9/__overlay__: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_nt36525b_evb05.dtsi:2.27-80.4: Warning (avoid_default_addr_size): /fragment@12/__overlay__/nt36525b: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_nt36525b_evb05.dtsi:2.27-80.4: Warning (avoid_default_addr_size): /fragment@12/__overlay__/nt36525b: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:3.13-52.4: Warning (avoid_default_addr_size): /fragment@17/__overlay__/wl2866d@28: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:3.13-52.4: Warning (avoid_default_addr_size): /fragment@17/__overlay__/wl2866d@28: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb05.dts:170.23-189.4: Warning (avoid_default_addr_size): /fragment@21/__overlay__/sd7601ad@6b: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb05.dts:170.23-189.4: Warning (avoid_default_addr_size): /fragment@21/__overlay__/sd7601ad@6b: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb05.dts:191.36-197.4: Warning (avoid_default_addr_size): /fragment@21/__overlay__/pericom_type_c@1d: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb05.dts:191.36-197.4: Warning (avoid_default_addr_size): /fragment@21/__overlay__/pericom_type_c@1d: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb05.dts:204.14-216.4: Warning (avoid_default_addr_size): /fragment@22/__overlay__/SH366101@55: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb05.dts:204.14-216.4: Warning (avoid_default_addr_size): /fragment@22/__overlay__/SH366101@55: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb05.dts:230.14-242.4: Warning (avoid_default_addr_size): /fragment@24/__overlay__/nvt36525b@0: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb05.dts:230.14-242.4: Warning (avoid_default_addr_size): /fragment@24/__overlay__/nvt36525b@0: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/aw87xxx.dtsi:6.3-16: Warning (reg_format): /fragment@3/__overlay__/aw87xxx_pa@58:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_evb06.dts:21.2-74: Warning (reg_format): /fragment@9/__overlay__:reg: property has invalid length (32 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/dsi_panel_nt36525b_evb05.dtsi:4.3-13: Warning (reg_format): /fragment@12/__overlay__/nt36525b:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:7.3-16: Warning (reg_format): /fragment@17/__overlay__/wl2866d@28:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_evb06.dts:175.3-16: Warning (reg_format): /fragment@21/__overlay__/sd7601ad@6b:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_evb06.dts:197.3-16: Warning (reg_format): /fragment@21/__overlay__/pericom_type_c@1d:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_evb06.dts:209.3-16: Warning (reg_format): /fragment@22/__overlay__/SH366101@55:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+../arch/arm64/boot/dts/jlq/jr510_evb06.dts:235.3-13: Warning (reg_format): /fragment@24/__overlay__/nvt36525b@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+arch/arm64/boot/dts/jlq/jr510_evb06.dtbo: Warning (pci_device_bus_num): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/jr510_evb06.dtbo: Warning (i2c_bus_reg): Failed prerequisite 'reg_format'
+arch/arm64/boot/dts/jlq/jr510_evb06.dtbo: Warning (spi_bus_reg): Failed prerequisite 'reg_format'
+../arch/arm64/boot/dts/jlq/aw87xxx.dtsi:4.16-10.4: Warning (avoid_default_addr_size): /fragment@3/__overlay__/aw87xxx_pa@58: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/aw87xxx.dtsi:4.16-10.4: Warning (avoid_default_addr_size): /fragment@3/__overlay__/aw87xxx_pa@58: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb06.dts:20.19-23.3: Warning (avoid_default_addr_size): /fragment@9/__overlay__: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb06.dts:20.19-23.3: Warning (avoid_default_addr_size): /fragment@9/__overlay__: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_nt36525b_evb05.dtsi:2.27-80.4: Warning (avoid_default_addr_size): /fragment@12/__overlay__/nt36525b: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/dsi_panel_nt36525b_evb05.dtsi:2.27-80.4: Warning (avoid_default_addr_size): /fragment@12/__overlay__/nt36525b: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:3.13-52.4: Warning (avoid_default_addr_size): /fragment@17/__overlay__/wl2866d@28: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/wl2866d-regulator.dtsi:3.13-52.4: Warning (avoid_default_addr_size): /fragment@17/__overlay__/wl2866d@28: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb06.dts:174.23-193.4: Warning (avoid_default_addr_size): /fragment@21/__overlay__/sd7601ad@6b: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb06.dts:174.23-193.4: Warning (avoid_default_addr_size): /fragment@21/__overlay__/sd7601ad@6b: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb06.dts:195.36-201.4: Warning (avoid_default_addr_size): /fragment@21/__overlay__/pericom_type_c@1d: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb06.dts:195.36-201.4: Warning (avoid_default_addr_size): /fragment@21/__overlay__/pericom_type_c@1d: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb06.dts:208.14-220.4: Warning (avoid_default_addr_size): /fragment@22/__overlay__/SH366101@55: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb06.dts:208.14-220.4: Warning (avoid_default_addr_size): /fragment@22/__overlay__/SH366101@55: Relying on default #size-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb06.dts:234.14-246.4: Warning (avoid_default_addr_size): /fragment@24/__overlay__/nvt36525b@0: Relying on default #address-cells value
+../arch/arm64/boot/dts/jlq/jr510_evb06.dts:234.14-246.4: Warning (avoid_default_addr_size): /fragment@24/__overlay__/nvt36525b@0: Relying on default #size-cells value
+  CALL    ../scripts/atomic/check-atomics.sh
+  CC      arch/arm64/kernel/asm-offsets.s
+  CALL    ../scripts/checksyscalls.sh
+  CC      init/main.o
+  CHK     include/generated/compile.h
+  CC      arch/arm64/net/bpf_jit_comp.o
+  CC      arch/arm64/crypto/sha2-ce-glue.o
+  CC      arch/arm64/mm/dma-mapping.o
+  CC      arch/arm64/mm/extable.o
+  CC      arch/arm64/kernel/debug-monitors.o
+  CC      kernel/fork.o
+  CC      kernel/exec_domain.o
+  CC      arch/arm64/mm/fault.o
+  CC      arch/arm64/crypto/aes-ce-glue.o
+  CC      arch/arm64/kernel/irq.o
+  HDRTEST usr/include/linux/bpf.h
+  CC      arch/arm64/crypto/aes-glue-ce.o
+  CC      init/do_mounts.o
+  AR      arch/arm64/net/built-in.a
+  CC      kernel/panic.o
+  CC      arch/arm64/mm/init.o
+  CC      arch/arm64/kernel/fpsimd.o
+  CC      certs/system_keyring.o
+  CC      init/do_mounts_rd.o
+  CC      arch/arm64/crypto/sha256-glue.o
+  CC      kernel/cpu.o
+  AR      certs/built-in.a
+  CC      arch/arm64/mm/copypage.o
+  CC      kernel/exit.o
+  CC      mm/filemap.o
+  CC      arch/arm64/kernel/process.o
+  CC      init/do_mounts_initrd.o
+  CC      arch/arm64/mm/flush.o
+  CC      fs/open.o
+  CC      arch/arm64/crypto/aes-cipher-glue.o
+  AR      arch/arm64/crypto/built-in.a
+  CC      kernel/softirq.o
+  CC      arch/arm64/mm/ioremap.o
+  CC      arch/arm64/kernel/ptrace.o
+  CC      mm/mempool.o
+  CC      init/initramfs.o
+  CC      ipc/compat.o
+  CC      arch/arm64/mm/mmap.o
+  CC      arch/arm64/kernel/setup.o
+  CC      fs/read_write.o
+  CC      kernel/resource.o
+  CC      mm/oom_kill.o
+  CC      init/init_task.o
+  CC      arch/arm64/mm/pgd.o
+  CC      ipc/util.o
+  CC      arch/arm64/mm/mmu.o
+  CC      arch/arm64/kernel/signal.o
+  CC      security/integrity/iint.o
+  AR      init/built-in.a
+  CC      fs/file_table.o
+  CC      kernel/sysctl.o
+  CC      ipc/msgutil.o
+  CC      crypto/api.o
+  CC      mm/fadvise.o
+  CC      security/integrity/integrity_audit.o
+  CC      arch/arm64/mm/context.o
+  CC      arch/arm64/kernel/sys.o
+  CC      fs/super.o
+  CC      ipc/msg.o
+  AR      security/integrity/built-in.a
+  CC      security/keys/gc.o
+  CC      crypto/cipher.o
+  CC      arch/arm64/mm/pageattr.o
+  CC      mm/maccess.o
+  CC      kernel/sysctl_binary.o
+  CC      arch/arm64/kernel/stacktrace.o
+  CC      security/keys/key.o
+  AR      arch/arm64/mm/built-in.a
+  CC      ipc/sem.o
+  CC      ipc/shm.o
+  CC      mm/page-writeback.o
+  CC      fs/char_dev.o
+  CC      crypto/compress.o
+  CC      arch/arm64/kernel/time.o
+  CC      kernel/capability.o
+  CC      security/keys/keyring.o
+  CC      crypto/memneq.o
+  CC      arch/arm64/kernel/traps.o
+  CC      fs/stat.o
+  CC      ipc/syscall.o
+  CC      kernel/ptrace.o
+  CC      block/bio.o
+  CC      crypto/crypto_engine.o
+  CC      security/keys/keyctl.o
+  CC      mm/readahead.o
+  CC      ipc/ipc_sysctl.o
+  CC      arch/arm64/kernel/io.o
+  CC      fs/exec.o
+  CC      arch/arm64/kernel/vdso.o
+  CC      crypto/algapi.o
+  CC      ipc/mqueue.o
+  CC      kernel/user.o
+  CC      security/keys/permission.o
+  CC      mm/swap.o
+  CC      block/elevator.o
+  CC      kernel/signal.o
+  CC      arch/arm64/kernel/psci.o
+  CC      security/keys/process_keys.o
+  CC      fs/pipe.o
+  CC      crypto/scatterwalk.o
+  CC      arch/arm64/kernel/cpu_ops.o
+  CC      block/blk-core.o
+  CC      ipc/namespace.o
+  CC      mm/truncate.o
+  CC      security/keys/request_key.o
+  CC      crypto/proc.o
+  CC      arch/arm64/kernel/insn.o
+  CC      ipc/mq_sysctl.o
+  CC      fs/namei.o
+  CC      kernel/sys.o
+  CC      security/keys/request_key_auth.o
+  AR      ipc/built-in.a
+  CC      mm/vmscan.o
+  CC      crypto/aead.o
+  CC      security/selinux/avc.o
+  CC      arch/arm64/kernel/return_address.o
+  CC      security/keys/user_defined.o
+  CC      block/blk-sysfs.o
+  CC      arch/arm64/kernel/cpuinfo.o
+  CC      crypto/ablkcipher.o
+  CC      security/keys/compat.o
+  CC      arch/arm64/kernel/cpu_errata.o
+  CC      kernel/umh.o
+  CC      security/selinux/hooks.o
+  CC      block/blk-flush.o
+  CC      fs/fcntl.o
+  CC      security/keys/proc.o
+  CC      crypto/blkcipher.o
+  CC      arch/arm64/kernel/cpufeature.o
+  CC      mm/shmem.o
+  CC      block/blk-settings.o
+  CC      security/keys/sysctl.o
+  CC      fs/ioctl.o
+  CC      kernel/workqueue.o
+  CC      crypto/skcipher.o
+  CC      arch/arm64/kernel/alternative.o
+  CC      security/keys/keyctl_pkey.o
+  CC      block/blk-ioc.o
+  CC      fs/readdir.o
+  CC      arch/arm64/kernel/cacheinfo.o
+  AR      security/keys/built-in.a
+  CC      security/commoncap.o
+  CC      mm/util.o
+  CC      security/selinux/selinuxfs.o
+  CC      block/blk-map.o
+  CC      crypto/seqiv.o
+  CC      arch/arm64/kernel/smp.o
+  CC      fs/select.o
+  CC      kernel/pid.o
+  CC      crypto/echainiv.o
+  CC      mm/mmzone.o
+  CC      block/blk-exec.o
+  CC      kernel/task_work.o
+  CC      arch/arm64/kernel/smp_spin_table.o
+  CC      mm/vmstat.o
+  CC      crypto/ahash.o
+  CC      block/blk-merge.o
+  CC      block/blk-softirq.o
+  CC      security/selinux/netlink.o
+  CC      kernel/extable.o
+  CC      arch/arm64/kernel/topology.o
+  CC      fs/dcache.o
+  CC      arch/arm64/kernel/syscall.o
+  CC      drivers/amba/bus.o
+  CC      security/selinux/nlmsgtab.o
+  CC      mm/backing-dev.o
+  CC      crypto/shash.o
+  CC      kernel/params.o
+  CC      block/blk-timeout.o
+  CC      arch/arm64/kernel/sys32.o
+  AR      drivers/amba/built-in.a
+  CC      drivers/android/binderfs.o
+  CC      block/blk-lib.o
+  CC      crypto/akcipher.o
+  CC      kernel/kthread.o
+  CC      security/selinux/netif.o
+  CC      fs/inode.o
+  CC      mm/mm_init.o
+  CC      arch/arm64/kernel/signal32.o
+  CC      drivers/android/binder.o
+  CC      block/blk-mq.o
+  CC      crypto/kpp.o
+  CC      mm/mmu_context.o
+  CC      kernel/nsproxy.o
+  CC      security/selinux/netnode.o
+  CC      mm/percpu.o
+  CC      fs/attr.o
+  CC      crypto/rsa.o
+  CC      arch/arm64/kernel/sys_compat.o
+  CC      kernel/notifier.o
+  CC      fs/bad_inode.o
+  CC      crypto/rsa-pkcs1pad.o
+  CC      arch/arm64/kernel/module.o
+  CC      block/blk-mq-tag.o
+  CC      kernel/ksysfs.o
+  CC      security/selinux/netport.o
+  CC      fs/file.o
+  CC      mm/slab_common.o
+  CC      arch/arm64/kernel/module-plts.o
+  CC      kernel/cred.o
+  CC      crypto/acompress.o
+  CC      block/blk-stat.o
+  CC      arch/arm64/kernel/perf_regs.o
+  CC      drivers/android/binder_alloc.o
+  CC      security/selinux/ibpkey.o
+  CC      fs/filesystems.o
+  CC      arch/arm64/kernel/perf_callchain.o
+  CC      mm/compaction.o
+  CC      block/blk-mq-sysfs.o
+  CC      crypto/scompress.o
+  CC      kernel/reboot.o
+  CC      fs/namespace.o
+  CC      arch/arm64/kernel/perf_event.o
+  CC      drivers/android/vendor_hooks.o
+  CC      crypto/algboss.o
+  CC      security/selinux/ss/ebitmap.o
+  CC      block/blk-mq-cpumap.o
+  CC      kernel/async.o
+  CC      kernel/smpboot.o
+  CC      block/blk-mq-sched.o
+  AR      drivers/android/built-in.a
+  CC      arch/arm64/kernel/hw_breakpoint.o
+  CC      mm/vmacache.o
+  CC      drivers/base/component.o
+  CC      crypto/testmgr.o
+  CC      kernel/ucount.o
+  CC      security/selinux/ss/hashtab.o
+  CC      fs/seq_file.o
+  CC      mm/interval_tree.o
+  CC      drivers/base/core.o
+  CC      security/selinux/ss/sidtab.o
+  CC      kernel/kmod.o
+  CC      arch/arm64/kernel/suspend.o
+  CC      crypto/cmac.o
+  CC      block/ioctl.o
+  CC      fs/xattr.o
+  CC      mm/list_lru.o
+  CC      arch/arm64/kernel/cpuidle.o
+  CC      crypto/hmac.o
+  CC      kernel/groups.o
+  CC      block/genhd.o
+  CC      arch/arm64/kernel/efi.o
+  CC      security/selinux/ss/avtab.o
+  CC      drivers/base/bus.o
+  CC      fs/libfs.o
+  CC      mm/workingset.o
+  CC      crypto/xcbc.o
+  CC      arch/arm64/kernel/pci.o
+  CC      kernel/bpf/core.o
+  CC      drivers/base/dd.o
+  CC      block/partition-generic.o
+  CC      crypto/crypto_null.o
+  CC      mm/debug.o
+  CC      fs/fs-writeback.o
+  CC      arch/arm64/kernel/armv8_deprecated.o
+  CC      security/selinux/ss/policydb.o
+  CC      drivers/base/syscore.o
+  CC      crypto/md5.o
+  CC      block/ioprio.o
+  CC      mm/gup.o
+  CC      arch/arm64/kernel/kaslr.o
+  CC      kernel/bpf/syscall.o
+  CC      drivers/base/driver.o
+  CC      crypto/sha1_generic.o
+  CC      arch/arm64/kernel/ssbd.o
+  CC      block/badblocks.o
+  CC      security/selinux/ss/services.o
+  CC      drivers/base/class.o
+  CC      mm/highmem.o
+  CC      arch/arm64/kernel/scs.o
+  CC      fs/pnode.o
+  CC      crypto/sha256_generic.o
+  CC      block/partitions/check.o
+  CC      drivers/base/platform.o
+  CC      arch/arm64/kernel/probes/uprobes.o
+  CC      fs/splice.o
+  CC      mm/memory.o
+  CC      crypto/sha512_generic.o
+  CC      block/partitions/msdos.o
+  CC      kernel/bpf/verifier.o
+  CC      arch/arm64/kernel/probes/decode-insn.o
+  CC      drivers/base/cpu.o
+  CC      security/selinux/ss/conditional.o
+  CC      crypto/blake2b_generic.o
+  CC      block/partitions/efi.o
+  CC      arch/arm64/kernel/probes/simulate-insn.o
+  CC      fs/sync.o
+  CC      drivers/base/firmware.o
+  AR      arch/arm64/kernel/probes/built-in.a
+  CC      drivers/base/init.o
+  CC      mm/mincore.o
+  AR      block/partitions/built-in.a
+  CC      block/blk-rq-qos.o
+  CC      security/selinux/ss/mls.o
+  CC      fs/utimes.o
+  CC      crypto/gf128mul.o
+  CC      drivers/base/map.o
+  CC      drivers/base/devres.o
+  CC      block/scsi_ioctl.o
+  CC      crypto/ecb.o
+  CC      mm/mlock.o
+  CC      fs/d_path.o
+  CC      security/selinux/ss/status.o
+  CC      drivers/base/attribute_container.o
+  CC      kernel/bpf/inode.o
+  CC      crypto/cbc.o
+  CC      block/bsg.o
+  CC      drivers/base/transport_class.o
+  CC      fs/stack.o
+  CC      mm/mmap.o
+  CC      drivers/base/topology.o
+  CC      crypto/cts.o
+  AR      security/selinux/built-in.a
+  CC      security/min_addr.o
+  CC      fs/fs_struct.o
+  CC      block/bsg-lib.o
+  AR      arch/arm64/kernel/built-in.a
+  AR      arch/arm64/built-in.a
+  CC      drivers/block/brd.o
+  CC      kernel/bpf/helpers.o
+  CC      drivers/base/container.o
+  CC      security/security.o
+  CC      fs/statfs.o
+  CC      crypto/xts.o
+  CC      drivers/base/property.o
+  CC      block/blk-cgroup.o
+  CC      mm/mmu_gather.o
+  CC      drivers/block/loop.o
+  CC      fs/fs_pin.o
+  CC      kernel/bpf/hashtab.o
+  CC      crypto/ctr.o
+  CC      fs/nsfs.o
+  CC      mm/mprotect.o
+  CC      drivers/base/cacheinfo.o
+  CC      security/inode.o
+  CC      block/blk-throttle.o
+  CC      crypto/adiantum.o
+  CC      fs/fs_types.o
+  CC      drivers/block/zram/zcomp.o
+  CC      drivers/base/devcon.o
+  CC      kernel/bpf/arraymap.o
+  CC      security/lsm_audit.o
+  CC      mm/mremap.o
+  CC      fs/fs_context.o
+  CC      drivers/block/zram/zram_drv.o
+  CC      drivers/base/swnode.o
+  CC      crypto/nhpoly1305.o
+  CC      block/mq-deadline.o
+  CC      drivers/base/firmware_loader/fallback_table.o
+  CC      fs/fs_parser.o
+  CC      kernel/bpf/lpm_trie.o
+  CC      mm/msync.o
+  CC      crypto/gcm.o
+  CC      security/device_cgroup.o
+  CC      block/kyber-iosched.o
+  AR      drivers/block/zram/built-in.a
+  AR      drivers/block/built-in.a
+  CC      mm/page_vma_mapped.o
+  CC      drivers/base/firmware_loader/main.o
+  CC      fs/fsopen.o
+  CC      drivers/bluetooth/hci_ldisc.o
+  AR      security/built-in.a
+  CC      kernel/cgroup/cgroup.o
+  CC      crypto/ccm.o
+  CC      kernel/bpf/map_in_map.o
+  CC      mm/pagewalk.o
+  CC      fs/buffer.o
+  CC      drivers/base/firmware_loader/fallback.o
+  CC      block/bfq-iosched.o
+  CC      kernel/bpf/local_storage.o
+  CC      mm/pgtable-generic.o
+  CC      crypto/cryptd.o
+  CC      drivers/bluetooth/hci_serdev.o
+  AR      drivers/base/firmware_loader/built-in.a
+  CC      drivers/base/power/sysfs.o
+  CC      drivers/base/power/generic_ops.o
+  CC      kernel/bpf/queue_stack_maps.o
+  CC      mm/rmap.o
+  CC      crypto/des_generic.o
+  CC      kernel/bpf/disasm.o
+  CC      drivers/base/power/common.o
+  CC      fs/block_dev.o
+  CC      block/bfq-wf2q.o
+  CC      drivers/bluetooth/hci_h4.o
+  CC      kernel/bpf/btf.o
+  CC      crypto/aes_generic.o
+  CC      drivers/base/power/qos.o
+  CC      kernel/cgroup/rstat.o
+  CC      mm/vmalloc.o
+  CC      crypto/chacha_generic.o
+  CC      block/bfq-cgroup.o
+  CC      kernel/cgroup/namespace.o
+  CC      fs/direct-io.o
+  CC      drivers/bluetooth/hci_ll.o
+  CC      drivers/base/power/runtime.o
+  CC      crypto/poly1305_generic.o
+  CC      kernel/cgroup/cgroup-v1.o
+  CC      kernel/bpf/devmap.o
+  CC      block/compat_ioctl.o
+  CC      drivers/base/power/wakeirq.o
+  CC      fs/mpage.o
+  CC      mm/process_vm_access.o
+  CC      crypto/deflate.o
+  CC      drivers/bluetooth/hci_bcm.o
+  CC      drivers/base/power/main.o
+  CC      kernel/cgroup/freezer.o
+  CC      block/blk-mq-pci.o
+  CC      mm/page_alloc.o
+  CC      kernel/bpf/cpumap.o
+  CC      crypto/crc32c_generic.o
+  CC      fs/proc_namespace.o
+  CC      kernel/cgroup/legacy_freezer.o
+  CC      block/blk-mq-virtio.o
+  CC      crypto/crc32_generic.o
+  CC      drivers/bluetooth/hci_qca.o
+  CC      fs/autofs/init.o
+  CC      drivers/base/power/wakeup.o
+  CC      kernel/cgroup/pids.o
+  CC      kernel/bpf/xskmap.o
+  CC      crypto/authenc.o
+  CC      fs/autofs/inode.o
+  CC      block/blk-wbt.o
+  CC      kernel/cgroup/cpuset.o
+  CC      fs/autofs/root.o
+  CC      drivers/base/power/wakeup_stats.o
+  CC      drivers/bluetooth/btsdio.o
+  CC      mm/shuffle.o
+  CC      kernel/bpf/offload.o
+  CC      crypto/authencesn.o
+  CC      drivers/base/power/domain.o
+  CC      block/blk-pm.o
+  CC      fs/autofs/symlink.o
+  CC      mm/init-mm.o
+  AR      kernel/cgroup/built-in.a
+  CC      kernel/bpf/stackmap.o
+  CC      block/keyslot-manager.o
+  CC      fs/autofs/waitq.o
+  CC      drivers/bluetooth/btbcm.o
+  CC      mm/memblock.o
+  CC      crypto/lzo.o
+  CC      sound/sound_core.o
+  CC      drivers/base/power/domain_governor.o
+  CC      fs/autofs/expire.o
+  CC      crypto/lzo-rle.o
+  CC      kernel/bpf/cgroup.o
+  CC      drivers/base/power/clock_ops.o
+  CC      sound/core/sound.o
+  CC      block/bio-crypt-ctx.o
+  CC      mm/madvise.o
+  CC      drivers/bluetooth/btqca.o
+  CC      fs/autofs/dev-ioctl.o
+  CC      crypto/lz4.o
+  AR      drivers/base/power/built-in.a
+  CC      sound/core/init.o
+  CC      drivers/base/regmap/regmap.o
+  CC      block/blk-crypto.o
+  CC      crypto/rng.o
+  AR      fs/autofs/built-in.a
+  CC      fs/configfs/inode.o
+  CC      mm/page_io.o
+  CC      sound/core/memory.o
+  CC      kernel/bpf/reuseport_array.o
+  CC      block/blk-crypto-fallback.o
+  CC      drivers/bluetooth/btpower.o
+  CC      crypto/ansi_cprng.o
+  CC      sound/core/control.o
+  CC      fs/configfs/file.o
+  CC      drivers/base/regmap/regcache.o
+  CC      mm/swap_state.o
+  CC      drivers/bluetooth/btfm_slim.o
+  CC      crypto/drbg.o
+  AR      kernel/bpf/built-in.a
+  AR      block/built-in.a
+  CC      drivers/bus/qcom-ebi2.o
+  CC      kernel/dma/mapping.o
+  CC      fs/configfs/dir.o
+  CC      drivers/base/regmap/regcache-rbtree.o
+  CC      sound/core/misc.o
+  AR      drivers/bus/built-in.a
+  CC      drivers/bluetooth/btfm_slim_codec.o
+"SPECTRA CAMERA IS BUILT AS DLKM"
+  CC      mm/swapfile.o
+  CC      techpack/dataipa/drivers/platform/msm/gsi/gsi.o
+  CC      kernel/dma/direct.o
+  CC      crypto/jitterentropy-kcapi.o
+  CC      drivers/base/regmap/regcache-flat.o
+  CC      fs/configfs/symlink.o
+  CC      sound/core/device.o
+  CC      drivers/bluetooth/btfm_slim_slave.o
+  CC      drivers/base/regmap/regmap-i2c.o
+  CC      kernel/dma/dummy.o
+  CC      fs/configfs/mount.o
+  CC      crypto/ghash-generic.o
+  CC      sound/core/info.o
+  AR      drivers/bluetooth/built-in.a
+  CC      fs/crypto/crypto.o
+  CC      drivers/base/regmap/regmap-spi.o
+  CC      kernel/dma/contiguous.o
+  CC      fs/configfs/item.o
+  AR      techpack/dataipa/drivers/platform/msm/gsi/built-in.a
+  CC      crypto/zstd.o
+  CC      sound/core/vmaster.o
+  CC      mm/swap_slots.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_rm.o
+  AR      fs/configfs/built-in.a
+  CC      drivers/base/memory.o
+  CC      kernel/dma/coherent.o
+  CC      fs/crypto/fname.o
+  CC      drivers/base/regmap/regmap-spmi.o
+  CC      sound/core/ctljack.o
+  CC      crypto/ecc.o
+  CC      mm/dmapool.o
+  CC      drivers/base/regmap/regmap-mmio.o
+  CC      sound/core/jack.o
+  CC      kernel/events/core.o
+  CC      kernel/dma/swiotlb.o
+  CC      fs/crypto/hkdf.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_rm_dependency_graph.o
+  CC      drivers/base/regmap/regmap-irq.o
+  CC      mm/sparse.o
+  CC      sound/core/hwdep.o
+  CC      fs/crypto/hooks.o
+  CC      crypto/essiv.o
+  CC      kernel/dma/remap.o
+  AR      drivers/base/regmap/built-in.a
+  CC      drivers/base/module.o
+  CC      sound/core/timer.o
+  CC      mm/sparse-vmemmap.o
+  CC      fs/crypto/keyring.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_rm_peers_list.o
+  AR      kernel/dma/built-in.a
+  CC      sound/core/hrtimer.o
+  CC      drivers/base/hypervisor.o
+  CC      crypto/ecdh.o
+  CC      mm/slub.o
+  CC      drivers/base/soc.o
+  CC      fs/crypto/keysetup.o
+  CC      net/socket.o
+  CC      sound/core/pcm.o
+  CC      crypto/ecdh_helper.o
+  CC      drivers/base/pinctrl.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_rm_resource.o
+  CC      fs/crypto/keysetup_v1.o
+  CC      crypto/asymmetric_keys/asymmetric_type.o
+  CC      drivers/base/platform-msi.o
+  CC      sound/core/pcm_native.o
+  CC      kernel/events/ring_buffer.o
+  CC      crypto/asymmetric_keys/restrict.o
+  CC      drivers/base/arch_topology.o
+  CC      fs/crypto/policy.o
+  CC      mm/kfence/core.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_rm_inactivity_timer.o
+  CC      crypto/asymmetric_keys/signature.o
+  CC      net/802/p8022.o
+  AR      drivers/base/built-in.a
+  CC      fs/crypto/bio.o
+  CC      drivers/char/mem.o
+  CC      kernel/events/callchain.o
+  CC      crypto/asymmetric_keys/public_key.o
+  CC      mm/kfence/report.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipa.o
+  CC      fs/crypto/inline_crypt.o
+  CC      sound/core/pcm_lib.o
+  CC      net/802/psnap.o
+  CC      crypto/asymmetric_keys/x509_cert_parser.o
+  CC      kernel/events/hw_breakpoint.o
+  CC      drivers/char/random.o
+  AR      mm/kfence/built-in.a
+  CC      mm/memory_hotplug.o
+  CC      crypto/asymmetric_keys/x509_public_key.o
+  AR      fs/crypto/built-in.a
+  CC      fs/devpts/inode.o
+  CC      net/802/stp.o
+  CC      kernel/events/uprobes.o
+  CC      sound/core/pcm_misc.o
+  CC      crypto/asymmetric_keys/pkcs7_parser.o
+  CC      drivers/char/misc.o
+  CC      mm/migrate.o
+  AR      fs/devpts/built-in.a
+  CC      fs/erofs/super.o
+  CC      crypto/asymmetric_keys/pkcs7_trust.o
+  CC      sound/core/pcm_memory.o
+  CC      drivers/char/hw_random/core.o
+  AR      net/802/built-in.a
+  CC      net/8021q/vlan_core.o
+  CC      crypto/asymmetric_keys/pkcs7_verify.o
+  AR      kernel/events/built-in.a
+  CC      sound/core/memalloc.o
+  CC      kernel/irq/irqdesc.o
+  CC      drivers/char/hw_random/hisi-rng.o
+  AR      crypto/asymmetric_keys/built-in.a
+  CC      crypto/simd.o
+  CC      fs/erofs/inode.o
+  CC      mm/memcontrol.o
+  CC      net/8021q/vlan.o
+  CC      sound/core/pcm_timer.o
+  AR      drivers/char/hw_random/built-in.a
+  AR      drivers/char/built-in.a
+  CC      kernel/irq/handle.o
+  CC      drivers/clk/clk-devres.o
+  AR      crypto/built-in.a
+  CC      fs/erofs/data.o
+  CC      drivers/clk/clk-bulk.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipa_hdr.o
+  CC      sound/core/pcm_drm_eld.o
+  CC      fs/exportfs/expfs.o
+  CC      kernel/irq/manage.o
+  CC      drivers/clk/clkdev.o
+  CC      net/8021q/vlan_dev.o
+  CC      fs/erofs/namei.o
+  AR      fs/exportfs/built-in.a
+  CC      sound/core/pcm_iec958.o
+  CC      net/bluetooth/af_bluetooth.o
+  CC      drivers/clk/clk.o
+  CC      kernel/irq/spurious.o
+  CC      sound/core/pcm_dmaengine.o
+  CC      fs/erofs/dir.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipa_flt.o
+  CC      net/8021q/vlan_netlink.o
+  CC      kernel/irq/resend.o
+  CC      mm/vmpressure.o
+  CC      sound/core/rawmidi.o
+  CC      fs/erofs/utils.o
+  CC      net/bluetooth/hci_core.o
+  CC      kernel/irq/chip.o
+  CC      net/8021q/vlanproc.o
+  CC      mm/cleancache.o
+  CC      fs/erofs/xattr.o
+  CC      drivers/clk/clk-divider.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipa_rt.o
+  CC      kernel/irq/dummychip.o
+  CC      sound/core/compress_offload.o
+  CC      mm/page_isolation.o
+  AR      net/8021q/built-in.a
+  CC      fs/ext4/balloc.o
+  CC      drivers/clk/clk-fixed-factor.o
+  CC      kernel/irq/devres.o
+  CC      fs/erofs/decompressor.o
+  AR      sound/core/built-in.a
+  CC      drivers/clk/clk-fixed-rate.o
+  CC      kernel/irq/generic-chip.o
+  CC      mm/zsmalloc.o
+  CC      net/bluetooth/hci_conn.o
+  CC      sound/soc/soc-core.o
+  CC      fs/erofs/zmap.o
+  CC      drivers/clk/clk-gate.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipa_dp.o
+  CC      kernel/irq/autoprobe.o
+  CC      fs/ext4/bitmap.o
+  CC      drivers/clk/clk-multiplier.o
+  CC      fs/erofs/zdata.o
+  CC      mm/early_ioremap.o
+  CC      kernel/irq/irqdomain.o
+  CC      drivers/clk/clk-mux.o
+  CC      fs/ext4/block_validity.o
+  CC      net/bluetooth/hci_event.o
+  CC      mm/cma.o
+  CC      sound/soc/soc-dapm.o
+  CC      drivers/clk/clk-composite.o
+  AR      fs/erofs/built-in.a
+  CC      drivers/clk/clk-fractional-divider.o
+  CC      kernel/irq/proc.o
+  CC      fs/ext4/dir.o
+  CC      arch/arm64/lib/delay.o
+  CC      drivers/clk/clk-gpio.o
+  CC      mm/frame_vector.o
+  CC      kernel/irq/cpuhotplug.o
+  AR      arch/arm64/lib/lib.a
+  EXPORTS arch/arm64/lib/lib-ksyms.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipa_client.o
+  AR      arch/arm64/lib/built-in.a
+  CC      net/bluetooth/mgmt.o
+  CC      drivers/clk/clk-conf.o
+  CC      kernel/irq/pm.o
+  CC      mm/usercopy.o
+  CC      fs/ext4/ext4_jbd2.o
+  CC      sound/soc/soc-jack.o
+  CC      drivers/clk/clk-scpi.o
+  CC      drivers/clocksource/timer-of.o
+  CC      mm/memfd.o
+  CC      kernel/irq/msi.o
+  CC      drivers/clk/hisilicon/clk.o
+  CC      drivers/clocksource/timer-probe.o
+  CC      sound/soc/soc-utils.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipa_utils.o
+  CC      fs/ext4/extents.o
+  CC      drivers/clk/hisilicon/clkgate-separated.o
+  CC      kernel/irq/affinity.o
+  CC      drivers/clocksource/mmio.o
+  AR      mm/built-in.a
+  CC      net/bpf/test_run.o
+  CC      sound/soc/soc-dai.o
+  CC      drivers/clk/hisilicon/clkdivider-hi6220.o
+  AR      kernel/irq/built-in.a
+  CC      drivers/clocksource/timer-sun4i.o
+  CC      kernel/locking/mutex.o
+  CC      net/bluetooth/hci_sock.o
+  CC      drivers/clk/hisilicon/clk-hisi-phase.o
+  CC      drivers/clocksource/timer-mediatek.o
+  CC      sound/soc/soc-component.o
+  CC      kernel/locking/semaphore.o
+  CC      drivers/clk/hisilicon/crg-hi3516cv300.o
+  CC      drivers/clocksource/arm_arch_timer.o
+  AR      net/bpf/built-in.a
+  CC      fs/f2fs/dir.o
+  CC      sound/soc/soc-pcm.o
+  CC      kernel/locking/rwsem.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipa_nat.o
+  CC      drivers/clk/hisilicon/clk-hi3519.o
+  CC      fs/ext4/extents_status.o
+  CC      net/bluetooth/hci_sysfs.o
+  CC      drivers/clocksource/timer-sp804.o
+  CC      drivers/clk/hisilicon/clk-hi3660.o
+  CC      kernel/locking/rtmutex.o
+  CC      drivers/clocksource/dummy_timer.o
+  CC      fs/f2fs/file.o
+  CC      drivers/clk/hisilicon/clk-hi3670.o
+  CC      sound/soc/soc-io.o
+  AR      kernel/locking/built-in.a
+  CC      net/bluetooth/l2cap_core.o
+  CC      kernel/power/qos.o
+  AR      drivers/clocksource/built-in.a
+  CC      fs/fat/cache.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipa_intf.o
+  CC      drivers/clk/hisilicon/crg-hi3798cv200.o
+  CC      fs/ext4/file.o
+  CC      sound/soc/soc-devres.o
+  CC      fs/fat/dir.o
+  CC      drivers/clk/hisilicon/clk-hi6220.o
+  CC      kernel/power/main.o
+  CC      fs/ext4/fsmap.o
+  CC      sound/soc/soc-ops.o
+  CC      drivers/clk/hisilicon/reset.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/teth_bridge.o
+  CC      fs/fat/fatent.o
+  CC      drivers/clk/hisilicon/clk-hi6220-stub.o
+  CC      kernel/power/process.o
+  CC      fs/f2fs/inode.o
+  CC      sound/soc/soc-topology.o
+  CC      drivers/clk/hisilicon/clk-hi3660-stub.o
+  CC      fs/ext4/fsync.o
+  CC      fs/fat/file.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipa_interrupts.o
+  CC      net/bluetooth/l2cap_sock.o
+  AR      drivers/clk/hisilicon/built-in.a
+  CC      kernel/power/suspend.o
+  AR      drivers/clk/built-in.a
+  CC      drivers/cpufreq/cpufreq.o
+  CC      fs/f2fs/namei.o
+  CC      sound/soc/soc-generic-dmaengine-pcm.o
+  CC      fs/fat/inode.o
+  CC      fs/ext4/hash.o
+  CC      kernel/power/wakelock.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipa_uc.o
+  CC      sound/soc/soc-compress.o
+  CC      net/bluetooth/smp.o
+  CC      drivers/cpufreq/freq_table.o
+  CC      fs/ext4/ialloc.o
+  CC      fs/f2fs/hash.o
+  CC      kernel/power/wakeup_reason.o
+  CC      fs/fat/misc.o
+  CC      drivers/cpufreq/cpufreq_stats.o
+  AR      sound/soc/built-in.a
+  CC      sound/usb/card.o
+  CC      drivers/cpufreq/cpufreq_times.o
+  CC      fs/fat/nfs.o
+  CC      fs/f2fs/super.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipa_uc_wdi.o
+  CC      kernel/power/energy_model.o
+  CC      drivers/cpufreq/cpufreq_performance.o
+  CC      fs/fat/namei_vfat.o
+  CC      fs/ext4/indirect.o
+  CC      net/bluetooth/lib.o
+  AR      kernel/power/built-in.a
+  CC      kernel/printk/printk.o
+  CC      sound/usb/clock.o
+  CC      drivers/cpufreq/cpufreq_powersave.o
+  CC      drivers/cpufreq/cpufreq_conservative.o
+  CC      fs/fat/namei_msdos.o
+  CC      sound/usb/endpoint.o
+  CC      net/bluetooth/ecdh_helper.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipa_dma.o
+  CC      drivers/cpufreq/cpufreq_governor.o
+  CC      fs/ext4/inline.o
+  AR      kernel/printk/built-in.a
+  CC      kernel/rcu/update.o
+  AR      fs/fat/built-in.a
+  CC      sound/usb/format.o
+  CC      net/bluetooth/hci_request.o
+  CC      lib/parser.o
+  CC      drivers/cpufreq/cpufreq_governor_attr_set.o
+  CC      fs/f2fs/inline.o
+  CC      lib/random32.o
+  CC      drivers/cpufreq/scmi-cpufreq.o
+  CC      kernel/rcu/srcutree.o
+  CC      sound/usb/helper.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipa_uc_mhi.o
+  CC      lib/bust_spinlocks.o
+  CC      fs/ext4/inode.o
+  CC      drivers/cpufreq/scpi-cpufreq.o
+  CC      sound/usb/mixer.o
+  CC      kernel/rcu/tree.o
+  CC      lib/kasprintf.o
+  CC      fs/f2fs/checkpoint.o
+  AR      drivers/cpufreq/built-in.a
+  CC      drivers/cpuidle/cpuidle.o
+  CC      net/bluetooth/mgmt_util.o
+  CC      lib/bitmap.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipa_mhi.o
+  CC      sound/usb/mixer_quirks.o
+  CC      lib/scatterlist.o
+  CC      drivers/cpuidle/driver.o
+  CC      net/bluetooth/sco.o
+  CC      fs/f2fs/gc.o
+  CC      drivers/cpuidle/governor.o
+  CC      lib/iov_iter.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipa_uc_ntn.o
+  CC      sound/usb/mixer_scarlett.o
+  AR      kernel/rcu/built-in.a
+  CC      drivers/cpuidle/sysfs.o
+  CC      kernel/sched/core.o
+  CC      fs/ext4/ioctl.o
+  CC      sound/usb/mixer_scarlett_gen2.o
+  CC      drivers/cpuidle/governors/menu.o
+  CC      net/bluetooth/a2mp.o
+  AR      drivers/cpuidle/governors/built-in.a
+  CC      fs/f2fs/data.o
+  CC      drivers/cpuidle/dt_idle_states.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipa_hw_stats.o
+  CC      lib/bsearch.o
+  CC      sound/usb/mixer_us16x08.o
+  CC      drivers/cpuidle/cpuidle-psci.o
+  CC      fs/ext4/mballoc.o
+  CC      lib/kfifo.o
+  CC      net/bluetooth/amp.o
+  AR      drivers/cpuidle/built-in.a
+  CC      sound/usb/pcm.o
+  CC      drivers/dax/super.o
+  CC      lib/percpu-refcount.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipa_pm.o
+  CC      drivers/dax/bus.o
+  CC      lib/rhashtable.o
+  CC      kernel/sched/loadavg.o
+  CC      sound/usb/power.o
+  CC      net/bluetooth/hidp/core.o
+  CC      fs/f2fs/node.o
+  CC      sound/usb/proc.o
+  AR      drivers/dax/built-in.a
+  CC      drivers/devfreq/devfreq.o
+  CC      lib/once.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipa_wdi3_i.o
+  CC      kernel/sched/clock.o
+  CC      fs/ext4/migrate.o
+  CC      sound/usb/quirks.o
+  CC      lib/usercopy.o
+  CC      drivers/devfreq/devfreq-event.o
+  CC      lib/bucket_locks.o
+  CC      net/bluetooth/hidp/sock.o
+  CC      sound/usb/stream.o
+  CC      fs/ext4/mmp.o
+  CC      kernel/sched/cputime.o
+  CC      drivers/devfreq/governor_simpleondemand.o
+  CC      lib/generic-radix-tree.o
+  CC      fs/f2fs/segment.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipa_odl.o
+  CC      drivers/devfreq/governor_performance.o
+  CC      sound/usb/validate.o
+  AR      net/bluetooth/hidp/built-in.a
+  CC      fs/ext4/move_extent.o
+  CC      net/bluetooth/rfcomm/core.o
+  CC      drivers/devfreq/governor_powersave.o
+  CC      lib/memcat_p.o
+  CC      kernel/sched/idle.o
+  CC      drivers/devfreq/governor_userspace.o
+  CC      sound/usb/media.o
+  CC      lib/string_helpers.o
+  CC      drivers/devfreq/governor_passive.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipa_vote.o
+  CC      fs/ext4/namei.o
+  CC      sound/usb/midi.o
+  CC      lib/kstrtox.o
+  AR      drivers/devfreq/built-in.a
+  CC      drivers/dma/dmaengine.o
+  CC      kernel/sched/fair.o
+  CC      lib/crypto/aes.o
+  CC      net/bluetooth/rfcomm/sock.o
+  CC      fs/f2fs/recovery.o
+  AR      sound/usb/built-in.a
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipa_wigig_i.o
+  CC      sound/last.o
+  CC      lib/crypto/arc4.o
+  CC      drivers/dma/virt-dma.o
+  AR      sound/built-in.a
+  CC      lib/crypto/blake2s.o
+  CC      kernel/sched/rt.o
+  CC      fs/ext4/page-io.o
+  CC      net/bluetooth/rfcomm/tty.o
+  CC      drivers/dma/of-dma.o
+  CC      fs/f2fs/shrinker.o
+  CC      lib/crypto/blake2s-generic.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipa_uc_holb_monitor.o
+  AR      drivers/dma/built-in.a
+  CC      drivers/dma-buf/dma-buf.o
+  CC      fs/f2fs/extent_cache.o
+  CC      fs/ext4/readpage.o
+  CC      net/bridge/br.o
+  CC      lib/crypto/des.o
+  CC      kernel/sched/deadline.o
+  AR      net/bluetooth/rfcomm/built-in.a
+  AR      net/bluetooth/built-in.a
+  CC      fs/fuse/dev.o
+  CC      drivers/dma-buf/dma-fence.o
+  CC      lib/crypto/sha256.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipahal/ipahal.o
+  CC      fs/ext4/resize.o
+  CC      fs/f2fs/sysfs.o
+  CC      net/bridge/br_device.o
+  AR      lib/crypto/built-in.a
+  CC      lib/fonts/fonts.o
+  CC      drivers/dma-buf/dma-fence-array.o
+  CC      kernel/sched/wait.o
+  CC      lib/fonts/font_8x16.o
+  CC      fs/fuse/dir.o
+  CC      drivers/dma-buf/dma-resv.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipahal/ipahal_reg.o
+  CC      fs/ext4/super.o
+  AR      lib/fonts/built-in.a
+  CC      lib/lz4/lz4_compress.o
+  CC      fs/f2fs/debug.o
+  CC      net/bridge/br_fdb.o
+  CC      drivers/dma-buf/seqno-fence.o
+  CC      kernel/sched/wait_bit.o
+  CC      lib/lz4/lz4_decompress.o
+  CC      fs/fuse/file.o
+  CC      fs/f2fs/xattr.o
+  CC      drivers/dma-buf/sync_file.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipahal/ipahal_fltrt.o
+  AR      lib/lz4/built-in.a
+  CC      lib/lzo/lzo1x_compress.o
+  CC      kernel/sched/swait.o
+  AR      drivers/dma-buf/built-in.a
+  CC      drivers/edac/edac_mc.o
+  CC      net/bridge/br_forward.o
+  CC      lib/lzo/lzo1x_decompress_safe.o
+  CC      fs/f2fs/acl.o
+  AR      lib/lzo/built-in.a
+  CC      lib/mpi/generic_mpih-lshift.o
+  CC      fs/fuse/inode.o
+  CC      drivers/edac/edac_device.o
+  CC      kernel/sched/completion.o
+  CC      fs/f2fs/verity.o
+  CC      lib/mpi/generic_mpih-mul1.o
+  CC      net/bridge/br_if.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipahal/ipahal_hw_stats.o
+  CC      fs/fuse/control.o
+  CC      drivers/edac/edac_mc_sysfs.o
+  CC      lib/mpi/generic_mpih-mul2.o
+  AR      fs/f2fs/built-in.a
+  CC      kernel/sched/cpupri.o
+  CC      kernel/time/time.o
+  CC      fs/ext4/symlink.o
+  CC      lib/mpi/generic_mpih-mul3.o
+  CC      fs/fuse/xattr.o
+  CC      drivers/edac/edac_module.o
+  CC      net/bridge/br_input.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipahal/ipahal_nat.o
+  CC      lib/mpi/generic_mpih-rshift.o
+  CC      kernel/time/timer.o
+  CC      fs/ext4/sysfs.o
+  CC      drivers/edac/edac_device_sysfs.o
+  CC      kernel/sched/cpudeadline.o
+  CC      fs/fuse/acl.o
+  CC      lib/mpi/generic_mpih-sub1.o
+  CC      drivers/edac/wq.o
+  CC      net/bridge/br_ioctl.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/rmnet_ipa.o
+  CC      fs/ext4/xattr.o
+  CC      fs/fuse/readdir.o
+  CC      lib/mpi/generic_mpih-add1.o
+  CC      kernel/time/hrtimer.o
+  CC      kernel/sched/topology.o
+  CC      drivers/edac/edac_pci.o
+  CC      lib/mpi/mpicoder.o
+  AR      fs/fuse/built-in.a
+  CC      net/bridge/br_stp.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipa_qmi_service_v01.o
+  CC      drivers/edac/edac_pci_sysfs.o
+  CC      lib/mpi/mpi-bit.o
+  CC      fs/ext4/xattr_trusted.o
+  CC      kernel/time/timekeeping.o
+  CC      lib/mpi/mpi-cmp.o
+  CC      kernel/sched/stop_task.o
+  AR      drivers/edac/built-in.a
+  CC      drivers/extcon/extcon.o
+  CC      net/bridge/br_stp_bpdu.o
+  CC      net/core/sock.o
+  CC      fs/ext4/xattr_user.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/ipa_qmi_service.o
+  CC      lib/mpi/mpih-cmp.o
+  CC      kernel/time/ntp.o
+  CC      drivers/extcon/devres.o
+  CC      kernel/sched/pelt.o
+  CC      lib/mpi/mpih-div.o
+  CC      fs/ext4/acl.o
+  AR      drivers/extcon/built-in.a
+  CC      drivers/firmware/arm_scpi.o
+  CC      kernel/time/clocksource.o
+  CC      net/bridge/br_stp_if.o
+  CC      lib/mpi/mpih-mul.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/rmnet_ctl_ipa.o
+  CC      fs/ext4/xattr_security.o
+  CC      kernel/time/jiffies.o
+  CC      drivers/firmware/arm_scmi/bus.o
+  CC      kernel/sched/autogroup.o
+  CC      lib/mpi/mpi-pow.o
+  CC      kernel/time/timer_list.o
+  CC      net/core/request_sock.o
+  CC      drivers/firmware/arm_scmi/driver.o
+  CC      net/bridge/br_stp_timer.o
+  CC      fs/ext4/verity.o
+  CC      lib/mpi/mpiutil.o
+  CC      kernel/time/timeconv.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_v3/rmnet_ipa_fd_ioctl.o
+  CC      drivers/firmware/arm_scmi/base.o
+  CC      kernel/sched/stats.o
+  CC      kernel/time/alarmtimer.o
+  CC      net/core/skbuff.o
+  AR      lib/mpi/built-in.a
+  AR      fs/ext4/built-in.a
+  CC      lib/reed_solomon/reed_solomon.o
+  CC      drivers/firmware/arm_scmi/clock.o
+  CC      fs/incfs/data_mgmt.o
+  CC      net/bridge/br_netlink.o
+  CC      drivers/firmware/arm_scmi/perf.o
+  AR      lib/reed_solomon/built-in.a
+  CC      lib/xz/xz_dec_syms.o
+  CC      kernel/time/posix-timers.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_clients/rndis_ipa.o
+  CC      kernel/sched/debug.o
+  CC      fs/incfs/format.o
+  CC      lib/xz/xz_dec_stream.o
+  CC      drivers/firmware/arm_scmi/power.o
+  CC      lib/xz/xz_dec_lzma2.o
+  CC      drivers/firmware/arm_scmi/reset.o
+  CC      fs/incfs/integrity.o
+  CC      net/bridge/br_netlink_tunnel.o
+  CC      kernel/time/posix-cpu-timers.o
+  CC      drivers/firmware/arm_scmi/sensors.o
+  CC      lib/xz/xz_dec_bcj.o
+  CC      fs/incfs/main.o
+  CC      kernel/sched/cpuacct.o
+  AR      lib/xz/built-in.a
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_clients/ipa_clients_manager.o
+  CC      lib/zlib_deflate/deflate.o
+  AR      drivers/firmware/arm_scmi/built-in.a
+  CC      drivers/firmware/efi/efi.o
+  CC      fs/incfs/vfs.o
+  CC      kernel/time/posix-clock.o
+  CC      net/core/datagram.o
+  CC      lib/zlib_deflate/deflate_syms.o
+  CC      net/bridge/br_arp_nd_proxy.o
+  CC      drivers/firmware/efi/vars.o
+  CC      kernel/sched/cpufreq.o
+  AR      lib/zlib_deflate/built-in.a
+  CC      lib/zlib_inflate/infutil.o
+  CC      kernel/time/itimer.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_clients/ipa_usb.o
+  CC      lib/zlib_inflate/inflate_syms.o
+  AR      fs/incfs/built-in.a
+  CC      fs/iomap/apply.o
+  CC      drivers/firmware/efi/reboot.o
+  CC      net/core/stream.o
+  AR      lib/zlib_inflate/built-in.a
+  CC      lib/zstd/compress.o
+  CC      kernel/time/clockevents.o
+  CC      net/bridge/br_sysfs_if.o
+  CC      kernel/sched/cpufreq_schedutil.o
+  CC      fs/iomap/buffered-io.o
+  CC      drivers/firmware/efi/memattr.o
+  CC      kernel/time/tick-common.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_clients/ipa_wdi3.o
+  CC      drivers/firmware/efi/tpm.o
+  CC      net/core/scm.o
+  CC      fs/iomap/direct-io.o
+  CC      net/bridge/br_sysfs_br.o
+  CC      kernel/sched/membarrier.o
+  CC      kernel/time/tick-broadcast.o
+  CC      drivers/firmware/efi/capsule.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_clients/ipa_gsb.o
+  CC      kernel/time/tick-broadcast-hrtimer.o
+  CC      fs/iomap/fiemap.o
+  CC      net/core/gen_stats.o
+  CC      drivers/firmware/efi/memmap.o
+  CC      kernel/sched/isolation.o
+  CC      kernel/time/sched_clock.o
+  CC      net/bridge/br_nf_core.o
+  CC      fs/iomap/seek.o
+  CC      drivers/firmware/efi/esrt.o
+  CC      kernel/time/tick-oneshot.o
+  CC      net/core/gen_estimator.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_clients/ipa_uc_offload.o
+  CC      kernel/time/tick-sched.o
+  CC      kernel/sched/psi.o
+  CC      drivers/firmware/efi/runtime-wrappers.o
+  CC      fs/iomap/swapfile.o
+  CC      net/bridge/br_multicast.o
+  CC      lib/zstd/decompress.o
+  CC      net/core/net_namespace.o
+  CC      kernel/time/vsyscall.o
+  AR      fs/iomap/built-in.a
+  CC      fs/jbd2/transaction.o
+  CC      drivers/firmware/efi/libstub/arm-stub.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_clients/ipa_wigig.o
+  AR      kernel/sched/built-in.a
+  AR      kernel/time/built-in.a
+  CC      net/ethernet/eth.o
+  CC      kernel/trace/trace_clock.o
+  AR      lib/zstd/built-in.a
+  CC      lib/pci_iomap.o
+  CC      drivers/firmware/efi/libstub/arm64-stub.o
+  CC      kernel/trace/ring_buffer.o
+  CC      net/bridge/br_mdb.o
+  CC      net/core/secure_seq.o
+  CC      fs/jbd2/commit.o
+  CC      lib/iomap_copy.o
+  CC      drivers/firmware/efi/libstub/efi-stub-helper.o
+  CC      techpack/dataipa/drivers/platform/msm/ipa/ipa_clients/ipa_mhi_client.o
+  CC      lib/devres.o
+  AR      net/ethernet/built-in.a
+  CC      drivers/firmware/efi/libstub/fdt.o
+  CC      kernel/trace/trace.o
+  CC      lib/logic_pio.o
+  CC      drivers/gnss/core.o
+  CC      drivers/firmware/efi/libstub/gop.o
+  CC      net/core/flow_dissector.o
+  CC      fs/jbd2/recovery.o
+  CC      net/bridge/br_vlan.o
+  CC      lib/assoc_array.o
+  AR      techpack/dataipa/drivers/platform/msm/ipa/ipa_clients/built-in.a
+  AR      drivers/gnss/built-in.a
+  CC      net/bridge/br_vlan_tunnel.o
+  AR      techpack/dataipa/drivers/platform/msm/ipa/built-in.a
+  AR      techpack/dataipa/drivers/platform/msm/built-in.a
+  AR      techpack/dataipa/built-in.a
+  CC      drivers/firmware/efi/libstub/random.o
+  AR      techpack/built-in.a
+  CC      net/core/sysctl_net_core.o
+  CC      fs/jbd2/checkpoint.o
+  CC      lib/crc-ccitt.o
+  CC      drivers/firmware/efi/libstub/secureboot.o
+  CC      lib/crc16.o
+  CC      fs/kernfs/mount.o
+  CC      kernel/freezer.o
+  CC      fs/jbd2/revoke.o
+  CC      kernel/trace/trace_output.o
+  CC      lib/crc32.o
+  CC      net/core/dev.o
+  CC      drivers/firmware/efi/libstub/tpm.o
+  CC      net/bridge/br_netfilter_hooks.o
+  CC      fs/kernfs/inode.o
+  CC      kernel/trace/trace_seq.o
+  CC      fs/jbd2/journal.o
+  CC      lib/libcrc32c.o
+  STUBCPY drivers/firmware/efi/libstub/arm-stub.stub.o
+  STUBCPY drivers/firmware/efi/libstub/arm64-stub.stub.o
+  STUBCPY drivers/firmware/efi/libstub/efi-stub-helper.stub.o
+  STUBCPY drivers/firmware/efi/libstub/fdt.stub.o
+  STUBCPY drivers/firmware/efi/libstub/gop.stub.o
+  STUBCPY drivers/firmware/efi/libstub/random.stub.o
+  STUBCPY drivers/firmware/efi/libstub/secureboot.stub.o
+  STUBCPY drivers/firmware/efi/libstub/tpm.stub.o
+  AR      drivers/firmware/efi/libstub/lib.a
+  EXPORTS drivers/firmware/efi/libstub/lib-ksyms.o
+  AR      drivers/firmware/efi/libstub/built-in.a
+  CC      drivers/firmware/efi/arm-init.o
+  CC      fs/kernfs/dir.o
+  CC      net/ipv4/route.o
+  CC      kernel/trace/trace_stat.o
+  CC      lib/crc8.o
+  CC      lib/xxhash.o
+  CC      drivers/firmware/efi/arm-runtime.o
+  CC      net/bridge/br_netfilter_ipv6.o
+  CC      kernel/trace/trace_printk.o
+  CC      fs/kernfs/file.o
+  CC      lib/genalloc.o
+  AR      fs/jbd2/built-in.a
+  CC      drivers/gpio/gpiolib.o
+  CC      drivers/firmware/efi/earlycon.o
+  CC      lib/textsearch.o
+  CC      fs/kernfs/symlink.o
+  CC      kernel/trace/trace_sched_switch.o
+  AR      drivers/firmware/efi/built-in.a
+  CC      net/bridge/netfilter/ebtables.o
+  CC      drivers/firmware/psci/psci.o
+  CC      lib/ts_kmp.o
+  CC      net/ipv4/inetpeer.o
+  AR      fs/kernfs/built-in.a
+  CC      fs/nls/nls_base.o
+  CC      kernel/trace/trace_nop.o
+  CC      lib/ts_bm.o
+  AR      drivers/firmware/psci/built-in.a
+  CC      fs/nls/nls_cp437.o
+  AR      drivers/firmware/built-in.a
+  CC      net/core/ethtool.o
+  CC      kernel/profile.o
+  CC      drivers/gpio/gpiolib-devres.o
+  CC      lib/ts_fsm.o
+  CC      fs/nls/nls_cp737.o
+  CC      kernel/trace/blktrace.o
+  CC      net/ipv4/protocol.o
+  CC      drivers/gpio/gpiolib-legacy.o
+  CC      lib/percpu_counter.o
+  CC      fs/nls/nls_cp775.o
+  AR      net/bridge/netfilter/built-in.a
+  AR      net/bridge/built-in.a
+  CC      kernel/trace/trace_events.o
+  CC      net/ipv6/af_inet6.o
+  CC      fs/nls/nls_cp850.o
+  CC      lib/audit.o
+  CC      drivers/gpio/gpiolib-devprop.o
+  CC      drivers/gpu/drm/drm_crtc_helper.o
+  CC      fs/nls/nls_cp852.o
+  CC      net/ipv4/ip_input.o
+  CC      net/core/dev_addr_lists.o
+  CC      lib/syscall.o
+  CC      fs/nls/nls_cp855.o
+  CC      drivers/gpio/gpiolib-of.o
+  CC      kernel/trace/trace_export.o
+  CC      drivers/gpu/drm/drm_dp_helper.o
+  CC      fs/nls/nls_cp857.o
+  CC      lib/nlattr.o
+  CC      net/ipv6/anycast.o
+  CC      drivers/gpio/gpio-pl061.o
+  CC      net/core/dst.o
+  CC      fs/nls/nls_cp860.o
+  CC      kernel/trace/trace_event_perf.o
+  CC      net/ipv4/ip_fragment.o
+  CC      fs/nls/nls_cp861.o
+  CC      drivers/gpu/drm/drm_dsc.o
+  CC      lib/checksum.o
+  AR      drivers/gpio/built-in.a
+  CC      fs/notify/fsnotify.o
+  CC      fs/nls/nls_cp862.o
+  CC      lib/cpu_rmap.o
+  CC      drivers/gpu/drm/drm_probe_helper.o
+  CC      net/ipv6/ip6_output.o
+  CC      kernel/trace/trace_events_filter.o
+  CC      fs/nls/nls_cp863.o
+  CC      net/core/netevent.o
+  CC      fs/notify/notification.o
+  CC      lib/glob.o
+  CC      net/ipv4/ip_forward.o
+  CC      fs/nls/nls_cp864.o
+  CC      lib/strncpy_from_user.o
+  CC      drivers/gpu/drm/drm_plane_helper.o
+  CC      fs/notify/group.o
+  CC      net/core/neighbour.o
+  CC      fs/nls/nls_cp865.o
+  CC      kernel/trace/trace_events_trigger.o
+  CC      lib/strnlen_user.o
+  CC      fs/nls/nls_cp866.o
+  CC      drivers/gpu/drm/drm_dp_mst_topology.o
+  CC      fs/notify/mark.o
+  CC      fs/nls/nls_cp869.o
+  CC      lib/net_utils.o
+  CC      net/ipv4/ip_options.o
+  CC      kernel/trace/bpf_trace.o
+  CC      net/ipv6/ip6_input.o
+  CC      fs/nls/nls_cp874.o
+  CC      lib/sg_pool.o
+  CC      fs/notify/fdinfo.o
+  CC      fs/nls/nls_cp932.o
+  CC      drivers/gpu/drm/drm_atomic_helper.o
+  CC      lib/asn1_decoder.o
+  CC      net/core/rtnetlink.o
+  CC      net/ipv4/ip_output.o
+  CC      fs/notify/fanotify/fanotify.o
+  CC      fs/nls/nls_euc-jp.o
+  CC      kernel/trace/error_report-traces.o
+  CC      lib/oid_registry.o
+  CC      net/ipv6/addrconf.o
+  CC      fs/nls/nls_cp936.o
+  CC      fs/notify/fanotify/fanotify_user.o
+  CC      lib/ucs2_string.o
+  CC      kernel/trace/power-traces.o
+  CC      fs/nls/nls_cp949.o
+  CC      drivers/gpu/drm/drm_kms_helper_common.o
+  CC      lib/sbitmap.o
+  CC      fs/nls/nls_cp950.o
+  CC      drivers/gpu/drm/drm_dp_dual_mode_helper.o
+  AR      fs/notify/fanotify/built-in.a
+  CC      net/ipv4/ip_sockglue.o
+  CC      fs/notify/inotify/inotify_fsnotify.o
+  CC      lib/argv_split.o
+  CC      kernel/trace/rpm-traces.o
+  CC      net/core/utils.o
+  CC      lib/bug.o
+  CC      fs/nls/nls_cp1250.o
+  CC      fs/notify/inotify/inotify_user.o
+  CC      drivers/gpu/drm/drm_simple_kms_helper.o
+  CC      lib/chacha.o
+  CC      fs/nls/nls_cp1251.o
+  CC      kernel/trace/trace_dynevent.o
+  CC      net/ipv6/addrlabel.o
+  CC      drivers/gpu/drm/drm_modeset_helper.o
+  CC      lib/cpumask.o
+  CC      fs/nls/nls_ascii.o
+  CC      net/core/link_watch.o
+  AR      fs/notify/inotify/built-in.a
+  AR      fs/notify/built-in.a
+  CC      kernel/stacktrace.o
+  CC      net/ipv4/inet_hashtables.o
+  CC      fs/nls/nls_iso8859-1.o
+  CC      lib/decompress_inflate.o
+  CC      kernel/trace/trace_probe.o
+  CC      drivers/gpu/drm/drm_scdc_helper.o
+  CC      net/key/af_key.o
+  CC      fs/nls/nls_iso8859-2.o
+  CC      lib/decompress_unlz4.o
+  CC      net/ipv6/route.o
+  CC      fs/nls/nls_iso8859-3.o
+  CC      drivers/gpu/drm/drm_gem_framebuffer_helper.o
+  CC      net/core/filter.o
+  CC      lib/dump_stack.o
+  CC      kernel/trace/trace_uprobe.o
+  CC      fs/nls/nls_iso8859-4.o
+  CC      net/ipv4/inet_timewait_sock.o
+  CC      lib/extable.o
+  CC      fs/nls/nls_iso8859-5.o
+  CC      drivers/gpu/drm/drm_atomic_state_helper.o
+  CC      fs/nls/nls_iso8859-6.o
+  CC      lib/flex_proportions.o
+  AR      net/key/built-in.a
+  CC      drivers/gpu/trace/trace_gpu_mem.o
+  AR      kernel/trace/built-in.a
+  CC      kernel/futex.o
+  CC      fs/nls/nls_iso8859-7.o
+  CC      lib/idr.o
+  CC      drivers/gpu/drm/drm_damage_helper.o
+  CC      net/ipv4/inet_connection_sock.o
+  CC      fs/nls/nls_cp1255.o
+  CC      lib/ioremap.o
+  AR      drivers/gpu/trace/built-in.a
+  CC      net/core/sock_diag.o
+  CC      fs/nls/nls_iso8859-9.o
+  CC      drivers/gpu/drm/drm_format_helper.o
+  CC      net/ipv6/ip6_fib.o
+  CC      lib/is_single_threaded.o
+  CC      fs/nls/nls_iso8859-13.o
+  CC      drivers/gpu/drm/drm_self_refresh_helper.o
+  CC      lib/kobject.o
+  CC      kernel/smp.o
+  CC      fs/nls/nls_iso8859-14.o
+  CC      net/core/dev_ioctl.o
+  CC      drivers/hid/hid-core.o
+  CC      net/ipv4/tcp.o
+  CC      fs/nls/nls_iso8859-15.o
+  CC      lib/kobject_uevent.o
+  CC      kernel/uid16.o
+  CC      drivers/gpu/drm/bridge/panel.o
+  CC      fs/nls/nls_koi8-r.o
+  CC      net/core/tso.o
+  CC      net/ipv6/ipv6_sockglue.o
+  CC      drivers/hid/hid-input.o
+  CC      fs/nls/nls_koi8-u.o
+  CC      drivers/gpu/drm/drm_fb_cma_helper.o
+  CC      kernel/module.o
+  CC      fs/nls/nls_koi8-ru.o
+  CC      lib/nmi_backtrace.o
+  CC      fs/nls/nls_utf8.o
+  CC      drivers/gpu/drm/drm_auth.o
+  CC      net/core/sock_reuseport.o
+  CC      lib/nodemask.o
+  CC      drivers/hid/hid-quirks.o
+  CC      fs/nls/mac-celtic.o
+  CC      net/ipv4/tcp_input.o
+  CC      net/ipv6/ndisc.o
+  CC      lib/radix-tree.o
+  CC      drivers/gpu/drm/drm_cache.o
+  CC      fs/nls/mac-centeuro.o
+  CC      drivers/hid/hidraw.o
+  CC      fs/nls/mac-croatian.o
+  CC      net/core/fib_notifier.o
+  CC      drivers/gpu/drm/drm_file.o
+  CC      lib/seq_buf.o
+  CC      kernel/kallsyms.o
+  CC      drivers/hid/uhid.o
+  CC      fs/nls/mac-cyrillic.o
+  CC      lib/show_mem.o
+  CC      fs/nls/mac-gaelic.o
+  CC      net/core/xdp.o
+  CC      net/ipv6/udp.o
+  CC      drivers/gpu/drm/drm_gem.o
+  CC      drivers/hid/hid-generic.o
+  CC      lib/siphash.o
+  CC      fs/nls/mac-greek.o
+  CC      kernel/compat.o
+  CC      fs/nls/mac-iceland.o
+  CC      drivers/hid/hid-apple.o
+  CC      lib/string.o
+  CC      fs/nls/mac-inuit.o
+  CC      drivers/gpu/drm/drm_ioctl.o
+  CC      net/core/flow_offload.o
+  CC      lib/vsprintf.o
+  CC      drivers/hid/hid-elecom.o
+  CC      net/ipv4/tcp_output.o
+  CC      kernel/utsname.o
+  CC      fs/nls/mac-romanian.o
+  CC      drivers/hid/hid-lg.o
+  CC      net/ipv6/udplite.o
+  CC      kernel/user_namespace.o
+  CC      fs/nls/mac-roman.o
+  CC      drivers/gpu/drm/drm_irq.o
+  CC      fs/nls/mac-turkish.o
+  CC      net/core/net-sysfs.o
+  CC      drivers/hid/hid-logitech-dj.o
+  AR      fs/nls/built-in.a
+  CC      kernel/pid_namespace.o
+  CC      fs/overlayfs/super.o
+  CC      drivers/gpu/drm/drm_memory.o
+  CC      net/ipv6/raw.o
+  CC      lib/win_minmax.o
+  CC      drivers/hid/hid-logitech-hidpp.o
+  CC      lib/xarray.o
+  CC      drivers/gpu/drm/drm_drv.o
+  UPD     kernel/config_data
+  CHK     kernel/kheaders_data.tar.xz
+  CC      fs/overlayfs/namei.o
+  CC      net/ipv4/tcp_timer.o
+  GEN     kernel/kheaders_data.tar.xz
+  CC      net/core/net-procfs.o
+  AR      lib/lib.a
+  EXPORTS lib/lib-ksyms.o
+  AR      lib/built-in.a
+  CC      net/l2tp/l2tp_core.o
+  CC      fs/overlayfs/util.o
+  CC      drivers/gpu/drm/drm_pci.o
+  CC      drivers/hid/hid-magicmouse.o
+  CC      net/ipv6/icmp.o
+  CC      net/core/fib_rules.o
+  CC      fs/overlayfs/inode.o
+  CC      drivers/gpu/drm/drm_sysfs.o
+  CC      net/ipv4/tcp_ipv4.o
+  CC      drivers/hid/hid-microsoft.o
+  CC      fs/overlayfs/file.o
+  CC      drivers/hid/hid-multitouch.o
+  CC      drivers/gpu/drm/drm_hashtab.o
+  CC      net/l2tp/l2tp_ppp.o
+  CC      net/ipv6/mcast.o
+  CC      fs/overlayfs/dir.o
+  CC      net/core/net-traces.o
+  CC      drivers/gpu/drm/drm_mm.o
+  CC      drivers/hid/hid-nintendo.o
+  CC      net/ipv4/tcp_minisocks.o
+  CC      fs/overlayfs/readdir.o
+  CC      drivers/gpu/drm/drm_crtc.o
+  CC      drivers/hid/hid-prodikeys.o
+  AR      net/l2tp/built-in.a
+  CC      drivers/hwspinlock/hwspinlock_core.o
+  CC      fs/overlayfs/copy_up.o
+  CC      drivers/hid/hid-picolcd_core.o
+  CC      drivers/hwspinlock/qcom_hwspinlock.o
+  CC      net/ipv6/reassembly.o
+  CC      drivers/gpu/drm/drm_fourcc.o
+  CC      net/ipv4/tcp_cong.o
+  CC      net/core/dst_cache.o
+  AR      drivers/hwspinlock/built-in.a
+  CC      drivers/gpu/drm/drm_modes.o
+  CC      drivers/hid/hid-plantronics.o
+  CC      fs/overlayfs/export.o
+  CC      net/l3mdev/l3mdev.o
+  CC      drivers/hid/hid-playstation.o
+  AR      fs/overlayfs/built-in.a
+  CC      net/ipv6/tcp_ipv6.o
+  CC      drivers/gpu/drm/drm_edid.o
+  CC      fs/proc/task_mmu.o
+  CC      net/ipv4/tcp_metrics.o
+  CC      net/core/gro_cells.o
+  AR      net/l3mdev/built-in.a
+  CC      net/core/bpf_sk_storage.o
+  CC      drivers/hid/hid-roccat.o
+  CC      fs/pstore/inode.o
+  CC      drivers/hid/hid-roccat-common.o
+  CC      fs/proc/inode.o
+  AR      net/core/built-in.a
+  CC      net/ipv4/tcp_fastopen.o
+  CC      net/ipv6/ping.o
+  CC      kernel/stop_machine.o
+  CC      drivers/gpu/drm/drm_encoder_slave.o
+  CC      drivers/hid/hid-roccat-arvo.o
+  CC      fs/pstore/platform.o
+  CC      fs/proc/root.o
+  CC      fs/proc/base.o
+  CC      drivers/hid/hid-roccat-isku.o
+  CC      drivers/gpu/drm/drm_trace_points.o
+  CC      fs/pstore/pmsg.o
+  CC      fs/quota/dquot.o
+  CC      net/ipv6/exthdrs.o
+  CC      net/ipv4/tcp_rate.o
+  CC      drivers/hid/hid-roccat-kone.o
+  CC      fs/pstore/ram.o
+  CC      drivers/gpu/drm/drm_prime.o
+  CC      drivers/hid/hid-roccat-koneplus.o
+  CC      fs/proc/generic.o
+  CC      fs/pstore/ram_core.o
+  CC      fs/quota/quota_v2.o
+  CC      drivers/gpu/drm/drm_rect.o
+  CC      net/ipv4/tcp_recovery.o
+  CC      drivers/hid/hid-roccat-konepure.o
+  CC      net/ipv6/datagram.o
+  CC      fs/proc/array.o
+  CC      fs/quota/quota_tree.o
+  CC      drivers/gpu/drm/drm_vma_manager.o
+  AR      fs/pstore/built-in.a
+  CC      drivers/hid/hid-roccat-kovaplus.o
+  CC      drivers/i2c/i2c-boardinfo.o
+  CC      drivers/gpu/drm/drm_flip_work.o
+  CC      fs/quota/quota.o
+  CC      drivers/hid/hid-roccat-lua.o
+  CC      drivers/i2c/i2c-core-base.o
+  CC      fs/proc/fd.o
+  CC      net/ipv4/tcp_ulp.o
+  CC      net/ipv6/ip6_flowlabel.o
+  CC      drivers/gpu/drm/drm_modeset_lock.o
+  CC      drivers/hid/hid-roccat-pyra.o
+  CC      fs/proc/proc_tty.o
+  CC      fs/quota/kqid.o
+  CC      drivers/hid/hid-roccat-ryos.o
+  CC      drivers/gpu/drm/drm_atomic.o
+  CC      drivers/i2c/i2c-core-smbus.o
+  CC      fs/proc/cmdline.o
+  CC      net/ipv4/tcp_offload.o
+  AR      fs/quota/built-in.a
+  CC      net/llc/llc_core.o
+  CC      net/ipv6/inet6_connection_sock.o
+  CC      drivers/hid/hid-roccat-savu.o
+  CC      fs/proc/consoles.o
+  CC      drivers/gpu/drm/drm_bridge.o
+  CC      fs/proc/cpuinfo.o
+  CC      drivers/i2c/i2c-core-of.o
+  CC      drivers/hid/hid-sony.o
+  CC      net/llc/llc_input.o
+  CC      net/ipv4/datagram.o
+  CC      fs/proc/devices.o
+  CC      drivers/i2c/i2c-dev.o
+  CC      net/ipv6/udp_offload.o
+  CC      drivers/gpu/drm/drm_framebuffer.o
+  CC      drivers/hid/hid-steam.o
+  CC      fs/proc/interrupts.o
+  CC      net/llc/llc_output.o
+  CC      drivers/i2c/algos/i2c-algo-bit.o
+  CC      fs/proc/loadavg.o
+  CC      net/ipv4/raw.o
+  CC      drivers/hid/hid-uclogic-core.o
+  CC      drivers/gpu/drm/drm_connector.o
+  CC      net/ipv6/seg6.o
+  AR      net/llc/built-in.a
+  CC      kernel/audit.o
+  AR      drivers/i2c/algos/built-in.a
+  CC      drivers/i2c/busses/i2c-designware-common.o
+  CC      fs/proc/meminfo.o
+  CC      drivers/hid/hid-uclogic-rdesc.o
+  CC      drivers/i2c/busses/i2c-designware-master.o
+  CC      drivers/hid/hid-uclogic-params.o
+  CC      drivers/gpu/drm/drm_blend.o
+  CC      fs/proc/stat.o
+  CC      net/ipv6/fib6_notifier.o
+  CC      net/ipv4/udp.o
+  CC      drivers/i2c/busses/i2c-designware-platdrv.o
+  CC      drivers/hid/wacom_wac.o
+  CC      fs/proc/uptime.o
+  CC      drivers/gpu/drm/drm_encoder.o
+  CC      net/mac80211/main.o
+  CC      fs/proc/util.o
+  CC      net/ipv6/sysctl_net_ipv6.o
+  AR      drivers/i2c/busses/built-in.a
+  AR      drivers/i2c/built-in.a
+  CC      drivers/gpu/drm/drm_mode_object.o
+  CC      drivers/hid/wacom_sys.o
+  CC      fs/proc/version.o
+  CC      fs/ramfs/inode.o
+  CC      fs/proc/softirqs.o
+  CC      drivers/gpu/drm/drm_property.o
+  CC      net/ipv6/xfrm6_policy.o
+  CC      net/ipv4/udplite.o
+  CC      fs/proc/namespaces.o
+  CC      net/mac80211/status.o
+  CC      fs/ramfs/file-mmu.o
+  CC      drivers/hid/hid-wiimote-core.o
+  CC      drivers/gpu/drm/drm_plane.o
+  AR      fs/ramfs/built-in.a
+  CC      kernel/auditfilter.o
+  CC      fs/proc/self.o
+  CC      drivers/hid/hid-wiimote-modules.o
+  CC      net/ipv6/xfrm6_state.o
+  CC      net/ipv4/udp_offload.o
+  CC      fs/proc/thread_self.o
+  CC      drivers/gpu/drm/drm_color_mgmt.o
+  CC      drivers/hid/usbhid/hid-core.o
+  CC      fs/proc/proc_sysctl.o
+  CC      net/mac80211/driver-ops.o
+  CC      net/ipv6/xfrm6_input.o
+  CC      drivers/gpu/drm/drm_print.o
+  CC      net/ipv4/arp.o
+  CC      net/netfilter/core.o
+  CC      drivers/hid/usbhid/hiddev.o
+  CC      fs/proc/proc_net.o
+  CC      drivers/gpu/drm/drm_dumb_buffers.o
+  CC      drivers/gpu/drm/drm_mode_config.o
+  AR      drivers/hid/usbhid/built-in.a
+  AR      drivers/hid/built-in.a
+  CC      fs/sysfs/file.o
+  CC      net/ipv6/xfrm6_output.o
+  CC      fs/proc/kmsg.o
+  CC      net/mac80211/sta_info.o
+  CC      net/netfilter/nf_log.o
+  CC      net/ipv4/icmp.o
+  CC      fs/proc/page.o
+  CC      fs/sysfs/dir.o
+  CC      drivers/gpu/drm/drm_vblank.o
+  CC      fs/sysfs/symlink.o
+  CC      net/ipv6/xfrm6_protocol.o
+  AR      fs/proc/built-in.a
+  CC      net/netlink/af_netlink.o
+  CC      net/netfilter/nf_queue.o
+  CC      fs/sysfs/mount.o
+  CC      drivers/gpu/drm/drm_syncobj.o
+  CC      net/ipv4/devinet.o
+  CC      fs/sysfs/group.o
+  CC      net/ipv6/netfilter.o
+  CC      net/mac80211/wep.o
+  CC      net/netfilter/nf_sockopt.o
+  CC      drivers/gpu/drm/drm_lease.o
+  AR      fs/sysfs/built-in.a
+  CC      fs/tracefs/inode.o
+  CC      net/netlink/genetlink.o
+  CC      net/ipv4/af_inet.o
+  AR      fs/tracefs/built-in.a
+  CC      fs/unicode/utf8-norm.o
+  CC      drivers/gpu/drm/drm_writeback.o
+  CC      net/netfilter/utils.o
+  CC      net/mac80211/aead_api.o
+  CC      net/ipv6/fib6_rules.o
+  CC      fs/unicode/utf8-core.o
+  CC      net/mac80211/wpa.o
+  CC      drivers/gpu/drm/drm_client.o
+  AR      net/netlink/built-in.a
+  CC      drivers/gpu/drm/drm_client_modeset.o
+  AR      fs/unicode/built-in.a
+  CC      fs/verity/enable.o
+  CC      net/netfilter/nfnetlink.o
+  CC      net/ipv6/proc.o
+  CC      net/ipv4/igmp.o
+  CC      kernel/auditsc.o
+  CC      drivers/gpu/drm/drm_atomic_uapi.o
+  CC      fs/verity/hash_algs.o
+  CC      net/mac80211/scan.o
+  CC      fs/verity/init.o
+  CC      net/netfilter/nfnetlink_queue.o
+  CC      net/ipv6/esp6.o
+  CC      drivers/gpu/drm/drm_hdcp.o
+  CC      net/packet/af_packet.o
+  CC      fs/verity/measure.o
+  CC      net/ipv4/fib_frontend.o
+  CC      fs/verity/open.o
+  CC      drivers/gpu/drm/drm_ioc32.o
+  CC      net/ipv6/ipcomp6.o
+  CC      fs/verity/verify.o
+  CC      net/mac80211/offchannel.o
+  CC      net/netfilter/nfnetlink_log.o
+  CC      drivers/gpu/drm/drm_gem_cma_helper.o
+  CC      fs/verity/signature.o
+  CC      net/ipv4/fib_semantics.o
+  CC      drivers/gpu/drm/drm_gem_shmem_helper.o
+  AR      net/packet/built-in.a
+  CC      fs/eventpoll.o
+  AR      fs/verity/built-in.a
+  CC      net/ipv6/xfrm6_tunnel.o
+  CC      drivers/iio/industrialio-core.o
+  CC      net/netfilter/nf_conntrack_core.o
+  CC      kernel/audit_watch.o
+  CC      drivers/gpu/drm/drm_panel.o
+  CC      net/mac80211/ht.o
+  CC      drivers/iio/industrialio-event.o
+  CC      net/ipv6/tunnel6.o
+  CC      kernel/audit_fsnotify.o
+  CC      net/ipv4/fib_trie.o
+  CC      drivers/gpu/drm/drm_of.o
+  CC      fs/anon_inodes.o
+  CC      drivers/iio/inkern.o
+  CC      kernel/audit_tree.o
+  CC      fs/signalfd.o
+  CC      drivers/gpu/drm/drm_mipi_dsi.o
+  CC      net/netfilter/nf_conntrack_standalone.o
+  CC      drivers/iio/industrialio-buffer.o
+  CC      net/mac80211/agg-tx.o
+  CC      net/ipv6/mip6.o
+  CC      drivers/gpu/drm/drm_panel_orientation_quirks.o
+  CC      fs/timerfd.o
+  CC      kernel/seccomp.o
+  CC      net/ipv4/fib_notifier.o
+  CC      drivers/iio/industrialio-trigger.o
+  CC      drivers/gpu/drm/ttm/ttm_memory.o
+  CC      net/netfilter/nf_conntrack_expect.o
+  CC      fs/eventfd.o
+  CC      net/ipv6/netfilter/ip6_tables.o
+  CC      net/mac80211/agg-rx.o
+  AR      drivers/iio/built-in.a
+  CC      drivers/gpu/drm/ttm/ttm_tt.o
+  CC      net/ipv4/inet_fragment.o
+  CC      net/qrtr/qrtr.o
+  CC      kernel/delayacct.o
+  CC      fs/aio.o
+  CC      kernel/taskstats.o
+  CC      net/netfilter/nf_conntrack_helper.o
+  CC      drivers/gpu/drm/ttm/ttm_bo.o
+  CC      net/ipv6/netfilter/ip6table_filter.o
+  CC      net/ipv4/ping.o
+  CC      net/qrtr/ns.o
+  CC      net/mac80211/vht.o
+  CC      kernel/tsacct.o
+  CC      fs/io_uring.o
+  CC      drivers/gpu/drm/ttm/ttm_bo_util.o
+  CC      net/netfilter/nf_conntrack_proto.o
+  CC      kernel/tracepoint.o
+  CC      net/ipv6/netfilter/ip6table_mangle.o
+  CC      drivers/gpu/drm/ttm/ttm_bo_vm.o
+  CC      net/qrtr/smd.o
+  CC      kernel/irq_work.o
+  CC      net/ipv4/ip_tunnel_core.o
+  CC      net/mac80211/he.o
+  CC      drivers/gpu/drm/ttm/ttm_module.o
+  CC      kernel/cpu_pm.o
+  CC      net/netfilter/nf_conntrack_proto_generic.o
+  AR      net/qrtr/built-in.a
+  CC      fs/locks.o
+  CC      net/ipv6/netfilter/ip6table_raw.o
+  CC      kernel/scs.o
+  CC      drivers/gpu/drm/ttm/ttm_execbuf_util.o
+  CC      net/ipv4/gre_offload.o
+  CC      net/ipv6/netfilter/ip6table_nat.o
+  CC      kernel/cfi.o
+  CC      drivers/gpu/drm/ttm/ttm_page_alloc.o
+  CC      net/mac80211/ibss.o
+  CC      net/netfilter/nf_conntrack_proto_tcp.o
+  CC      net/ipv6/ip6_vti.o
+  CC      kernel/jump_label.o
+  CC      fs/compat.o
+  CC      net/ipv4/metrics.o
+  CC      drivers/gpu/drm/ttm/ttm_bo_manager.o
+  CC      net/ipv6/netfilter/nf_defrag_ipv6_hooks.o
+  CC      kernel/iomem.o
+  CC      fs/compat_ioctl.o
+  CC      drivers/gpu/drm/ttm/ttm_page_alloc_dma.o
+  CC      net/netfilter/nf_conntrack_proto_udp.o
+  GZIP    kernel/config_data.gz
+  CC      kernel/kheaders.o
+  CC      net/ipv4/netlink.o
+  CC      net/mac80211/iface.o
+  CC      kernel/configs.o
+  CC      drivers/input/input.o
+  CC      net/ipv6/netfilter/nf_conntrack_reasm.o
+  AR      drivers/gpu/drm/ttm/built-in.a
+  AR      drivers/gpu/drm/built-in.a
+  AR      drivers/gpu/built-in.a
+  CC      net/rfkill/core.o
+  AR      kernel/built-in.a
+  CC      fs/binfmt_misc.o
+  CC      net/ipv4/nexthop.o
+  CC      net/netfilter/nf_conntrack_proto_icmp.o
+  CC      net/mac80211/rate.o
+  AR      net/rfkill/built-in.a
+  CC      net/ipv6/sit.o
+  CC      drivers/input/input-compat.o
+  CC      fs/binfmt_script.o
+  CC      net/ipv6/netfilter/nf_socket_ipv6.o
+  CC      drivers/input/input-mt.o
+  CC      fs/binfmt_elf.o
+  CC      drivers/input/serio/serio.o
+  CC      net/netfilter/nf_conntrack_extend.o
+  CC      drivers/input/input-poller.o
+  CC      net/ipv4/ip_tunnel.o
+  CC      drivers/input/serio/serport.o
+  CC      net/mac80211/michael.o
+  CC      net/ipv6/netfilter/nf_tproxy_ipv6.o
+  CC      net/sched/sch_generic.o
+  CC      fs/compat_binfmt_elf.o
+  CC      drivers/input/ff-core.o
+  CC      drivers/input/serio/libps2.o
+  CC      net/netfilter/nf_conntrack_acct.o
+  CC      net/mac80211/tkip.o
+  CC      drivers/input/ff-memless.o
+  AR      drivers/input/serio/built-in.a
+  CC      net/tipc/addr.o
+  CC      net/ipv6/netfilter/nf_reject_ipv6.o
+  CC      fs/mbcache.o
+  CC      net/ipv4/sysctl_net_ipv4.o
+  CC      drivers/input/input-leds.o
+  CC      fs/posix_acl.o
+  CC      net/sched/sch_mq.o
+  CC      net/netfilter/nf_conntrack_seqadj.o
+  CC      net/tipc/bcast.o
+  CC      drivers/input/evdev.o
+  CC      net/mac80211/aes_cmac.o
+  CC      net/ipv6/netfilter/nf_dup_ipv6.o
+  CC      fs/coredump.o
+  CC      net/ipv4/proc.o
+  CC      net/sched/sch_api.o
+  CC      drivers/input/joystick/xpad.o
+  CC      net/netfilter/nf_conntrack_proto_icmpv6.o
+  CC      net/tipc/bearer.o
+  CC      net/mac80211/aes_gmac.o
+  CC      net/ipv6/netfilter/ip6t_rpfilter.o
+  CC      fs/drop_caches.o
+  AR      drivers/input/joystick/built-in.a
+  CC      drivers/input/keyboard/atkbd.o
+  CC      net/ipv4/fib_rules.o
+  CC      fs/dcookies.o
+  CC      drivers/input/keyboard/gpio_keys.o
+  CC      net/netfilter/nf_conntrack_ecache.o
+  CC      net/sched/sch_blackhole.o
+  CC      net/tipc/core.o
+  CC      net/mac80211/fils_aead.o
+  CC      net/ipv6/netfilter/ip6t_NPT.o
+  CC      net/ipv4/ipip.o
+  AR      drivers/input/keyboard/built-in.a
+  CC      drivers/input/misc/uinput.o
+  AR      fs/built-in.a
+  CC      net/ipv6/ip6_tunnel.o
+  CC      net/sched/cls_api.o
+  CC      net/netfilter/nf_conntrack_proto_dccp.o
+  AR      drivers/input/misc/built-in.a
+  CC      drivers/input/touchscreen/of_touchscreen.o
+  CC      net/tipc/link.o
+  CC      net/ipv6/netfilter/ip6t_REJECT.o
+  CC      net/mac80211/cfg.o
+  CC      net/ipv4/gre_demux.o
+  AR      drivers/input/touchscreen/built-in.a
+  AR      drivers/input/built-in.a
+  CC      drivers/interconnect/core.o
+  CC      net/tipc/discover.o
+  CC      net/netfilter/nf_conntrack_proto_sctp.o
+  AR      net/ipv6/netfilter/built-in.a
+  CC      net/ipv6/ip6_gre.o
+  AR      drivers/interconnect/built-in.a
+  CC      drivers/iommu/iommu.o
+  CC      net/sched/act_api.o
+  CC      net/ipv4/ip_gre.o
+  CC      net/unix/af_unix.o
+  CC      net/tipc/msg.o
+  CC      net/netfilter/nf_conntrack_proto_gre.o
+  CC      drivers/iommu/iommu-traces.o
+  CC      net/mac80211/ethtool.o
+  CC      net/ipv6/addrconf_core.o
+  CC      net/sched/sch_fifo.o
+  CC      net/tipc/name_distr.o
+  CC      net/ipv4/udp_tunnel.o
+  CC      drivers/iommu/iommu-sysfs.o
+  CC      net/unix/garbage.o
+  CC      net/netfilter/nf_conntrack_netlink.o
+  CC      drivers/iommu/dma-iommu.o
+  CC      net/sched/sch_htb.o
+  CC      net/ipv6/exthdrs_core.o
+  CC      net/tipc/subscr.o
+  CC      net/mac80211/rx.o
+  CC      net/ipv4/ip_vti.o
+  CC      net/unix/sysctl_net_unix.o
+  CC      drivers/iommu/io-pgtable.o
+  CC      net/tipc/monitor.o
+  CC      net/sched/sch_ingress.o
+  CC      net/ipv6/ip6_checksum.o
+  CC      net/netfilter/nf_conntrack_amanda.o
+  CC      drivers/iommu/io-pgtable-arm-v7s.o
+  CC      net/unix/scm.o
+  CC      net/ipv4/esp4.o
+  CC      net/sched/sch_prio.o
+  CC      net/tipc/name_table.o
+  CC      drivers/iommu/io-pgtable-arm.o
+  CC      net/ipv6/ip6_icmp.o
+  CC      net/netfilter/nf_conntrack_ftp.o
+  CC      net/mac80211/spectmgmt.o
+  AR      net/unix/built-in.a
+  CC      net/sched/sch_multiq.o
+  CC      drivers/iommu/iova.o
+  CC      drivers/irqchip/irqchip.o
+  CC      net/ipv6/output_core.o
+  CC      net/ipv4/tunnel4.o
+  CC      net/tipc/net.o
+  CC      drivers/irqchip/irq-sun4i.o
+  CC      net/netfilter/nf_conntrack_h323_main.o
+  CC      net/sched/sch_netem.o
+  CC      drivers/iommu/of_iommu.o
+  CC      net/mac80211/tx.o
+  CC      drivers/irqchip/irq-sunxi-nmi.o
+  CC      drivers/iommu/arm-smmu-v3.o
+  CC      net/ipv6/protocol.o
+  CC      drivers/irqchip/irq-gic.o
+  CC      net/ipv4/netfilter.o
+  CC      net/tipc/netlink.o
+  CC      net/sched/cls_u32.o
+  CC      net/netfilter/nf_conntrack_irc.o
+  CC      drivers/irqchip/irq-gic-common.o
+  CC      net/ipv6/ip6_offload.o
+  CC      net/tipc/netlink_compat.o
+  CC      drivers/irqchip/irq-gic-v2m.o
+  CC      net/ipv4/netfilter/nf_defrag_ipv4.o
+  AR      drivers/iommu/built-in.a
+  CC      net/wireless/core.o
+  CC      net/sched/cls_bpf.o
+  CC      net/netfilter/nf_conntrack_broadcast.o
+  CC      drivers/irqchip/irq-gic-v3.o
+  CC      net/mac80211/key.o
+  CC      net/ipv6/tcpv6_offload.o
+  CC      net/ipv4/netfilter/nf_socket_ipv4.o
+  CC      net/tipc/node.o
+  CC      drivers/irqchip/irq-gic-v3-mbi.o
+  CC      net/sched/ematch.o
+  CC      net/netfilter/nf_conntrack_netbios_ns.o
+  CC      net/wireless/sysfs.o
+  CC      net/ipv6/exthdrs_offload.o
+  CC      net/ipv4/netfilter/nf_tproxy_ipv4.o
+  CC      drivers/irqchip/irq-gic-v3-its.o
+  CC      net/mac80211/util.o
+  CC      net/sched/em_u32.o
+  CC      net/netfilter/nf_conntrack_pptp.o
+  CC      net/tipc/socket.o
+  CC      net/ipv6/inet6_hashtables.o
+  CC      net/wireless/radiotap.o
+  CC      net/ipv4/netfilter/nf_reject_ipv4.o
+  AR      net/sched/built-in.a
+  CC      net/ipv6/ip6_udp_tunnel.o
+  CC      drivers/irqchip/irq-gic-v3-its-platform-msi.o
+  CC      net/netfilter/nf_conntrack_sane.o
+  CC      net/wireless/util.o
+  CC      net/mac80211/wme.o
+  CC      drivers/irqchip/irq-gic-v4.o
+  CC      net/ipv4/netfilter/nf_nat_h323.o
+  CC      drivers/irqchip/irq-gic-v3-its-pci-msi.o
+  CC      net/ipv6/mcast_snoop.o
+  CC      net/netfilter/nf_conntrack_tftp.o
+  CC      net/tipc/eth_media.o
+  CC      net/ipv4/netfilter/nf_nat_pptp.o
+  CC      drivers/irqchip/irq-partition-percpu.o
+  CC      net/mac80211/chan.o
+  CC      net/ipv4/inet_diag.o
+  AR      net/ipv6/built-in.a
+  CC      drivers/irqchip/irq-mbigen.o
+  CC      net/wireless/reg.o
+  CC      net/tipc/topsrv.o
+  CC      net/mac80211/trace.o
+  CC      net/ipv4/netfilter/ip_tables.o
+  CC      net/netfilter/nf_nat_core.o
+  AR      drivers/irqchip/built-in.a
+-- KernelSU version: 11872
+-- KernelSU Manager signature size: 0x033b
+-- KernelSU Manager signature hash: c371061b19d8c7d7d6133c6a9bafe198fa944e50c1b31c9d8daa8d7f1fc2d2d6
+  CC      drivers/kernelsu/ksu.o
+  CC      drivers/kernelsu/allowlist.o
+  CC      net/ipv4/tcp_diag.o
+  CC      net/tipc/group.o
+  CC      net/xdp/xsk.o
+  CC      net/netfilter/nf_nat_proto.o
+  CC      net/ipv4/netfilter/iptable_filter.o
+  CC      drivers/kernelsu/apk_sign.o
+  CC      net/wireless/scan.o
+  CC      net/xfrm/xfrm_policy.o
+  CC      net/tipc/trace.o
+  CC      net/xdp/xdp_umem.o
+  CC      net/ipv4/netfilter/iptable_mangle.o
+  CC      net/mac80211/mlme.o
+  CC      net/netfilter/nf_nat_helper.o
+  CC      drivers/kernelsu/sucompat.o
+  CC      net/tipc/udp_media.o
+  CC      net/ipv4/netfilter/iptable_nat.o
+  CC      net/xdp/xsk_queue.o
+  CC      net/wireless/nl80211.o
+  CC      net/netfilter/nf_nat_redirect.o
+  CC      drivers/kernelsu/throne_tracker.o
+  CC      net/xfrm/xfrm_state.o
+  CC      net/ipv4/netfilter/iptable_raw.o
+  CC      net/tipc/sysctl.o
+  AR      net/xdp/built-in.a
+  CC      drivers/leds/led-core.o
+  CC      drivers/kernelsu/core_hook.o
+  CC      net/netfilter/nf_nat_masquerade.o
+  CC      drivers/leds/led-class.o
+  CC      net/mac80211/tdls.o
+  CC      drivers/leds/led-class-flash.o
+  CC      net/ipv4/netfilter/iptable_security.o
+  CC      net/tipc/diag.o
+  CC      drivers/leds/led-class-multicolor.o
+  CC      net/xfrm/xfrm_hash.o
+  CC      drivers/kernelsu/ksud.o
+  CC      net/netfilter/nf_nat_amanda.o
+  CC      drivers/leds/led-triggers.o
+  CC      net/xfrm/xfrm_input.o
+  CC      net/ipv4/netfilter/ipt_REJECT.o
+  AR      net/tipc/built-in.a
+  CC      net/ipv4/udp_diag.o
+  CC      drivers/leds/trigger/ledtrig-timer.o
+  CC      net/mac80211/ocb.o
+  AR      drivers/leds/trigger/built-in.a
+  AR      drivers/leds/built-in.a
+  CC      net/wireless/mlme.o
+  CC      drivers/kernelsu/kernel_compat.o
+  CC      net/netfilter/nf_nat_ftp.o
+  CC      net/ipv4/netfilter/arp_tables.o
+  CC      net/xfrm/xfrm_output.o
+  CC      net/compat.o
+  CC      drivers/kernelsu/selinux/selinux.o
+  CC      net/netfilter/nf_nat_irc.o
+  CC      net/mac80211/pm.o
+  CC      net/ipv4/netfilter/arpt_mangle.o
+  CC      net/wireless/ibss.o
+  CC      net/ipv4/tcp_cubic.o
+  CC      net/xfrm/xfrm_sysctl.o
+  CC      drivers/kernelsu/selinux/sepolicy.o
+  CC      net/mac80211/rc80211_minstrel.o
+  CC      net/ipv4/netfilter/arptable_filter.o
+  CC      net/netfilter/nf_nat_tftp.o
+  CC      drivers/mailbox/mailbox.o
+  CC      net/wireless/sme.o
+  CC      net/xfrm/xfrm_replay.o
+  CC      net/ipv4/netfilter/nf_dup_ipv4.o
+  CC      drivers/kernelsu/selinux/rules.o
+  CC      drivers/mailbox/hi3660-mailbox.o
+  CC      net/sysctl_net.o
+  CC      net/netfilter/nf_conncount.o
+  CC      net/mac80211/rc80211_minstrel_ht.o
+  CC      drivers/mailbox/hi6220-mailbox.o
+  CC      net/xfrm/xfrm_device.o
+  AR      net/ipv4/netfilter/built-in.a
+  CC      net/ipv4/xfrm4_policy.o
+  AR      drivers/kernelsu/built-in.a
+  CC      net/wireless/chan.o
+  CC      net/netfilter/x_tables.o
+  CC      drivers/mailbox/qcom-apcs-ipc-mailbox.o
+  CC      net/xfrm/xfrm_proc.o
+  CC      net/ipv4/xfrm4_state.o
+  AR      drivers/mailbox/built-in.a
+  CC      drivers/md/dm-uevent.o
+  CC      net/wireless/ethtool.o
+  CC      net/netfilter/xt_tcpudp.o
+  AR      net/mac80211/built-in.a
+  CC      net/netfilter/xt_mark.o
+  CC      drivers/md/dm.o
+  CC      net/xfrm/xfrm_algo.o
+  CC      net/ipv4/xfrm4_input.o
+  CC      drivers/media/cec/cec-core.o
+  CC      drivers/mfd/act8945a.o
+  CC      drivers/mfd/mfd-core.o
+  CC      drivers/misc/uid_sys_stats.o
+  CC      net/netfilter/xt_connmark.o
+  CC      drivers/media/cec/cec-adap.o
+  CC      net/wireless/mesh.o
+  CC      drivers/mfd/qcom-spmi-pmic.o
+  CC      net/xfrm/xfrm_user.o
+  CC      drivers/md/dm-table.o
+  CC      net/ipv4/xfrm4_output.o
+  CC      drivers/misc/ant_check.o
+  CC      drivers/mfd/syscon.o
+  CC      drivers/media/cec/cec-api.o
+  CC      net/netfilter/xt_nat.o
+  AR      drivers/mfd/built-in.a
+  CC      drivers/misc/ant_check_div.o
+  CC      drivers/media/common/videobuf2/videobuf2-core.o
+  CC      net/wireless/ap.o
+  CC      drivers/md/dm-target.o
+  CC      net/ipv4/xfrm4_protocol.o
+  CC      drivers/media/cec/cec-notifier.o
+  AR      drivers/misc/built-in.a
+  CC      net/wireless/trace.o
+  CC      net/xfrm/xfrm_ipcomp.o
+  CC      net/netfilter/xt_CHECKSUM.o
+  CC      drivers/md/dm-linear.o
+  CC      drivers/media/cec/cec-pin.o
+  CC      drivers/media/common/videobuf2/vb2-trace.o
+  AR      net/ipv4/built-in.a
+  CC      net/netfilter/xt_CLASSIFY.o
+  CC      drivers/mmc/core/core.o
+  CC      drivers/md/dm-stripe.o
+  AR      drivers/media/cec/built-in.a
+  CC      net/xfrm/xfrm_interface.o
+  CC      drivers/media/common/videobuf2/videobuf2-v4l2.o
+  CC      net/netfilter/xt_CONNSECMARK.o
+  CC      drivers/net/ipvlan/ipvlan_core.o
+  CC      net/wireless/ocb.o
+  CC      drivers/md/dm-ioctl.o
+  CC      drivers/mmc/core/bus.o
+  CC      drivers/media/common/videobuf2/videobuf2-memops.o
+  CC      net/netfilter/xt_CT.o
+  CC      drivers/mmc/core/host.o
+  AR      net/xfrm/built-in.a
+  CC      drivers/mmc/host/sdhci.o
+  CC      drivers/media/common/videobuf2/videobuf2-vmalloc.o
+  CC      drivers/net/ipvlan/ipvlan_main.o
+  CC      drivers/md/dm-io.o
+  CC      drivers/mmc/core/mmc.o
+  CC      drivers/md/dm-kcopyd.o
+  CC      drivers/media/common/videobuf2/videobuf2-dma-contig.o
+  CC      net/netfilter/xt_NETMAP.o
+  CC      drivers/mmc/host/sdhci-pltfm.o
+  CC      drivers/mmc/core/mmc_ops.o
+  CC      net/wireless/pmsr.o
+  AR      drivers/media/common/videobuf2/built-in.a
+  AR      drivers/media/common/built-in.a
+  CC      drivers/media/mc/mc-device.o
+  CC      drivers/md/dm-sysfs.o
+  CC      drivers/net/phy/mdio-boardinfo.o
+  CC      drivers/net/ipvlan/ipvlan_l3s.o
+  CC      drivers/mmc/host/sdhci-jlq.o
+  CC      drivers/mmc/core/sd.o
+  CC      net/netfilter/xt_NFLOG.o
+  CC      drivers/net/phy/phy.o
+  CC      drivers/md/dm-stats.o
+  CC      drivers/media/mc/mc-devnode.o
+  CC      drivers/mmc/core/sd_ops.o
+  AR      drivers/net/ipvlan/built-in.a
+  CC      net/wireless/of.o
+  CC      drivers/mmc/host/sdhci-crypto.o
+  CC      drivers/media/mc/mc-entity.o
+  CC      drivers/net/phy/phy-c45.o
+  CC      net/netfilter/xt_NFQUEUE.o
+  CC      drivers/mmc/core/sdio.o
+  CC      drivers/md/dm-rq.o
+  CC      drivers/net/ppp/ppp_generic.o
+  CC      drivers/media/mc/mc-request.o
+  CC      drivers/mmc/host/cqhci.o
+  CC      drivers/net/phy/phy-core.o
+  CC      net/wireless/shipped-certs.o
+  CC      drivers/mmc/core/sdio_ops.o
+  CC      net/netfilter/xt_REDIRECT.o
+  CC      drivers/md/dm-builtin.o
+  CC      drivers/media/mc/mc-dev-allocator.o
+  CC      drivers/mmc/core/sdio_bus.o
+  CC      drivers/net/phy/phy_device.o
+  CC      net/wireless/wext-core.o
+  AR      drivers/mmc/host/built-in.a
+  CC      drivers/nvdimm/core.o
+  AR      drivers/media/mc/built-in.a
+  CC      drivers/mmc/core/sdio_cis.o
+  CC      drivers/md/dm-bufio.o
+  CC      drivers/media/usb/gspca/gspca.o
+  CC      drivers/net/ppp/bsd_comp.o
+  CC      net/netfilter/xt_MASQUERADE.o
+  CC      drivers/mmc/core/sdio_io.o
+  CC      drivers/nvdimm/bus.o
+  CC      drivers/net/ppp/ppp_deflate.o
+  CC      net/wireless/wext-proc.o
+  CC      drivers/net/phy/mdio_bus.o
+  CC      drivers/mmc/core/sdio_irq.o
+  CC      drivers/net/ppp/ppp_mppe.o
+  CC      drivers/md/dm-crypt.o
+  CC      drivers/media/usb/gspca/autogain_functions.o
+  CC      drivers/mmc/core/slot-gpio.o
+  CC      drivers/nvdimm/dimm_devs.o
+  CC      net/netfilter/xt_SECMARK.o
+  CC      net/wireless/wext-spy.o
+  CC      drivers/net/ppp/pppox.o
+  CC      drivers/net/phy/mdio_device.o
+  CC      drivers/mmc/core/regulator.o
+  AR      drivers/media/usb/gspca/built-in.a
+  CC      drivers/media/usb/uvc/uvc_driver.o
+  CC      drivers/mmc/core/pwrseq.o
+  CC      drivers/nvdimm/dimm.o
+  CC      net/netfilter/xt_TPROXY.o
+  CC      net/wireless/wext-priv.o
+  CC      drivers/net/phy/swphy.o
+  CC      drivers/mmc/core/crypto.o
+  CC      drivers/md/dm-default-key.o
+  CC      drivers/net/ppp/pptp.o
+  CC      drivers/nvdimm/region_devs.o
+  CC      drivers/net/phy/fixed_phy.o
+  AR      net/wireless/built-in.a
+  CC      drivers/md/dm-snap.o
+  CC      drivers/media/usb/uvc/uvc_queue.o
+  CC      drivers/mmc/core/block.o
+  CC      net/netfilter/xt_TCPMSS.o
+  CC      drivers/net/slip/slhc.o
+  CC      drivers/nvdimm/region.o
+  AR      drivers/net/ppp/built-in.a
+  CC      drivers/media/usb/uvc/uvc_v4l2.o
+  CC      drivers/media/usb/uvc/uvc_video.o
+  AR      drivers/net/phy/built-in.a
+  CC      drivers/mmc/core/queue.o
+  CC      drivers/md/dm-exception-store.o
+  CC      drivers/nvdimm/namespace_devs.o
+  CC      drivers/nvmem/core.o
+  CC      net/netfilter/xt_TEE.o
+  AR      drivers/net/slip/built-in.a
+  CC      drivers/net/usb/r8152.o
+  CC      drivers/mmc/core/mmc_test.o
+  CC      drivers/media/usb/uvc/uvc_ctrl.o
+  CC      drivers/media/v4l2-core/v4l2-dev.o
+  CC      drivers/md/dm-snap-transient.o
+  CC      drivers/nvmem/nvmem-sysfs.o
+  CC      net/netfilter/xt_TRACE.o
+  AR      drivers/nvmem/built-in.a
+  CC      drivers/nvdimm/label.o
+  CC      drivers/net/wireless/cnss_genl/cnss_nl.o
+  CC      drivers/md/dm-snap-persistent.o
+  CC      drivers/media/v4l2-core/v4l2-ioctl.o
+  AR      drivers/mmc/core/built-in.a
+  AR      drivers/mmc/built-in.a
+  CC      drivers/md/dm-verity-avb.o
+  CC      drivers/media/usb/uvc/uvc_status.o
+  CC      net/netfilter/xt_IDLETIMER.o
+  AR      drivers/net/wireless/cnss_genl/built-in.a
+  CC      drivers/net/wireless/cnss_prealloc/cnss_prealloc.o
+  CC      drivers/net/usb/asix_devices.o
+  CC      drivers/nvdimm/badrange.o
+  CC      drivers/md/dm-verity-fec.o
+  CC      drivers/net/dummy.o
+  CC      drivers/media/usb/uvc/uvc_isight.o
+  AR      drivers/net/wireless/cnss_prealloc/built-in.a
+  CC      drivers/net/wireless/cnss_utils/cnss_utils.o
+  CC      drivers/media/v4l2-core/v4l2-device.o
+  CC      drivers/nvdimm/claim.o
+  CC      drivers/net/usb/asix_common.o
+  CC      drivers/md/dm-verity-target.o
+  CC      net/netfilter/xt_addrtype.o
+  CC      drivers/media/usb/uvc/uvc_debugfs.o
+  CC      drivers/net/wireless/cnss_utils/wlan_firmware_service_v01.o
+  CC      drivers/media/v4l2-core/v4l2-fh.o
+  CC      net/netfilter/xt_bpf.o
+  CC      drivers/net/wireless/cnss_utils/device_management_service_v01.o
+  CC      drivers/nvdimm/btt_devs.o
+  CC      drivers/media/usb/uvc/uvc_metadata.o
+  CC      drivers/media/v4l2-core/v4l2-event.o
+  CC      drivers/net/usb/ax88172a.o
+  AR      drivers/net/wireless/cnss_utils/built-in.a
+  AR      drivers/net/wireless/built-in.a
+  CC      drivers/nvdimm/pmem.o
+  CC      drivers/md/dm-bow.o
+  CC      drivers/media/usb/uvc/uvc_entity.o
+  CC      net/netfilter/xt_comment.o
+  CC      drivers/of/base.o
+  CC      drivers/media/v4l2-core/v4l2-ctrls.o
+  CC      drivers/net/macvlan.o
+  CC      drivers/net/usb/ax88179_178a.o
+  CC      drivers/nvdimm/btt.o
+  AR      drivers/media/usb/uvc/built-in.a
+  AR      drivers/media/usb/built-in.a
+  CC      drivers/media/v4l2-core/v4l2-subdev.o
+  CC      net/netfilter/xt_connlimit.o
+  AR      drivers/md/built-in.a
+  CC      drivers/of/device.o
+  CC      drivers/nvdimm/of_pmem.o
+  CC      drivers/net/macvtap.o
+  CC      drivers/of/platform.o
+  CC      drivers/media/v4l2-core/v4l2-clk.o
+  CC      drivers/opp/core.o
+  CC      net/netfilter/xt_conntrack.o
+  CC      drivers/net/usb/cdc_ether.o
+  AR      drivers/nvdimm/built-in.a
+  CC      drivers/net/usb/usbnet.o
+  CC      drivers/of/property.o
+  CC      drivers/opp/cpu.o
+  CC      drivers/media/v4l2-core/v4l2-async.o
+  CC      drivers/pci/access.o
+  CC      drivers/of/kobj.o
+  CC      net/netfilter/xt_dscp.o
+  CC      drivers/opp/of.o
+  CC      drivers/media/v4l2-core/v4l2-common.o
+  CC      drivers/perf/arm_pmu.o
+  CC      drivers/of/fdt.o
+  CC      drivers/pci/bus.o
+  AR      drivers/net/usb/built-in.a
+  CC      drivers/net/mii.o
+  CC      drivers/phy/phy-core.o
+  AR      drivers/opp/built-in.a
+  CC      net/netfilter/xt_ecn.o
+  CC      drivers/media/v4l2-core/v4l2-compat-ioctl32.o
+  CC      drivers/of/fdt_address.o
+  CC      drivers/perf/arm_pmu_platform.o
+  CC      drivers/pci/probe.o
+  CC      drivers/net/Space.o
+  AR      drivers/phy/built-in.a
+  CC      drivers/net/loopback.o
+  CC      drivers/of/address.o
+  CC      net/netfilter/xt_esp.o
+  CC      drivers/pci/host-bridge.o
+  AR      drivers/perf/built-in.a
+  CC      drivers/media/v4l2-core/v4l2-trace.o
+  CC      drivers/of/irq.o
+  CC      net/netfilter/xt_hashlimit.o
+  CC      drivers/pinctrl/core.o
+  CC      drivers/net/tun.o
+  CC      drivers/pci/remove.o
+  CC      drivers/media/v4l2-core/v4l2-mc.o
+  CC      drivers/of/of_net.o
+  CC      drivers/platform/msm/ipa_fmwk/ipa_fmwk.o
+  CC      drivers/pinctrl/pinctrl-utils.o
+  CC      drivers/pci/pci.o
+  CC      drivers/net/tap.o
+  CC      drivers/pinctrl/pinmux.o
+  CC      drivers/media/v4l2-core/v4l2-spi.o
+  CC      drivers/of/of_mdio.o
+  CC      net/netfilter/xt_helper.o
+  CC      drivers/pinctrl/pinconf.o
+  CC      drivers/media/v4l2-core/v4l2-i2c.o
+  AR      drivers/platform/msm/ipa_fmwk/built-in.a
+  AR      drivers/platform/msm/built-in.a
+  AR      drivers/platform/built-in.a
+  CC      drivers/pci/pci-driver.o
+  CC      drivers/of/of_reserved_mem.o
+  CC      drivers/pinctrl/devicetree.o
+  CC      net/netfilter/xt_hl.o
+  CC      drivers/media/v4l2-core/v4l2-dv-timings.o
+  CC      drivers/pinctrl/pinconf-generic.o
+  CC      drivers/net/veth.o
+  CC      drivers/power/reset/hisi-reboot.o
+  AR      drivers/of/built-in.a
+  CC      drivers/net/vxlan.o
+  CC      drivers/pci/search.o
+  CC      drivers/pinctrl/pinctrl-amd.o
+  CC      net/netfilter/xt_iprange.o
+  AR      drivers/power/reset/built-in.a
+  CC      drivers/power/supply/power_supply_core.o
+  AR      drivers/media/v4l2-core/built-in.a
+  AR      drivers/media/built-in.a
+  CC      drivers/pci/pci-sysfs.o
+  CC      drivers/pinctrl/pinctrl-single.o
+  CC      drivers/power/supply/power_supply_sysfs.o
+  CC      drivers/pci/rom.o
+  CC      drivers/pwm/core.o
+  CC      drivers/power/supply/power_supply_leds.o
+  CC      net/netfilter/xt_ipvs.o
+  CC      drivers/ras/ras.o
+  CC      drivers/pci/setup-res.o
+  AR      drivers/pinctrl/built-in.a
+  CC      drivers/pwm/sysfs.o
+  CC      net/netfilter/xt_l2tp.o
+  AR      drivers/power/supply/built-in.a
+  AR      drivers/power/built-in.a
+  CC      net/netfilter/xt_length.o
+  CC      drivers/pci/irq.o
+  CC      drivers/regulator/core.o
+  AR      drivers/pwm/built-in.a
+  CC      net/netfilter/xt_limit.o
+  AR      drivers/ras/built-in.a
+  CC      drivers/regulator/dummy.o
+  AR      drivers/net/built-in.a
+  CC      drivers/pci/vpd.o
+  CC      drivers/regulator/fixed-helper.o
+  CC      drivers/remoteproc/remoteproc_core.o
+  CC      drivers/pci/setup-bus.o
+  CC      drivers/regulator/helpers.o
+  CC      drivers/reset/core.o
+  CC      net/netfilter/xt_mac.o
+  CC      drivers/rpmsg/rpmsg_core.o
+  CC      drivers/rtc/lib.o
+  CC      drivers/remoteproc/remoteproc_debugfs.o
+  CC      drivers/rpmsg/rpmsg_char.o
+  CC      drivers/reset/hisilicon/hi6220_reset.o
+  CC      drivers/rtc/hctosys.o
+  CC      net/netfilter/xt_owner.o
+  CC      drivers/regulator/devres.o
+  CC      drivers/pci/vc.o
+  CC      drivers/remoteproc/remoteproc_sysfs.o
+  CC      drivers/reset/hisilicon/reset-hi3660.o
+  CC      drivers/rtc/systohc.o
+  CC      drivers/regulator/of_regulator.o
+  CC      drivers/rpmsg/qcom_glink_rpm.o
+  CC      drivers/pci/mmap.o
+  AR      drivers/reset/hisilicon/built-in.a
+  CC      drivers/reset/reset-scmi.o
+  CC      drivers/scsi/scsi.o
+  CC      drivers/rtc/class.o
+  CC      drivers/remoteproc/remoteproc_virtio.o
+  CC      net/netfilter/xt_pkttype.o
+  CC      drivers/reset/reset-simple.o
+  CC      drivers/regulator/fixed.o
+  CC      drivers/rpmsg/qcom_glink_native.o
+  CC      drivers/pci/setup-irq.o
+  CC      drivers/rtc/interface.o
+  CC      drivers/remoteproc/remoteproc_elf_loader.o
+  CC      drivers/reset/reset-sunxi.o
+  CC      drivers/scsi/hosts.o
+  CC      drivers/pci/proc.o
+  AR      drivers/regulator/built-in.a
+  CC      drivers/rtc/nvmem.o
+  AR      drivers/reset/built-in.a
+  CC      net/netfilter/xt_policy.o
+  CC      drivers/rpmsg/rpm-smd.o
+  AR      drivers/remoteproc/built-in.a
+  CC      drivers/scsi/scsi_ioctl.o
+  CC      drivers/pci/slot.o
+  CC      net/netfilter/xt_quota.o
+  CC      drivers/rtc/dev.o
+  CC      drivers/pci/of.o
+  CC      drivers/soc/jlq/audio-kernel/adspload/adsp_wdt2.o
+  CC      drivers/scsi/scsicam.o
+  CC      drivers/soc/jlq/audio-kernel/adspload/adsp_load.o
+  CC      drivers/rtc/proc.o
+  CC      drivers/rpmsg/qcom_glink_smem.o
+  CC      net/netfilter/xt_quota2.o
+  CC      drivers/soundwire/bus_type.o
+  CC      drivers/pci/quirks.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/aw87xxx/aw87xxx.o
+  CC      drivers/rtc/sysfs.o
+  CC      drivers/scsi/scsi_error.o
+  AR      drivers/rpmsg/built-in.a
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/aw87xxx/aw_monitor.o
+  CC      drivers/soundwire/bus.o
+  CC      drivers/soc/jlq/audio-kernel/adspload/adsp_lpm.o
+  CC      net/netfilter/xt_socket.o
+  CC      drivers/rtc/rtc-pl030.o
+  CC      drivers/soundwire/slave.o
+  CC      drivers/soc/jlq/audio-kernel/adspload/adsp_opp.o
+  CC      drivers/soc/jlq/blklog/jlq-blk-log.o
+  CC      drivers/pci/controller/pci-host-common.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/aw87xxx/aw_device.o
+  CC      drivers/rtc/rtc-pl031.o
+  CC      drivers/scsi/scsi_lib.o
+  CC      drivers/soundwire/mipi_disco.o
+  CC      drivers/pci/controller/pci-host-generic.o
+  CC      drivers/soc/jlq/audio-kernel/adspload/adsp_noti.o
+  CC      net/netfilter/xt_state.o
+  CC      drivers/soundwire/stream.o
+  CC      drivers/rtc/rtc-pm8xxx.o
+  AR      drivers/soc/jlq/blklog/built-in.a
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/aw87xxx/aw_bin_parse.o
+  CC      drivers/soc/qcom/peripheral-loader.o
+  CC      drivers/pci/controller/dwc/pcie-designware.o
+  CC      drivers/soc/jlq/audio-kernel/adspload/adsp_dump.o
+  AR      drivers/rtc/built-in.a
+  AR      drivers/soundwire/built-in.a
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/aw87xxx/aw_dsp.o
+  CC      drivers/scsi/scsi_lib_dma.o
+  CC      drivers/soc/jlq/audio-kernel/dsp/audio_calibration.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/bolero/bolero-cdc.o
+  CC      net/netfilter/xt_statistic.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/aw87xxx/aw_acf_bin.o
+  CC      drivers/soc/jlq/audio-kernel/adspload/adsp_wdt.o
+  CC      drivers/pci/controller/dwc/pcie-designware-host.o
+  CC      drivers/soc/qcom/msm_subsystem_restart.o
+  CC      drivers/scsi/scsi_scan.o
+  CC      drivers/soc/jlq/audio-kernel/dsp/audio_cal_utils.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/bolero/bolero-cdc-utils.o
+  CC      drivers/soc/jlq/audio-kernel/adspload/adsp_test.o
+  CC      net/netfilter/xt_string.o
+  CC      drivers/pci/controller/dwc/pcie-designware-ep.o
+  AR      drivers/soc/jlq/audio-kernel/asoc/codecs/aw87xxx/built-in.a
+  CC      drivers/pci/endpoint/pci-epc-core.o
+  CC      drivers/soc/jlq/audio-kernel/dsp/q6adm.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/bolero/bolero-cdc-regmap.o
+  CC      drivers/scsi/scsi_sysfs.o
+  AR      drivers/soc/jlq/audio-kernel/adspload/built-in.a
+  CC      drivers/scsi/scsi_devinfo.o
+  CC      drivers/soc/qcom/subsystem_notif.o
+  CC      net/netfilter/xt_time.o
+  CC      drivers/pci/controller/dwc/pcie-designware-plat.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/bolero/bolero-cdc-tables.o
+  CC      drivers/pci/endpoint/pci-epf-core.o
+  CC      drivers/soc/jlq/audio-kernel/dsp/q6afe.o
+  CC      drivers/soc/qcom/ramdump.o
+  CC      drivers/soc/jlq/bluetooth/jlq_btstate.o
+  CC      drivers/scsi/scsi_sysctl.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/bolero/bolero-clk-rsc.o
+  CC      net/netfilter/xt_u32.o
+  CC      drivers/pci/controller/dwc/pcie-qcom.o
+  CC      drivers/pci/endpoint/pci-epc-mem.o
+  AR      drivers/soc/jlq/bluetooth/built-in.a
+  CC      drivers/soc/jlq/audio-kernel/asoc/msm-dai-fe.o
+  CC      drivers/soc/qcom/sysmon-qmi.o
+  CC      drivers/scsi/scsi_trace.o
+  CC      drivers/soc/jlq/audio-kernel/dsp/q6asm.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/bolero/bolero-lpm.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/bolero/va-macro.o
+  AR      drivers/pci/endpoint/built-in.a
+  CC      drivers/pci/controller/dwc/pcie-kirin.o
+  CC      drivers/pci/controller/pci-thunder-ecam.o
+  CC      net/netfilter/ipvs/ip_vs_conn.o
+  CC      drivers/soc/qcom/subsys-pil-tz.o
+  CC      drivers/scsi/scsi_logging.o
+  CC      drivers/spi/spi.o
+  CC      drivers/soc/jlq/audio-kernel/ipc/apr.o
+  CC      drivers/pci/controller/dwc/pcie-al.o
+  CC      drivers/soc/jlq/audio-kernel/dsp/q6audio-v2.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/bolero/tx-macro.o
+  CC      drivers/scsi/scsi_pm.o
+  CC      drivers/soc/qcom/service-notifier.o
+  CC      drivers/soc/jlq/audio-kernel/dsp/q6voice.o
+  CC      drivers/pci/controller/dwc/pcie-hisi.o
+  CC      net/netfilter/ipvs/ip_vs_core.o
+  CC      drivers/soc/jlq/audio-kernel/ipc/apr_v2.o
+  CC      drivers/soc/qcom/service-locator.o
+  CC      drivers/scsi/ufs/tc-dwc-g210-pltfrm.o
+  AR      drivers/pci/controller/dwc/built-in.a
+  CC      drivers/pci/controller/pci-thunder-pem.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/bolero/rx-macro.o
+  AR      drivers/spi/built-in.a
+  CC      drivers/soc/jlq/audio-kernel/dsp/q6core.o
+  CC      drivers/soc/qcom/qmi_encdec.o
+  CC      drivers/soc/jlq/audio-kernel/ipc/apr_tal_rpmsg.o
+  CC      drivers/pci/controller/pci-xgene.o
+  CC      drivers/scsi/ufs/ufshcd-dwc.o
+  CC      drivers/soc/qcom/qmi_interface.o
+  CC      net/netfilter/ipvs/ip_vs_ctl.o
+  CC      drivers/soc/jlq/bridge/jlq_bridge.o
+  AR      drivers/pci/controller/built-in.a
+  CC      drivers/pci/pcie/portdrv_core.o
+  AR      drivers/soc/jlq/audio-kernel/asoc/codecs/bolero/built-in.a
+  AR      drivers/soc/jlq/audio-kernel/ipc/built-in.a
+  CC      drivers/soc/jlq/audio-kernel/asoc/msm-dai-q6-v2.o
+  CC      drivers/soc/jlq/audio-kernel/dsp/rtac.o
+  CC      drivers/scsi/ufs/tc-dwc-g210.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/sia81xx/sia81xx.o
+  CC      drivers/pci/pcie/portdrv_pci.o
+  CC      drivers/scsi/ufs/ufshcd.o
+  AR      drivers/soc/jlq/bridge/built-in.a
+  CC      drivers/soc/qcom/icnss2/main.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/msm-pcm-afe-v2.o
+  CC      drivers/soc/jlq/audio-kernel/dsp/adsp_err.o
+  CC      drivers/soc/qcom/icnss2/debug.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/sia81xx/sia81xx_regmap.o
+  CC      drivers/pci/pcie/err.o
+  CC      drivers/soc/jlq/audio-kernel/dsp/msm_audio_ion.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/sia81xx/sia81xx_aux_dev_if.o
+  CC      drivers/spmi/spmi.o
+  CC      drivers/soc/jlq/audio-kernel/dsp/avtimer.o
+  CC      net/netfilter/ipvs/ip_vs_sched.o
+  CC      drivers/pci/pcie/aspm.o
+  CC      drivers/scsi/sd.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/sia81xx/sia81xx_set_vdd.o
+  CC      drivers/soc/jlq/audio-kernel/dsp/q6_init.o
+  CC      drivers/soc/qcom/icnss2/power.o
+  CC      drivers/spmi/spmi-pmic-arb.o
+  CC      drivers/pci/pcie/pme.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/sia81xx/sia8101_regs.o
+  CC      drivers/soc/jlq/audio-kernel/dsp/digital-cdc-rsc-mgr.o
+  CC      net/netfilter/ipvs/ip_vs_xmit.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/sia81xx/sia8108_regs.o
+  CC      drivers/soc/jlq/audio-kernel/dsp/audio_notifier.o
+  CC      drivers/soc/qcom/icnss2/genl.o
+  AR      drivers/spmi/built-in.a
+  CC      drivers/soc/sunxi/sunxi_sram.o
+  AR      drivers/pci/pcie/built-in.a
+  CC      drivers/pci/msi.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/sia81xx/sia8109_regs.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/wcd937x/wcd937x.o
+  CC      drivers/soc/jlq/audio-kernel/dsp/audio_ssr.o
+  CC      drivers/scsi/ufs/ufs-sysfs.o
+  AR      drivers/soc/sunxi/built-in.a
+  CC      drivers/soc/qcom/icnss2/qmi.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/sia81xx/sia8152_regs.o
+  CC      drivers/soc/jlq/audio-kernel/soc/pinctrl-lpi.o
+  CC      drivers/soc/jlq/audio-kernel/dsp/audio_pdr.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/sia81xx/sia8152s_regs.o
+  AR      drivers/soc/jlq/audio-kernel/dsp/built-in.a
+  CC      net/netfilter/ipvs/ip_vs_app.o
+  CC      drivers/pci/syscall.o
+  CC      drivers/soc/jlq/audio-kernel/tinylog/tinylog_drv.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/wcd937x/wcd937x-regmap.o
+  CC      drivers/soc/jlq/audio-kernel/soc/snd_event.o
+  CC      drivers/scsi/ufs/ufs_bsg.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/sia81xx/sia8159_regs.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/wcd937x/wcd937x-mbhc.o
+  AR      drivers/soc/qcom/icnss2/built-in.a
+  CC      drivers/soc/qcom/memshare/heap_mem_ext_v01.o
+  CC      drivers/soc/jlq/audio-kernel/soc/jlq-info.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/sia81xx/sia81xx_afe_jlq.o
+  CC      drivers/pci/ecam.o
+  CC      drivers/soc/jlq/audio-kernel/tinylog/tinylog_psy.o
+  CC      drivers/soc/qcom/memshare/msm_memshare.o
+  CC      drivers/scsi/ufs/ufshcd-crypto.o
+  CC      drivers/soc/jlq/audio-kernel/soc/regmap-swr.o
+  CC      net/netfilter/ipvs/ip_vs_sync.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/wcd937x/wcd937x_slave.o
+  AR      drivers/pci/built-in.a
+  AR      drivers/soc/jlq/audio-kernel/asoc/codecs/sia81xx/built-in.a
+  CC      drivers/soc/jlq/audio-kernel/asoc/msm-pcm-dtmf-v2.o
+  CC      drivers/soc/jlq/clk/jvcc/gcc-bengal.o
+  AR      drivers/soc/jlq/audio-kernel/asoc/codecs/wcd937x/built-in.a
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/wcd9xxx-core-init.o
+  CC      drivers/soc/jlq/audio-kernel/soc/soundwire.o
+  AR      drivers/soc/qcom/memshare/built-in.a
+  CC      drivers/soc/qcom/soc_sleep_stats.o
+  CC      drivers/scsi/ufs/ufshcd-pci.o
+  CC      drivers/soc/jlq/audio-kernel/tinylog/tinylog_controller.o
+  CC      drivers/soc/jlq/clk/jvcc/common.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/msm-cdc-pinctrl.o
+  CC      drivers/soc/jlq/cpufreq/cpufreq-dt-jlq-platdev.o
+  CC      drivers/soc/jlq/audio-kernel/soc/swr-mstr-ctrl.o
+  CC      drivers/soc/qcom/smem.o
+  CC      drivers/soc/jlq/clk/jvcc/vdd-class.o
+  CC      drivers/soc/jlq/cpufreq/cpufreq-dt-jlq.o
+  CC      drivers/scsi/ufs/ufshcd-pltfrm.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/msm-cdc-supply.o
+  AR      drivers/soc/jlq/audio-kernel/tinylog/built-in.a
+  CC      drivers/soc/jlq/clk/jvcc/clk-regmap.o
+  CC      net/netfilter/ipvs/ip_vs_est.o
+  CC      drivers/soc/qcom/smem_state.o
+  CC      drivers/soc/jlq/cpufreq/cpufreq-proc.o
+  CC      drivers/staging/android/ion/ion.o
+  CC      drivers/soc/jlq/clk/jvcc/clk-alpha-pll.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/wcd-irq.o
+  CC      drivers/soc/qcom/smp2p.o
+  CC      drivers/scsi/ufs/ufs-hisi.o
+  AR      drivers/soc/jlq/audio-kernel/soc/built-in.a
+  CC      drivers/soc/jlq/clk/smd.o
+  AR      drivers/soc/jlq/cpufreq/built-in.a
+  CC      drivers/soc/jlq/audio-kernel/asoc/msm-pcm-hostless.o
+  CC      drivers/staging/android/ion/ion_buffer.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/wcd-clsh.o
+  CC      net/netfilter/ipvs/ip_vs_proto.o
+  CC      drivers/soc/qcom/microdump_collector.o
+"CONFIG_MICROTRUST_TEE_VERSION="300""
+"CONFIG_MICROTRUST_TEE_SUPPORT=y"
+"CONFIG_MICROTRUST_TZ_DRIVER=y"
+"CONFIG_MICROTRUST_VFS_DRIVER=y"
+"CONFIG_MICROTRUST_FP_DRIVER=y"
+"CONFIG_MICROTRUST_DEBUG="
+"CONFIG_MICROTRUST_TEST_DRIVERS="
+  AR      drivers/scsi/ufs/built-in.a
+  AR      drivers/scsi/built-in.a
+  CC      drivers/teei/300/tee/tee_core.o
+  CC      drivers/staging/exfat/exfat_core.o
+  CC      drivers/soc/jlq/clk/jvcc/clk-opp.o
+  CC      drivers/staging/android/ashmem.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/wcdcal-hwdep.o
+  CC      drivers/soc/qcom/glink_pkt.o
+  CC      drivers/staging/android/ion/ion_dma_buf.o
+  CC      drivers/soc/jlq/clk/jvcc/clk-pll.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/wcd9xxx-soc-init.o
+  CC      drivers/teei/300/tee/capi_proxy.o
+  CC      net/netfilter/ipvs/ip_vs_pe.o
+  CC      drivers/staging/android/ion/ion_heap.o
+  CC      drivers/teei/300/tee/tee_client_api.o
+  CC      drivers/soc/qcom/glink_probe.o
+  CC      drivers/soc/jlq/clk/jvcc/clk-rcg.o
+  CC      drivers/staging/exfat/exfat_super.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/wcd-dsp-utils.o
+  CC      drivers/staging/exfat/exfat_blkdev.o
+  CC      drivers/staging/android/ion/heaps/ion_cma_heap.o
+  CC      drivers/soc/qcom/msm_glink_ssr.o
+  CC      drivers/teei/300/tee/soter/core.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/wcd-dsp-mgr.o
+  CC      drivers/soc/jlq/clk/jvcc/clk-rcg2.o
+  CC      net/netfilter/ipvs/ip_vs_proto_tcp.o
+  CC      drivers/soc/jlq/clk/clk-smd.o
+  CC      drivers/teei/300/tee/soter/call.o
+  CC      drivers/soc/qcom/rpmh_master_stat.o
+  AR      drivers/staging/android/ion/heaps/built-in.a
+  AR      drivers/staging/android/ion/built-in.a
+  CC      drivers/staging/android/vsoc.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/audio-ext-clk-up.o
+  CC      drivers/soc/jlq/clk/jvcc/clk-branch.o
+  CC      drivers/staging/exfat/exfat_cache.o
+  CC      drivers/teei/300/tee/tee_shm.o
+  CC      drivers/soc/jlq/crypto/fde-jlq.o
+  CC      drivers/soc/qcom/rpm_master_stat.o
+  CC      drivers/soc/jlq/clk/jvcc/clk-regmap-divider.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/msm_stub.o
+  AR      drivers/staging/android/built-in.a
+  CC      drivers/teei/300/tee/tee_shm_pool.o
+  CC      drivers/staging/exfat/exfat_nls.o
+  CC      drivers/thermal/thermal_core.o
+  CC      net/netfilter/ipvs/ip_vs_proto_udp.o
+  AR      drivers/soc/qcom/built-in.a
+  CC      drivers/soc/jlq/dcstat/cpu-dcstat.o
+  AR      drivers/soc/jlq/crypto/built-in.a
+  CC      drivers/soc/jlq/audio-kernel/asoc/msm-pcm-host-voice-v2.o
+  CC      drivers/soc/jlq/clk/jvcc/clk-regmap-mux.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/wcd-mbhc-v2.o
+  CC      drivers/teei/300/ut_keymaster/ut_keymaster.o
+  CC      drivers/staging/exfat/exfat_upcase.o
+  CC      drivers/soc/jlq/clk/jvcc/clk-regmap-mux-div.o
+  AR      drivers/staging/exfat/built-in.a
+  CC      drivers/soc/jlq/audio-kernel/asoc/codecs/wcd-mbhc-adc.o
+  AR      drivers/staging/built-in.a
+  CC      drivers/soc/jlq/clk/pll-power.o
+  CC      drivers/teei/300/tz_driver/teei_fp.o
+  CC      net/netfilter/ipvs/ip_vs_nfct.o
+  CC      drivers/soc/jlq/clk/jvcc/clk-hfpll.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/msm-pcm-q6-v2.o
+  AR      drivers/soc/jlq/dcstat/built-in.a
+  CC      drivers/thermal/thermal_sysfs.o
+  CC      drivers/tty/tty_io.o
+  CC      drivers/teei/300/tz_driver/teei_client_transfer_data.o
+  CC      drivers/tty/n_tty.o
+  CC      drivers/soc/jlq/clk/jvcc/reset.o
+  CC      drivers/teei/300/tz_driver/teei_smc_call.o
+  CC      drivers/thermal/thermal_helpers.o
+  AR      drivers/soc/jlq/audio-kernel/asoc/codecs/built-in.a
+  CC      drivers/soc/jlq/devfreq/governor_cpufreq.o
+  CC      drivers/soc/jlq/clk/jvcc/clk-debug.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/msm-pcm-routing-v2.o
+  CC      drivers/thermal/of-thermal.o
+  CC      net/netfilter/ipvs/ip_vs_rr.o
+  CC      drivers/teei/300/tz_driver/sysfs.o
+  CC      drivers/soc/jlq/clk/jvcc/gdsc.o
+  CC      drivers/tty/tty_ioctl.o
+  CC      drivers/soc/jlq/clk/clk-jr510.o
+  CC      drivers/soc/jlq/devfreq/devfreq_simple_dev.o
+  CC      drivers/thermal/step_wise.o
+  CC      drivers/soc/jlq/clk/jvcc/clk-smd-rpm.o
+  CC      drivers/teei/300/tz_driver/teei_cancel_cmd.o
+  CC      drivers/thermal/user_space.o
+  CC      drivers/tty/tty_ldisc.o
+  CC      net/netfilter/ipvs/ip_vs_wrr.o
+  CC      drivers/soc/jlq/clk/jvcc/gdsc-regulator.o
+  CC      drivers/uio/uio.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/msm-pcm-voice-v2.o
+  CC      drivers/soc/jlq/devfreq/devfreq_ddr.o
+  CC      drivers/thermal/power_allocator.o
+  CC      drivers/teei/300/tz_driver/fdrv.o
+  CC      drivers/tty/tty_buffer.o
+  CC      drivers/soc/jlq/devfreq/devfreq_ddr_bridge.o
+  CC      drivers/soc/jlq/clk/jvcc/jlq-gdsc-regulator.o
+  CC      drivers/uio/msm_sharedmem/msm_sharedmem.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/msm-pcm-voip-v2.o
+  CC      drivers/thermal/cpu_cooling.o
+  CC      net/netfilter/ipvs/ip_vs_sh.o
+  CC      drivers/teei/300/tz_driver/notify_queue.o
+  CC      drivers/tty/tty_port.o
+  CC      drivers/soc/jlq/devfreq/ddr_bw_busmon.o
+  AR      drivers/uio/msm_sharedmem/built-in.a
+  AR      drivers/uio/built-in.a
+  CC      drivers/soc/jlq/display/camille/camille_driver.o
+  CC      drivers/soc/jlq/clk/jvcc/clk-dummy.o
+  CC      drivers/thermal/devfreq_cooling.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/platform_init.o
+  CC      drivers/tty/tty_mutex.o
+  CC      drivers/teei/300/tz_driver/switch_queue.o
+  AR      drivers/soc/jlq/clk/jvcc/built-in.a
+  AR      drivers/soc/jlq/clk/built-in.a
+  CC      drivers/usb/common/common.o
+  AR      drivers/soc/jlq/devfreq/built-in.a
+  CC      drivers/soc/jlq/audio-kernel/asoc/msm-qti-pp-config.o
+  CC      drivers/tty/tty_ldsem.o
+  CC      drivers/thermal/hisi_thermal.o
+  AR      drivers/soc/jlq/display/camille/built-in.a
+  CC      drivers/soc/jlq/display/komeda/komeda_drv.o
+  AR      net/netfilter/ipvs/built-in.a
+  AR      net/netfilter/built-in.a
+  AR      net/built-in.a
+  CC      drivers/teei/300/tz_driver/teei_keymaster.o
+  CC      drivers/video/hdmi.o
+  CC      drivers/usb/common/debug.o
+  CC      drivers/video/backlight/backlight.o
+  CC      drivers/teei/300/tz_driver/teei_task_link.o
+  CC      drivers/tty/tty_baudrate.o
+  CC      drivers/thermal/thermal-generic-adc.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/jlq-asoc-voice-trigger.o
+  AR      drivers/usb/common/built-in.a
+  CC      drivers/usb/core/usb.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/jlq_dai_slim.o
+  CC      drivers/soc/jlq/display/komeda/komeda_dev.o
+  CC      drivers/teei/300/tz_driver/tz_log.o
+  AR      drivers/thermal/built-in.a
+  CC      drivers/soc/jlq/dmas/jlq-dmas.o
+  CC      drivers/tty/tty_jobctrl.o
+  CC      drivers/video/backlight/generic_bl.o
+  CC      drivers/soc/jlq/display/transmitter/jlq_dsi_panel.o
+  CC      drivers/usb/core/hub.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/jlq_audio_calibration.o
+  CC      drivers/soc/jlq/display/komeda/komeda_format_caps.o
+  CC      drivers/teei/300/tz_driver/irq_register.o
+  CC      drivers/tty/n_null.o
+  AR      drivers/soc/jlq/dmas/built-in.a
+  AR      drivers/video/backlight/built-in.a
+  CC      drivers/usb/dwc2/core.o
+  CC      drivers/video/fbdev/core/fb_cmdline.o
+  CC      drivers/soc/jlq/display/komeda/komeda_coeffs.o
+  CC      drivers/tty/pty.o
+  CC      drivers/soc/jlq/audio-kernel/asoc/jr510.o
+  CC      drivers/soc/jlq/display/komeda/komeda_color_mgmt.o
+  AR      drivers/video/fbdev/core/built-in.a
+  AR      drivers/video/fbdev/built-in.a
+  CC      drivers/teei/300/tz_driver/teei_client_main.o
+  CC      drivers/video/display_timing.o
+  CC      drivers/usb/dwc2/core_intr.o
+  CC      drivers/video/of_display_timing.o
+  CC      drivers/soc/jlq/display/transmitter/jlq_dsi_transmitter.o
+  CC      drivers/soc/jlq/display/komeda/komeda_pipeline.o
+  CC      drivers/tty/tty_audit.o
+  CC      drivers/usb/core/hcd.o
+  CC      drivers/video/of_videomode.o
+  CC      drivers/usb/dwc2/platform.o
+  CC      drivers/teei/300/tz_driver/backward_driver.o
+  AR      drivers/soc/jlq/audio-kernel/asoc/built-in.a
+  AR      drivers/soc/jlq/audio-kernel/built-in.a
+  CC      drivers/soc/jlq/display/komeda/komeda_pipeline_state.o
+  CC      drivers/tty/sysrq.o
+  AR      drivers/video/built-in.a
+  CC      drivers/usb/gadget/usbstring.o
+  CC      drivers/usb/core/urb.o
+  AR      drivers/soc/jlq/display/transmitter/built-in.a
+  CC      drivers/usb/dwc2/params.o
+  CC      drivers/soc/jlq/display/komeda/komeda_xr.o
+  CC      drivers/teei/300/tz_vfs/fp_vendor.o
+  CC      drivers/soc/jlq/fingerprint/fpc/fpc1020.o
+  CC      drivers/usb/gadget/config.o
+  CC      drivers/usb/core/message.o
+  CC      drivers/tty/hvc/hvc_console.o
+  CC      drivers/teei/300/tz_vfs/vfsFun.o
+  CC      drivers/usb/host/pci-quirks.o
+  CC      drivers/usb/dwc2/hcd.o
+  CC      drivers/soc/jlq/display/komeda/komeda_framebuffer.o
+  CC      drivers/soc/jlq/fingerprint/fpc/fpc1020_ree.o
+  CC      drivers/usb/gadget/epautoconf.o
+  AR      drivers/tty/hvc/built-in.a
+  CC      drivers/tty/serdev/core.o
+  CC      drivers/teei/300/tz_dcih/tz_dcih_test.o
+  CC      drivers/usb/host/ehci-hcd.o
+  CC      drivers/usb/core/driver.o
+  AR      drivers/soc/jlq/fingerprint/fpc/built-in.a
+  CC      drivers/usb/gadget/composite.o
+  CC      drivers/soc/jlq/display/komeda/komeda_kms.o
+  CC      drivers/soc/jlq/fingerprint/goodix/gf_spi.o
+  CC      drivers/teei/300/tz_dcih/tz_dcih.o
+  CC      drivers/tty/serdev/serdev-ttyport.o
+  CC      drivers/usb/dwc2/hcd_intr.o
+  CC      drivers/usb/core/config.o
+  CC      drivers/soc/jlq/display/komeda/komeda_crtc.o
+  CC      drivers/soc/jlq/fingerprint/goodix/platform.o
+  CC      drivers/teei/300/teei_fp/fp_func.o
+  AR      drivers/tty/serdev/built-in.a
+  CC      drivers/tty/serial/serial_core.o
+  CC      drivers/usb/gadget/functions.o
+  CC      drivers/usb/dwc2/hcd_queue.o
+  CC      drivers/soc/jlq/fingerprint/goodix/netlink.o
+  CC      drivers/usb/core/file.o
+  CC      drivers/usb/host/ehci-pci.o
+  CC      drivers/usb/gadget/configfs.o
+  CC      drivers/soc/jlq/display/komeda/komeda_plane.o
+  CC      drivers/teei/300/tz_verifier/tz_verifier.o
+  CC      drivers/usb/core/buffer.o
+  AR      drivers/teei/300/built-in.a
+  AR      drivers/teei/built-in.a
+  CC      drivers/usb/dwc2/hcd_ddma.o
+  CC      drivers/tty/serial/earlycon.o
+  CC      drivers/usb/host/ehci-platform.o
+  CC      drivers/soc/jlq/gpio/jlq-ap-gpio.o
+  AR      drivers/soc/jlq/fingerprint/goodix/built-in.a
+  CC      drivers/soc/jlq/fingerprint/silead/silead_fp.o
+  CC      drivers/soc/jlq/display/komeda/komeda_wb_connector.o
+  CC      drivers/usb/gadget/u_f.o
+  CC      drivers/usb/core/sysfs.o
+  CC      drivers/tty/serial/8250/8250_core.o
+  AR      drivers/usb/host/built-in.a
+  CC      drivers/soc/jlq/gpio/pinctrl-data-jr510.o
+  CC      drivers/usb/dwc2/gadget.o
+  CC      drivers/virtio/virtio.o
+  CC      drivers/usb/gadget/function/f_acm.o
+  CC      drivers/soc/jlq/display/komeda/komeda_private_obj.o
+  CC      drivers/usb/core/endpoint.o
+  CC      drivers/soc/jlq/gpio/pinctrl-data-ja310.o
+  CC      drivers/tty/serial/8250/8250_port.o
+  CC      drivers/virtio/virtio_ring.o
+  CC      drivers/usb/gadget/function/u_serial.o
+  AR      drivers/soc/jlq/fingerprint/silead/built-in.a
+  AR      drivers/soc/jlq/fingerprint/built-in.a
+  CC      drivers/usb/core/devio.o
+  CC      drivers/soc/jlq/display/komeda/komeda_debugfs.o
+  CC      drivers/tty/serial/serial_mctrl_gpio.o
+  CC      drivers/soc/jlq/gpio/jlq-qtang-gpio.o
+  AR      drivers/usb/dwc2/built-in.a
+  CC      drivers/watchdog/watchdog_core.o
+  CC      drivers/usb/gadget/function/f_serial.o
+  CC      drivers/usb/core/notify.o
+  CC      drivers/soc/jlq/display/komeda/komeda_event.o
+  AR      drivers/virtio/built-in.a
+  CC      drivers/soc/jlq/gpio/pinctrl-data-qtang.o
+  CC      drivers/tty/serial/8250/8250_dma.o
+  CC      drivers/usb/gadget/udc/core.o
+  CC      drivers/watchdog/watchdog_dev.o
+  CC      drivers/usb/phy/phy.o
+  CC      drivers/usb/gadget/function/u_ether.o
+  AR      drivers/soc/jlq/gpio/built-in.a
+  CC      drivers/usb/roles/class.o
+  CC      drivers/soc/jlq/display/komeda/d71/d71_dev.o
+  CC      drivers/usb/core/generic.o
+  CC      drivers/tty/serial/8250/8250_pci.o
+  AR      drivers/watchdog/built-in.a
+  CC      drivers/usb/gadget/udc/trace.o
+  CC      drivers/usb/phy/of.o
+  AR      drivers/usb/roles/built-in.a
+  CC      drivers/usb/gadget/function/f_ncm.o
+  CC      drivers/soc/jlq/display/komeda/d71/d71_component.o
+  CC      drivers/usb/core/quirks.o
+  CC      drivers/tty/serial/8250/8250_of.o
+  AR      drivers/usb/phy/built-in.a
+  CC      drivers/usb/gadget/udc/dummy_hcd.o
+  CC      drivers/usb/core/devices.o
+  CC      drivers/soc/jlq/display/komeda/d71/d71_axi.o
+  CC      drivers/usb/storage/uas.o
+  CC      drivers/usb/gadget/function/f_rndis.o
+  CC      drivers/soc/jlq/iio/adc/qcom-spmi-adc5.o
+  AR      drivers/tty/serial/8250/built-in.a
+  AR      drivers/tty/serial/built-in.a
+  AR      drivers/tty/built-in.a
+  CC      drivers/usb/storage/scsiglue.o
+  CC      drivers/usb/typec/class.o
+  CC      drivers/usb/core/phy.o
+  AR      drivers/usb/gadget/udc/built-in.a
+  CC      drivers/soc/jlq/display/komeda/d71/d77_debugfs.o
+  CC      drivers/soc/jlq/interconnect/jr510_bus.o
+  CC      drivers/soc/jlq/iio/adc/qcom-vadc-common.o
+  CC      drivers/usb/core/port.o
+  CC      drivers/soc/jlq/irq/mailbox-irq-JR510.o
+  CC      drivers/usb/gadget/function/rndis.o
+  CC      drivers/usb/typec/mux.o
+  CC      drivers/usb/storage/protocol.o
+  AR      drivers/soc/jlq/iio/adc/built-in.a
+  AR      drivers/soc/jlq/iio/built-in.a
+  CC      drivers/usb/storage/transport.o
+  AR      drivers/soc/jlq/display/komeda/built-in.a
+  AR      drivers/soc/jlq/display/built-in.a
+  CC      drivers/soc/jlq/interconnect/icc-bus.o
+  CC      drivers/usb/core/of.o
+  CC      drivers/usb/typec/bus.o
+  AR      drivers/soc/jlq/irq/built-in.a
+  CC      drivers/usb/storage/usb.o
+  CC      drivers/usb/gadget/function/f_mass_storage.o
+  AR      drivers/soc/jlq/interconnect/built-in.a
+  CC      drivers/usb/core/hcd-pci.o
+  CC      drivers/soc/jlq/nanohub/nanohub-comms.o
+  CC      drivers/usb/storage/initializers.o
+  CC      drivers/soc/jlq/pmctrl/pmctrl.o
+  CC      drivers/usb/typec/tcpm/tcpm.o
+  CC      drivers/soc/jlq/pmic/flash/leds-qpnp-flash-v2.o
+  CC      drivers/soc/jlq/pmctrl/pmctrl-opp.o
+  CC      drivers/usb/storage/sierra_ms.o
+  AR      drivers/usb/core/built-in.a
+  CC      drivers/usb/gadget/function/storage_common.o
+  CC      drivers/soc/jlq/nanohub/nanohub-core.o
+  CC      drivers/usb/gadget/function/f_fs.o
+  CC      drivers/soc/jlq/power/qcom/step-chg-jeita.o
+  AR      drivers/soc/jlq/pmctrl/built-in.a
+  CC      drivers/usb/storage/option_ms.o
+  AR      drivers/soc/jlq/pmic/flash/built-in.a
+  CC      drivers/soc/jlq/pmic/pinctrl/pinctrl-spmi-gpio.o
+  AR      drivers/usb/typec/tcpm/built-in.a
+  AR      drivers/usb/typec/built-in.a
+  CC      drivers/soc/jlq/power/supply/jlq_battery_profile.o
+  CC      drivers/soc/jlq/pmic/pm8008/qcom-i2c-pmic.o
+  CC      drivers/soc/jlq/power/qcom/battery.o
+  CC      drivers/soc/jlq/pwm/pwm_jlq.o
+  CC      drivers/usb/storage/usual-tables.o
+  CC      drivers/soc/jlq/power/supply/jlq_charger_manager.o
+  AR      drivers/soc/jlq/nanohub/built-in.a
+  CC      drivers/soc/jlq/power/supply/jlq_cm_voter.o
+  AR      drivers/soc/jlq/pmic/pinctrl/built-in.a
+  AR      drivers/soc/jlq/pwm/built-in.a
+  CC      drivers/usb/gadget/function/f_midi.o
+  CC      drivers/soc/jlq/reset/reset-jlq.o
+  AR      drivers/soc/jlq/pmic/pm8008/built-in.a
+  CC      drivers/soc/jlq/pmic/pon/qpnp-power-on.o
+  CC      drivers/soc/jlq/power/qcom/qpnp-smb5.o
+  AR      drivers/usb/storage/built-in.a
+  CC      drivers/soc/jlq/slimbus/slimbus.o
+  CC      drivers/soc/jlq/power/supply/qcom_battery_sysfs.o
+  AR      drivers/soc/jlq/reset/built-in.a
+  CC      drivers/soc/jlq/pmic/pwm/pwm-qti-lpg.o
+  CC      drivers/soc/jlq/pmic/pon/jlq-poweroff.o
+  CC      drivers/soc/jlq/power/qcom/smb5-lib.o
+  CC      drivers/usb/gadget/function/f_hid.o
+  CC      drivers/soc/jlq/pmic/regulator/jlq-regulator.o
+  CC      drivers/soc/jlq/power/supply/sd7601.o
+  AR      drivers/soc/jlq/pmic/pwm/built-in.a
+  CC      drivers/soc/jlq/power/supply/sgm4154x_charger.o
+  AR      drivers/soc/jlq/pmic/pon/built-in.a
+  CC      drivers/soc/jlq/slimbus/of_slimbus.o
+  CC      drivers/soc/jlq/ssi/spi-jlq.o
+  CC      drivers/usb/gadget/function/f_accessory.o
+  CC      drivers/soc/jlq/power/qcom/pmic-voter.o
+  CC      drivers/soc/jlq/slimbus/slim_ctrl.o
+  CC      drivers/soc/jlq/pmic/regulator/proxy-consumer.o
+  CC      drivers/soc/jlq/pmic/revid/qpnp-revid.o
+  AR      drivers/soc/jlq/ssi/built-in.a
+  CC      drivers/soc/jlq/power/supply/sh366101_fg.o
+  CC      drivers/soc/jlq/power/qcom/schgm-flash.o
+  CC      drivers/soc/jlq/slimbus/slim_chk.o
+  CC      drivers/usb/gadget/function/f_audio_source.o
+  CC      drivers/soc/jlq/pmic/regulator/qcom_pm8008-regulator.o
+  CC      drivers/soc/jlq/pmic/rgb/leds-qti-tri-led.o
+  CC      drivers/soc/jlq/power/qcom/battery-profile-loader.o
+  AR      drivers/soc/jlq/pmic/revid/built-in.a
+  CC      drivers/soc/jlq/slimbus/slim_mtdr.o
+  CC      drivers/soc/jlq/sysdump/jlq_wdt.o
+  CC      drivers/soc/jlq/pmic/regulator/rpm-smd-regulator.o
+  CC      drivers/soc/jlq/power/qcom/smb5-iio.o
+  AR      drivers/usb/gadget/function/built-in.a
+  AR      drivers/usb/gadget/built-in.a
+  AR      drivers/usb/built-in.a
+  AR      drivers/soc/jlq/pmic/rgb/built-in.a
+  CC      drivers/soc/jlq/sysdump/jlq_sysdump.o
+  CC      drivers/soc/jlq/thermal/mpss/thermal_sensor_service_v01.o
+  AR      drivers/soc/jlq/power/supply/built-in.a
+  CC      drivers/soc/jlq/slimbus/slim_master.o
+  CC      drivers/soc/jlq/power/qcom/qpnp-qg.o
+  CC      drivers/soc/jlq/timer/jlq_dw_apb_timer.o
+  CC      drivers/soc/jlq/sysdump/jlq_slave_dummy.o
+  CC      drivers/soc/jlq/touchscreen/focaltech/focaltech_core.o
+  CC      drivers/soc/jlq/thermal/mpss/qmi_sensors.o
+  CC      drivers/soc/jlq/slimbus/slim_slave.o
+  CC      drivers/soc/jlq/thermal/pmu/adc-tm.o
+  CC      drivers/soc/jlq/timer/jlq_dw_apb_timer_of.o
+  CC      drivers/soc/jlq/pmic/regulator/qpnp-lcdb-regulator.o
+  CC      drivers/soc/jlq/sysdump/jlq_isr_monitor.o
+  CC      drivers/soc/jlq/slimbus/slim_devs.o
+  CC      drivers/soc/jlq/thermal/pmu/adc-tm-common.o
+  AR      drivers/soc/jlq/timer/built-in.a
+  CC      drivers/soc/jlq/thermal/mpss/thermal_mitigation_device_service_v01.o
+  CC      drivers/soc/jlq/pmic/vibrator/leds-qpnp-vibrator-ldo.o
+  CC      drivers/soc/jlq/touchscreen/focaltech/focaltech_ex_fun.o
+  CC      drivers/soc/jlq/power/qcom/qg-util.o
+  CC      drivers/soc/jlq/thermal/mpss/qmi_cooling.o
+  CC      drivers/soc/jlq/thermal/pmu/adc-tm5.o
+  AR      drivers/soc/jlq/slimbus/built-in.a
+  AR      drivers/soc/jlq/sysdump/built-in.a
+  CC      drivers/soc/jlq/uart/jlq-uart.o
+  CC      drivers/soc/jlq/touchscreen/gsl/gsl_ts_driver.o
+  CC      drivers/soc/jlq/pmic/vibrator/gpio-vibra.o
+  CC      drivers/soc/jlq/pmic/regulator/jlq-sysfs.o
+  CC      drivers/soc/jlq/touchscreen/focaltech/focaltech_ex_mode.o
+  CC      drivers/soc/jlq/power/qcom/qg-soc.o
+  AR      drivers/soc/jlq/pmic/vibrator/built-in.a
+  CC      drivers/soc/jlq/pmic/regulator/wl2866d.o
+  CC      drivers/soc/jlq/thermal/pmu/adc-tm7.o
+  AR      drivers/soc/jlq/thermal/mpss/built-in.a
+  CC      drivers/soc/jlq/touchscreen/novatek/nt36xxx.o
+  CC      drivers/soc/jlq/power/qcom/qg-sdam.o
+  CC      drivers/soc/jlq/touchscreen/gsl/gen_vkeys.o
+  AR      drivers/soc/jlq/uart/built-in.a
+  CC      drivers/soc/jlq/thermal/tsens/tsens.o
+  CC      drivers/soc/jlq/touchscreen/lct_tp_info.o
+  CC      drivers/soc/jlq/pmic/regulator/wl2866d-regulator.o
+  AR      drivers/soc/jlq/thermal/pmu/built-in.a
+  CC      drivers/soc/jlq/power/qcom/qg-battery-profile.o
+  CC      drivers/soc/jlq/touchscreen/focaltech/focaltech_gesture.o
+  CC      drivers/soc/jlq/touchscreen/novatek/nt36xxx_fw_update.o
+  AR      drivers/soc/jlq/touchscreen/gsl/built-in.a
+  CC      drivers/soc/jlq/usb/function/f_cdev.o
+  CC      drivers/soc/jlq/thermal/tsens/tsens-common.o
+  CC      drivers/soc/jlq/thermal/tsens/tsens-ja310.o
+  CC      drivers/soc/jlq/power/qcom/qg-profile-lib.o
+  AR      drivers/soc/jlq/pmic/regulator/built-in.a
+  AR      drivers/soc/jlq/pmic/built-in.a
+  CC      drivers/soc/jlq/touchscreen/focaltech/focaltech_esdcheck.o
+  CC      drivers/soc/jlq/usb/misc/type-c-pericom.o
+  CC      drivers/soc/jlq/touchscreen/focaltech/focaltech_point_report_check.o
+  CC      drivers/soc/jlq/touchscreen/novatek/nt36xxx_ext_proc.o
+  CC      drivers/soc/jlq/usb/function/f_gsi.o
+  CC      drivers/soc/jlq/thermal/tsens/tsens-jr510.o
+  CC      drivers/soc/jlq/power/qcom/fg-alg.o
+  CC      drivers/soc/jlq/touchscreen/lct_tp_work.o
+  AR      drivers/soc/jlq/thermal/tsens/built-in.a
+  AR      drivers/soc/jlq/thermal/built-in.a
+  CC      drivers/soc/jlq/usb/phy/phy-jlq-dwc2.o
+  CC      drivers/soc/jlq/usb/misc/extcon-jlq-gpio.o
+  CC      drivers/soc/jlq/touchscreen/novatek/nt36xxx_mp_ctrlram.o
+  CC      drivers/soc/jlq/touchscreen/focaltech/focaltech_flash.o
+  CC      drivers/soc/jlq/touchscreen/lct_tp_selftest.o
+  AR      drivers/soc/jlq/power/qcom/built-in.a
+  AR      drivers/soc/jlq/power/built-in.a
+  CC      drivers/soc/jlq/touchscreen/focaltech/focaltech_spi.o
+  CC      drivers/soc/jlq/nvmem/qcom-spmi-sdam.o
+  AR      drivers/soc/jlq/usb/misc/built-in.a
+  CC      drivers/soc/jlq/touchscreen/lct_tp_palm.o
+  CC      drivers/soc/jlq/touchscreen/focaltech/focaltech_test.o
+  AR      drivers/soc/jlq/usb/phy/built-in.a
+  CC      drivers/soc/jlq/touchscreen/lct_tp_grip_area.o
+  CC      drivers/soc/jlq/touchscreen/focaltech/focaltech_test_ini.o
+  CC      drivers/soc/jlq/socinfo.o
+  CC      drivers/soc/jlq/touchscreen/lct_tp_gesture.o
+  AR      drivers/soc/jlq/touchscreen/novatek/built-in.a
+  CC      drivers/soc/jlq/touchscreen/focaltech/focaltech_test_ft8006s_ab.o
+  CC      drivers/soc/jlq/touchscreen/focaltech/focaltech_test_ft8006s_an.o
+  AR      drivers/soc/jlq/usb/function/built-in.a
+  AR      drivers/soc/jlq/usb/built-in.a
+  AR      drivers/soc/jlq/touchscreen/focaltech/built-in.a
+  AR      drivers/soc/jlq/touchscreen/built-in.a
+  AR      drivers/soc/jlq/built-in.a
+  AR      drivers/soc/built-in.a
+  AR      drivers/built-in.a
+  GEN     .version
+  CHK     include/generated/compile.h
+  UPD     include/generated/compile.h
+  CC      init/version.o
+  AR      init/built-in.a
+  LTO     vmlinux.o
+  MODPOST vmlinux.o
+  MODINFO modules.builtin.modinfo
+  LD      .tmp_vmlinux.kallsyms1
+  KSYM    .tmp_vmlinux.kallsyms1.o
+  LD      .tmp_vmlinux.kallsyms2
+  KSYM    .tmp_vmlinux.kallsyms2.o
+  LD      vmlinux
+  SORTEX  vmlinux
+  SYSMAP  System.map
+  OBJCOPY arch/arm64/boot/Image
+make[1]: 'Image' is up to date.
+  GZIP    arch/arm64/boot/Image.gz
+==========================================================
+Compilação KernelSU concluída com sucesso!
+-rwxrwxr-x 1 ubuntu ubuntu 35M Oct 16 17:46 out/arch/arm64/boot/Image
+-rw-rw-r-- 1 ubuntu ubuntu 16M Oct 16 17:47 out/arch/arm64/boot/Image.gz
+-rw-rw-r-- 1 ubuntu ubuntu 250K Oct 16 05:25 out/arch/arm64/boot/dts/jlq/jlq_jr510.dtb
+==========================================================
