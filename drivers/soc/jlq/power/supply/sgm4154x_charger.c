@@ -217,14 +217,14 @@ static int32_t	sgm4154x_extcon_notify(struct sgm4154x_chip *chip, unsigned int e
 #define I2C_4_SCL_PINCTL 0x50
 #define I2C_4_SDA_PINCTL 0x54
 
-static inline u32 i2c_read32(u64 addr)
+static inline u32 i2c_read32(void __iomem *addr)
 {
-        return readl((void *)addr);
+        return readl(addr);
 }
 
-static inline void i2c_write32(u64 addr, u32 v)
+static inline void i2c_write32(void __iomem *addr, u32 v)
 {
-        writel(v, (void *)addr);
+        writel(v, addr);
 }
 
 static s32 i2cbus_recovery(void)

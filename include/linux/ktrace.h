@@ -1,1 +1,1 @@
-/home/ubuntu/work_space/kernel_xiaomi_frost_kernelsu/include/dum/ktrace.h
+/root/workspace/kernel_xiaomi_frost/include/dum/ktrace.h
